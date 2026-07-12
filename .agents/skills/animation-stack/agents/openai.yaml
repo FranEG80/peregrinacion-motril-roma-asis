@@ -1,0 +1,4 @@
+interface:
+  display_name: "Animation Stack"
+  short_description: "Choose and implement the project animation stack"
+  default_prompt: "Use $animation-stack to choose and implement the right animation library for this Astro and Preact interface."
