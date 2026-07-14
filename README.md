@@ -1,46 +1,31 @@
-# Astro Starter Kit: Basics
+# Peregrinación Motril · Roma
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Álbum privado de cinco días construido con Astro SSR, Preact y Tailwind CSS. Incluye portada pública, acceso por contraseña, cronología general y diaria, fichas editoriales de cada lugar, galería accesible, selección persistente y descargas ZIP mediante Cloudflare Workers + R2 + Images.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Puesta en marcha
 
-## 🚀 Project Structure
+1. Instala dependencias con `pnpm install`.
+2. Copia `.env.example` a `.env` y sustituye todos los secretos.
+3. Arranca Astro en segundo plano con `pnpm dev`.
+4. Consulta el estado con `pnpm dev:status`, los registros con `pnpm dev:logs` y detenlo con `pnpm dev:stop`.
 
-Inside of your Astro project, you'll see the following folders and files:
+La contraseña local incluida en `.env` es solo para desarrollo. `.env` está ignorado por Git; `.env.example` documenta las variables sin contener secretos reales.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Comprobaciones
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- `pnpm check`: tipos y componentes Astro.
+- `pnpm test`: dominio, sesiones, tickets y contenido.
+- `pnpm build`: build SSR de producción para Vercel.
 
-## 🧞 Commands
+## Medios y Cloudflare
 
-All commands are run from the root of the project, from a terminal:
+El frontend y la autenticación se despliegan en Vercel. El Worker de `workers/media` sirve originales privados desde R2, genera variantes WebP con Cloudflare Images y construye ZIP en streaming. La descarga predefinida es WebP de alta calidad sin reducir las dimensiones; el original queda como opción explícita.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Para configurar Cloudflare:
 
-## 👀 Want to learn more?
+1. Crea el bucket R2 indicado en `workers/media/wrangler.jsonc`.
+2. Sustituye el identificador de la cuenta y configura `MEDIA_TICKET_SECRET` como secreto de Wrangler.
+3. Ajusta `ALLOWED_ORIGIN` al dominio definitivo.
+4. Despliega con `pnpm worker:deploy` y copia su URL a `MEDIA_WORKER_URL`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las URLs fotográficas actuales son contenido provisional WebP de Unsplash para poder revisar la interfaz. Al cargar el material real, conserva las claves `roma/...` descritas en `src/data/pilgrimage.ts`. No se usan ilustraciones SVG: los únicos SVG permitidos son los iconos de Lucide.

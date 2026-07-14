@@ -1,0 +1,368 @@
+{
+  "title": "Peregrinación Roma · Asís",
+  "subtitle": "Cinco días entre basílicas, memoria y camino",
+  "dates": "7—11 julio · Roma y Asís",
+  "hero": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=2200&q=90&fm=webp",
+  "publicIntroduction": [
+    "Un viaje compartido desde Motril hasta Roma y Asís, siguiendo las huellas de los apóstoles, los mártires y la familia franciscana.",
+    "Este álbum ordena los recuerdos tal como sucedieron: cinco días intensos, muchas iglesias, calles recorridas juntos y una fe que también se hizo camino."
+  ],
+  "privateIntroduction": "Cinco jornadas entre Roma y Asís. El recorrido conserva el orden real del viaje y añade una explicación breve a cada lugar; cuando una identificación no es completamente segura queda indicada como probable.",
+  "days": [
+    {
+      "id": "day-1",
+      "number": 1,
+      "slug": "primer-dia-en-roma",
+      "date": "2026-07-07",
+      "city": "Roma",
+      "title": "Primer día en Roma",
+      "summary": "De la catedral de Roma a sus plazas barrocas: una primera jornada larga, atravesando siglos de fe, arquitectura y vida urbana.",
+      "cover": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=86&fm=webp",
+      "places": [
+        {
+          "id": "llegada-roma",
+          "slug": "llegada-roma",
+          "name": "Llegada a Roma",
+          "summary": "El comienzo del camino y el primer encuentro del grupo con la ciudad eterna.",
+          "description": "La llegada marca el paso del viaje esperado al viaje vivido. Roma se presenta como una ciudad de capas: antigua, cristiana, barroca y cotidiana, y sirve de escenario para los siguientes días de peregrinación.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "san-juan-letran",
+          "slug": "san-juan-letran",
+          "name": "Basílica de San Juan de Letrán",
+          "summary": "La catedral de Roma y una de las cuatro grandes basílicas papales de la ciudad.",
+          "description": "San Juan de Letrán es la catedral del obispo de Roma, el papa. Su origen constantiniano, la gran nave con los apóstoles y su condición de sede episcopal la convierten en un punto esencial para comenzar una peregrinación romana.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "baptisterio-lateranense",
+          "slug": "baptisterio-lateranense",
+          "name": "Baptisterio Lateranense",
+          "summary": "Un antiguo baptisterio octogonal junto a San Juan de Letrán, modelo para toda la cristiandad.",
+          "description": "El Baptisterio de San Juan, de raíces paleocristianas, conserva su planta octogonal y recuerda la importancia del bautismo en la Iglesia antigua. Está separado de la basílica, a pocos pasos del conjunto lateranense.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "san-clemente",
+          "slug": "san-clemente",
+          "name": "Basílica de San Clemente",
+          "summary": "Una iglesia construida sobre otras épocas, donde la historia de Roma se puede recorrer hacia abajo.",
+          "description": "San Clemente superpone una basílica medieval, una iglesia del siglo IV y estructuras romanas anteriores. Sus niveles subterráneos hacen visible cómo la ciudad cristiana creció sobre la Roma imperial sin borrar del todo su memoria.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "piazza-navona",
+          "slug": "piazza-navona",
+          "name": "Piazza Navona",
+          "summary": "La plaza barroca que conserva en su forma la antigua pista del estadio de Domiciano.",
+          "description": "La plaza ocupa el antiguo estadio de Domiciano y mantiene su trazado alargado. Las fuentes, especialmente la de los Cuatro Ríos de Bernini, y la fachada de Sant'Agnese in Agone forman uno de los grandes escenarios urbanos de Roma.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "panteon",
+          "slug": "panteon",
+          "name": "Panteón de Agripa",
+          "summary": "La fachada y el pórtico del gran templo romano, contemplados desde la Piazza della Rotonda.",
+          "description": "El Panteón es uno de los edificios romanos mejor conservados y desde el siglo VII funciona como iglesia. Aunque la visita fue exterior, su pórtico monumental y la enorme cúpula que se adivina detrás explican buena parte de su fuerza arquitectónica.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "piazza-montecitorio",
+          "slug": "piazza-montecitorio",
+          "name": "Piazza di Montecitorio",
+          "summary": "Probable primera plaza del paseo, junto al Parlamento italiano y un antiguo obelisco solar.",
+          "description": "Muy cerca del Panteón y de Piazza Colonna, Montecitorio está presidida por el palacio que alberga la Cámara de Diputados. En el centro se levanta un obelisco egipcio que Augusto utilizó como parte de un gran reloj solar.",
+          "certainty": "probable",
+          "editorialNote": "Identificación probable por la ruta entre el Panteón, Piazza Colonna y la galería comercial.",
+          "hasPhotos": true
+        },
+        {
+          "id": "piazza-colonna",
+          "slug": "piazza-colonna",
+          "name": "Piazza Colonna",
+          "summary": "La plaza de la columna de Marco Aurelio, coronada en realidad por una estatua de san Pablo.",
+          "description": "La plaza toma su nombre de la columna de Marco Aurelio, cubierta por un relieve en espiral. La estatua que la corona es san Pablo, colocada en el siglo XVI; este detalle encaja con el recuerdo de una figura apostólica sobre la columna.",
+          "certainty": "probable",
+          "editorialNote": "La pista de la galería cercana hace esta identificación muy probable. La estatua es san Pablo, no san Pedro.",
+          "hasPhotos": true
+        },
+        {
+          "id": "galleria-alberto-sordi",
+          "slug": "galleria-alberto-sordi",
+          "name": "Galleria Alberto Sordi",
+          "summary": "La elegante galería comercial de estilo modernista situada en la propia Piazza Colonna.",
+          "description": "La antigua Galleria Colonna abrió en 1922 y conecta varios accesos del centro de Roma bajo vidrieras y una cuidada arquitectura interior. Su ubicación, a un paseo de Trevi, coincide con el itinerario recordado.",
+          "certainty": "probable",
+          "editorialNote": "Identificación muy probable por su cercanía inmediata a Piazza Colonna y a la Fontana di Trevi.",
+          "hasPhotos": true
+        },
+        {
+          "id": "fontana-trevi",
+          "slug": "fontana-trevi",
+          "name": "Fontana di Trevi",
+          "summary": "Agua, piedra y movimiento para cerrar la primera jornada en uno de los iconos de Roma.",
+          "description": "La gran fuente barroca ocupa casi por completo su pequeña plaza. Diseñada como una fachada monumental para el final del acueducto del Aqua Virgo, reúne esculturas, roca y agua en una escena de enorme teatralidad.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "number": 2,
+      "slug": "el-corazon-del-vaticano",
+      "date": "2026-07-08",
+      "city": "Ciudad del Vaticano",
+      "title": "El corazón del Vaticano",
+      "summary": "Una jornada concentrada en san Pedro y en las colecciones vaticanas: oración, memoria de los papas y siglos de arte reunidos.",
+      "cover": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1600&q=86&fm=webp",
+      "places": [
+        {
+          "id": "vaticano-san-pedro",
+          "slug": "vaticano-san-pedro",
+          "name": "Vaticano y Basílica de San Pedro",
+          "summary": "La plaza, la columnata de Bernini y la basílica levantada sobre la memoria del apóstol Pedro.",
+          "description": "La plaza acoge al peregrino entre los brazos de la columnata de Bernini. Dentro de la basílica, la tumba de san Pedro, la cúpula de Miguel Ángel, la Piedad y el baldaquino señalan el centro espiritual y artístico del Vaticano.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "grutas-vaticanas",
+          "slug": "grutas-vaticanas",
+          "name": "Grutas Vaticanas y tumbas papales",
+          "summary": "El espacio bajo la basílica donde se conservan sepulturas de numerosos pontífices.",
+          "description": "Las Grutas Vaticanas ocupan el nivel situado entre la actual basílica y la antigua construcción constantiniana. Allí se encuentran capillas y tumbas papales, cerca del lugar venerado como sepultura de san Pedro.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "museos-vaticanos",
+          "slug": "museos-vaticanos",
+          "name": "Museos Vaticanos",
+          "summary": "Colecciones de arte y arqueología reunidas por los papas a lo largo de varios siglos.",
+          "description": "Los Museos Vaticanos enlazan patios, galerías y antiguas estancias pontificias. El recorrido reúne escultura clásica, tapices, mapas, las Estancias de Rafael y la Capilla Sixtina, formando un verdadero museo de museos.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        }
+      ]
+    },
+    {
+      "id": "day-3",
+      "number": 3,
+      "slug": "basilicas-y-roma-imperial",
+      "date": "2026-07-09",
+      "city": "Roma",
+      "title": "Basílicas y Roma imperial",
+      "summary": "Reliquias, mosaicos y memoria apostólica por la mañana; después, el gran eje arqueológico de la ciudad y San Pablo Extramuros.",
+      "cover": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1600&q=86&fm=webp",
+      "places": [
+        {
+          "id": "santa-maria-mayor",
+          "slug": "santa-maria-mayor",
+          "name": "Basílica de Santa María la Mayor",
+          "summary": "La gran basílica mariana de Roma, vinculada a la reliquia de la Santa Cuna.",
+          "description": "Santa María la Mayor conserva mosaicos paleocristianos y un interior de extraordinaria continuidad histórica. En la confessio se venera el relicario de la Santa Cuna, asociado por la tradición con el pesebre de Belén.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "san-alfonso-perpetuo-socorro",
+          "slug": "san-alfonso-perpetuo-socorro",
+          "name": "Santuario de Nuestra Señora del Perpetuo Socorro",
+          "summary": "La iglesia de San Alfonso en el Esquilino, custodia del icono del Perpetuo Socorro.",
+          "description": "La iglesia de Sant'Alfonso all'Esquilino está atendida por los redentoristas y guarda el icono original de Nuestra Señora del Perpetuo Socorro. Es un importante lugar de devoción mariana cercano a Santa María la Mayor.",
+          "certainty": "probable",
+          "editorialNote": "Es la identificación que mejor encaja con el recuerdo de la parroquia o santuario del Perpetuo Socorro.",
+          "hasPhotos": true
+        },
+        {
+          "id": "santa-prassede",
+          "slug": "santa-prassede",
+          "name": "Basílica de Santa Práxedes",
+          "summary": "Mosaicos medievales, memoria de los mártires y la tradición de la columna de la Flagelación.",
+          "description": "Santa Práxedes conserva espléndidos mosaicos del siglo IX y reliquias trasladadas desde antiguas catacumbas. Una capilla custodia un fragmento venerado por tradición como parte de la columna de la Flagelación de Cristo.",
+          "certainty": "confirmed",
+          "editorialNote": "El nombre recordado como «Pradese» corresponde a Santa Prassede, Santa Práxedes en español; no consta una relación especial con santa Agripina.",
+          "hasPhotos": true
+        },
+        {
+          "id": "san-pietro-in-vincoli",
+          "slug": "san-pietro-in-vincoli",
+          "name": "Basílica de San Pietro in Vincoli",
+          "summary": "La iglesia de las cadenas de san Pedro y del célebre Moisés de Miguel Ángel.",
+          "description": "La basílica venera las cadenas asociadas a los encarcelamientos del apóstol Pedro. En uno de sus laterales se encuentra el monumento funerario de Julio II, presidido por el poderoso Moisés esculpido por Miguel Ángel.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "coliseo",
+          "slug": "coliseo",
+          "name": "Coliseo",
+          "summary": "El exterior del anfiteatro Flavio y el paisaje monumental que lo rodea.",
+          "description": "El Coliseo fue el mayor anfiteatro de la Roma imperial. Incluso visto desde fuera, su sucesión de arcos y la escala del edificio permiten comprender la ambición técnica y política de los emperadores flavios.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "foros-imperiales",
+          "slug": "foros-imperiales",
+          "name": "Via dei Fori Imperiali",
+          "summary": "Ruinas, columnas y estatuas de emperadores a lo largo del gran paseo arqueológico.",
+          "description": "La avenida une el Coliseo con Piazza Venezia y permite contemplar los foros de César, Augusto, Nerva y Trajano. Las estatuas de bronce instaladas junto a cada foro ayudan a reconocer a los emperadores vinculados con estos conjuntos.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "san-pablo-extramuros",
+          "slug": "san-pablo-extramuros",
+          "name": "Basílica de San Pablo Extramuros",
+          "summary": "La gran basílica levantada fuera de las murallas sobre la memoria del apóstol de los gentiles.",
+          "description": "San Pablo Extramuros se alza junto a la vía Ostiense, donde la tradición sitúa la tumba del apóstol. Su amplio atrio, los medallones de los papas y el espacio solemne de la nave cierran la jornada con una fuerte dimensión apostólica.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        }
+      ]
+    },
+    {
+      "id": "day-4",
+      "number": 4,
+      "slug": "asis-y-catacumbas",
+      "date": "2026-07-10",
+      "city": "Asís · Roma",
+      "title": "Asís y las catacumbas",
+      "summary": "Una mañana tras las huellas de Francisco, Clara y Carlo Acutis; la tarde termina de nuevo en Roma, bajo tierra, en San Calixto.",
+      "cover": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1600&q=86&fm=webp",
+      "places": [
+        {
+          "id": "santa-clara-asis",
+          "slug": "santa-clara-asis",
+          "name": "Basílica de Santa Clara",
+          "summary": "La basílica de piedra rosada que guarda la tumba de santa Clara y el crucifijo de San Damián.",
+          "description": "Construida poco después de la muerte de Clara, la basílica conserva su cuerpo en la cripta y el crucifijo ante el que, según la tradición, Cristo habló a Francisco en San Damián. Su fachada domina el valle de Umbría.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "catedral-san-rufino",
+          "slug": "catedral-san-rufino",
+          "name": "Catedral de San Rufino",
+          "summary": "La catedral románica de Asís, vinculada al bautismo de Francisco y Clara.",
+          "description": "San Rufino es la catedral de Asís y uno de los mejores ejemplos del románico umbro. Su pila bautismal enlaza la historia del templo con Francisco, Clara y otros santos nacidos en la ciudad.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "basilica-san-francisco",
+          "slug": "basilica-san-francisco",
+          "name": "Basílica de San Francisco",
+          "summary": "Las basílicas inferior y superior, sus grandes ciclos de frescos y la tumba de san Francisco.",
+          "description": "El conjunto se construyó para custodiar el cuerpo de san Francisco y narrar visualmente su mensaje. La basílica inferior conduce a la cripta; la superior se abre a los célebres frescos medievales atribuidos a Giotto y su taller.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "piazza-comune-minerva",
+          "slug": "piazza-comune-minerva",
+          "name": "Piazza del Comune y templo de Minerva",
+          "summary": "El centro civil de Asís, presidido por un templo romano convertido en iglesia.",
+          "description": "La plaza reúne el antiguo templo de Minerva, hoy iglesia de Santa Maria sopra Minerva, y los principales edificios cívicos medievales. Su fachada romana de columnas corintias sobrevivió integrada en la vida posterior de la ciudad.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "torre-popolo",
+          "slug": "torre-popolo",
+          "name": "Torre del Popolo",
+          "summary": "La gran torre medieval que marca el perfil de Piazza del Comune.",
+          "description": "La Torre del Popolo forma parte del conjunto del Palazzo del Capitano del Popolo. Su volumen vertical contrasta con la fachada clásica del vecino templo de Minerva y ayuda a leer las distintas épocas reunidas en la plaza.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "santuario-spogliazione",
+          "slug": "santuario-spogliazione",
+          "name": "Santuario de la Spogliazione",
+          "summary": "Santa Maria Maggiore de Asís, lugar de la renuncia de san Francisco y sepultura de san Carlo Acutis.",
+          "description": "El santuario recuerda el gesto con el que Francisco renunció a sus bienes ante el obispo. En este mismo conjunto, dentro de la iglesia de Santa Maria Maggiore, se encuentra la sepultura de san Carlo Acutis.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "calles-asis",
+          "slug": "calles-asis",
+          "name": "Las calles de Asís",
+          "summary": "Piedra rosada, cuestas, arcos y vistas sobre el valle entre una visita y otra.",
+          "description": "Caminar Asís forma parte esencial de la experiencia: sus calles medievales enlazan santuarios y plazas sin separar el monumento de la vida cotidiana. La piedra del monte Subasio da unidad y una luz muy particular a todo el casco histórico.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "santa-maria-angeles",
+          "slug": "santa-maria-angeles",
+          "name": "Santa Maria degli Angeli y la Porciúncula",
+          "summary": "La gran basílica del llano que protege la pequeña capilla de la Porciúncula.",
+          "description": "La basílica se encuentra en la localidad de Santa Maria degli Angeli, a los pies de Asís. Dentro conserva la Porciúncula, pequeña iglesia restaurada por Francisco y uno de los lugares donde nació la fraternidad franciscana.",
+          "certainty": "confirmed",
+          "editorialNote": "La Porciúncula está aquí, no dentro de la basílica de San Francisco.",
+          "hasPhotos": true
+        },
+        {
+          "id": "catacumbas-san-calixto",
+          "slug": "catacumbas-san-calixto",
+          "name": "Catacumbas de San Calixto",
+          "summary": "El gran cementerio cristiano de la vía Apia, visitado por la tarde y sin fotografías.",
+          "description": "Las catacumbas fueron uno de los principales lugares de enterramiento de la Iglesia de Roma y albergaron sepulturas de papas y mártires. La ausencia de imágenes conserva también el carácter subterráneo, silencioso y difícil de fotografiar de la visita.",
+          "certainty": "confirmed",
+          "hasPhotos": false
+        }
+      ]
+    },
+    {
+      "id": "day-5",
+      "number": 5,
+      "slug": "rivotorto-y-regreso",
+      "date": "2026-07-11",
+      "city": "Rivotorto · Asís · España",
+      "title": "Rivotorto y regreso",
+      "summary": "El último día vuelve a los orígenes de la fraternidad franciscana, deja un último paseo por Asís y emprende el camino de casa.",
+      "cover": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1600&q=86&fm=webp",
+      "places": [
+        {
+          "id": "santuario-rivotorto",
+          "slug": "santuario-rivotorto",
+          "name": "Santuario de Rivotorto",
+          "summary": "El santuario que guarda el Sacro Tugurio, memoria de Francisco y sus primeros compañeros.",
+          "description": "En el interior se conserva una reconstrucción del humilde refugio donde Francisco y los primeros frailes vivieron, rezaron y organizaron la fraternidad. El lugar está dedicado a la Virgen, pero la casita no se considera la casa de María.",
+          "certainty": "confirmed",
+          "editorialNote": "La «casita de piedra» es el Sacro Tugurio franciscano; no es una vivienda atribuida a la Virgen María.",
+          "hasPhotos": true
+        },
+        {
+          "id": "ultimo-paseo-asis",
+          "slug": "ultimo-paseo-asis",
+          "name": "Último paseo por Asís",
+          "summary": "Un tiempo más tranquilo para volver a las calles y despedirse de la ciudad.",
+          "description": "El paseo final permite mirar Asís sin la prisa del itinerario del día anterior: reconocer sus cuestas, detenerse en las plazas y guardar las últimas imágenes antes del regreso.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        },
+        {
+          "id": "regreso-espana",
+          "slug": "regreso-espana",
+          "name": "Vuelta a España",
+          "summary": "El final del desplazamiento y el comienzo de conservar y compartir lo vivido.",
+          "description": "El regreso cierra el recorrido geográfico, pero da comienzo al trabajo de la memoria: ordenar las fotografías, contar el viaje a quienes esperaban y reconocer qué permanece después de estos cinco días.",
+          "certainty": "confirmed",
+          "hasPhotos": true
+        }
+      ]
+    }
+  ]
+}

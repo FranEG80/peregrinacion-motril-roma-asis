@@ -1,11 +1,120 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import AccessForm from '../components/AccessForm.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { pilgrimage } from '../data/pilgrimage';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={`${pilgrimage.title} · Álbum privado`} description={pilgrimage.publicIntroduction[0]} transitionReadyId="home-hero">
+  <Header active="home" />
+  <main id="main-content">
+    <section id="home-hero" class="grid min-h-[calc(100svh-4rem)] bg-[#8e2925] text-[#fff9ef] lg:grid-cols-[0.85fr_1.15fr]">
+      <div class="relative z-10 flex items-center px-[max(1rem,calc((100vw-1120px)/2))] py-14 lg:pr-14">
+        <div class="max-w-[34rem]">
+          <p data-hero-reveal class="mb-4 text-xs font-bold tracking-[0.2em] text-[#f0d09e] uppercase">{pilgrimage.dates}</p>
+          <h1 data-hero-reveal class="font-serif text-4xl leading-[1.02] font-medium tracking-[-0.035em] sm:text-5xl md:text-[3.25rem]">{pilgrimage.title}</h1>
+          <p data-hero-reveal class="mt-5 max-w-[28ch] font-serif text-xl leading-snug text-[#f8e9d7] md:text-2xl">{pilgrimage.subtitle}</p>
+          <button data-hero-reveal class="mt-8 inline-flex min-h-12 items-center justify-center gap-3 border border-[#fff1dc] bg-[#fff8ed] px-6 text-sm font-bold text-[#80241f] transition-transform duration-200 hover:-translate-y-0.5 motion-reduce:transition-none" type="button" data-open-access>
+            Entrar en el álbum <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="relative min-h-[44svh] overflow-hidden bg-[#332824] lg:min-h-0" data-hero-image>
+        <img class="absolute inset-0 h-full w-full object-cover" src={pilgrimage.hero} width="2200" height="1467" alt="Panorámica de Roma con el Coliseo y la ciudad al fondo" fetchpriority="high" />
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgb(142_41_37_/_0.35),transparent_40%),linear-gradient(0deg,rgb(30_24_21_/_0.34),transparent_50%)]" aria-hidden="true"></div>
+        <div class="absolute right-5 bottom-5 grid size-28 rotate-6 place-items-center rounded-full border border-[#fff3df]/70 bg-[#8e2925]/85 text-center text-[#fff8ed] shadow-xl backdrop-blur-sm md:right-10 md:bottom-10 md:size-32" aria-hidden="true">
+          <span class="font-serif text-lg leading-tight">Motril<br /><small class="font-sans text-[0.62rem] tracking-[0.14em] uppercase">Roma · Asís</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-20">
+      <div class="mx-auto grid w-[min(1040px,calc(100%-2rem))] gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+        <div>
+          <p class="mb-2 text-xs font-bold tracking-[0.18em] text-[#8e2925] uppercase">Nuestro recuerdo compartido</p>
+          <h2 class="font-serif text-3xl leading-tight font-medium tracking-[-0.025em] text-[#26211d] md:text-[2.65rem]">Lo vivido merece un lugar propio.</h2>
+        </div>
+        <div class="max-w-[42rem] text-[1.02rem] leading-7 text-[#5d554c]">
+          {pilgrimage.publicIntroduction.map((paragraph) => <p class="mt-0 mb-5">{paragraph}</p>)}
+          <button class="mt-2 inline-flex min-h-12 items-center border border-[#8e2925] px-5 text-sm font-bold text-[#8e2925] transition-colors hover:bg-[#8e2925] hover:text-white" type="button" data-open-access>Descubrir los cinco días</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-[#372c26]/15 bg-[#251f1c] py-14 text-[#fff8ed] md:py-20" aria-labelledby="preview-title">
+      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
+        <div class="flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p class="mb-2 text-xs font-bold tracking-[0.18em] text-[#dfbc83] uppercase">Cinco jornadas</p>
+            <h2 id="preview-title" class="font-serif text-3xl leading-tight font-medium md:text-[2.65rem]">Una memoria hecha de lugares</h2>
+          </div>
+          <p class="m-0 max-w-[34rem] text-sm leading-6 text-[#d9cbbc]">El relato completo y las galerías están protegidos para el grupo y sus familias.</p>
+        </div>
+
+        <div class="mt-9 grid gap-4 sm:grid-cols-3" data-preview-grid>
+          {pilgrimage.days.slice(0, 3).map((day) => (
+            <figure class="preview-photo group m-0 border border-white/15 bg-[#332a26] p-2">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src={day.cover} width="1600" height="1067" alt="" loading="lazy" class="h-full w-full object-cover saturate-[0.8] transition duration-500 group-hover:scale-[1.03] group-hover:saturate-100 motion-reduce:transition-none" />
+              </div>
+              <figcaption class="flex items-center justify-between gap-3 px-2 py-3 text-sm text-[#f4e6d5]"><span>Día {day.number} · {day.city}</span><span aria-hidden="true">0{day.number}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <button class="mt-8 inline-flex min-h-12 items-center border border-[#f0d09e] px-5 text-sm font-bold text-[#fff7e9] transition-colors hover:bg-[#fff7e9] hover:text-[#251f1c]" type="button" data-open-access>Acceder con contraseña</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#171311] py-7 text-[#e9ddcf]">
+    <div class="mx-auto flex w-[min(1120px,calc(100%-2rem))] flex-wrap justify-between gap-2 text-sm">
+      <p class="m-0 font-serif text-base">Un álbum para conservar lo vivido juntos.</p>
+      <p class="m-0 text-[#ad9f91]">Fotografías provisionales hasta importar el archivo del grupo.</p>
+    </div>
+  </footer>
+
+  <dialog id="access-dialog" aria-labelledby="access-title" closedby="any">
+    <div class="relative p-6 md:p-10">
+      <form method="dialog" class="absolute top-4 right-4"><button type="submit" class="min-h-11 border-0 bg-[#e7ded1] px-4 text-sm font-bold text-[#3d352e]">Cerrar</button></form>
+      <p class="mb-2 text-xs font-bold tracking-[0.16em] text-[#8e2925] uppercase">Contenido privado</p>
+      <h2 id="access-title" class="max-w-[12ch] pr-16 font-serif text-3xl leading-tight font-medium text-[#26211d] md:text-[2.6rem]">Entrar en el álbum</h2>
+      <p class="text-[#5d554c]">Usa la contraseña compartida con los peregrinos y sus familias.</p>
+      <AccessForm enhanced />
+    </div>
+  </dialog>
 </Layout>
+
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const dialog = document.querySelector<HTMLDialogElement>('#access-dialog');
+  document.querySelectorAll<HTMLButtonElement>('[data-open-access]').forEach((button) => button.addEventListener('click', () => dialog?.showModal()));
+  const query = new URLSearchParams(window.location.search);
+  if (query.has('access')) dialog?.showModal();
+
+  const mm = gsap.matchMedia();
+  mm.add('(prefers-reduced-motion: no-preference)', () => {
+    const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    intro
+      .from('[data-hero-reveal]', { autoAlpha: 0, y: 24, duration: 0.72, stagger: 0.1 })
+      .from('[data-hero-image] img', { scale: 1.07, duration: 1.25, ease: 'power2.out' }, 0);
+
+    gsap.from('.preview-photo', {
+      autoAlpha: 0,
+      y: 28,
+      duration: 0.72,
+      stagger: 0.12,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '[data-preview-grid]', start: 'top 82%', once: true },
+    });
+
+    return () => intro.kill();
+  });
+
+  document.addEventListener('astro:before-swap', () => mm.revert(), { once: true });
+</script>

@@ -1,0 +1,24 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "peregrinacion-roma-media",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "peregrinacion-roma",
+      "preview_bucket_name": "peregrinacion-roma-preview"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "vars": {
+    "ALLOWED_ORIGIN": "http://localhost:4321"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
+

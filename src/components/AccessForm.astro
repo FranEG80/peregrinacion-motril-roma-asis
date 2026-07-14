@@ -1,0 +1,58 @@
+---
+interface Props { enhanced?: boolean; returnTo?: string; error?: string; }
+const { enhanced = false, returnTo = '/album', error = '' } = Astro.props;
+---
+
+<form class="access-form" method="post" action="/api/access" data-access-form={enhanced ? '' : undefined}>
+  <input type="hidden" name="returnTo" value={returnTo} />
+  <label for={enhanced ? 'dialog-password' : 'page-password'}>Contraseña compartida</label>
+  <div class="password-field">
+    <input id={enhanced ? 'dialog-password' : 'page-password'} name="password" type="password" autocomplete="current-password" required aria-describedby={enhanced ? 'dialog-access-error' : 'page-access-error'} />
+    <button type="button" data-toggle-password>Mostrar</button>
+  </div>
+  <p id={enhanced ? 'dialog-access-error' : 'page-access-error'} class="form-message" role="alert" aria-live="polite">{error}</p>
+  <button class="button" type="submit">Entrar al álbum</button>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('.access-form').forEach((form) => {
+    const password = form.querySelector<HTMLInputElement>('input[type="password"], input[type="text"]');
+    const toggle = form.querySelector<HTMLButtonElement>('[data-toggle-password]');
+    toggle?.addEventListener('click', () => {
+      if (!password) return;
+      const visible = password.type === 'text';
+      password.type = visible ? 'password' : 'text';
+      toggle.textContent = visible ? 'Mostrar' : 'Ocultar';
+    });
+    if (!form.hasAttribute('data-access-form')) return;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const message = form.querySelector<HTMLElement>('[role="alert"]');
+      if (submit) { submit.disabled = true; submit.textContent = 'Comprobando…'; }
+      if (message) message.textContent = '';
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || 'No se ha podido acceder.');
+        window.location.assign(result.redirectTo || '/album');
+      } catch (error) {
+        if (message) message.textContent = error instanceof Error ? error.message : 'No se ha podido acceder.';
+        password?.focus();
+      } finally {
+        if (submit) { submit.disabled = false; submit.textContent = 'Entrar al álbum'; }
+      }
+    });
+  });
+</script>
+
+<style>
+  .access-form { display: grid; gap: .65rem; margin-top: 1.5rem; }
+  label { font-weight: 850; }
+  .password-field { display: grid; grid-template-columns: minmax(0, 1fr) auto; overflow: clip; border: 1px solid var(--stone-500); border-radius: .75rem; background: white; }
+  .password-field:focus-within { border-color: var(--petrol-700); box-shadow: 0 0 0 3px rgb(36 89 106 / .18); }
+  input { min-width: 0; min-height: 3.25rem; border: 0; padding-inline: 1rem; outline: 0; }
+  .password-field button { min-width: 4.8rem; border: 0; border-inline-start: 1px solid var(--stone-300); background: var(--ivory-100); color: var(--petrol-800); cursor: pointer; font-weight: 850; }
+  .form-message { min-height: 1.6em; margin: 0; color: var(--terracotta-700); font-size: .86rem; font-weight: 750; }
+</style>
+

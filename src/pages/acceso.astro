@@ -1,0 +1,26 @@
+---
+import AccessForm from '../components/AccessForm.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+const error = Astro.url.searchParams.has('error') ? 'La contraseña no es correcta. Revísala e inténtalo de nuevo.' : Astro.url.searchParams.has('config') ? 'El acceso privado todavía no está configurado.' : '';
+const returnTo = Astro.url.searchParams.get('returnTo') || '/album';
+---
+<Layout title="Acceso privado · Peregrinación a Roma" transitionReadyId="access-card">
+  <Header active="home" />
+  <main id="main-content" class="access-page">
+    <section id="access-card">
+      <p class="eyebrow">Contenido privado</p>
+      <h1>Entrar en el álbum</h1>
+      <p>Introduce la contraseña compartida con los peregrinos y sus familias.</p>
+      <AccessForm returnTo={returnTo} error={error} />
+      <a class="back" href="/">← Volver a la presentación</a>
+    </section>
+  </main>
+</Layout>
+<style>
+  .access-page { display: grid; min-height: calc(100dvh - 5rem); place-items: center; padding: 1rem; }
+  section { width: min(100%, 34rem); border: 1px solid var(--stone-300); border-radius: 1.25rem; padding: clamp(1.5rem, 5vw, 3rem); background: rgb(255 255 255 / .75); box-shadow: var(--shadow-soft); }
+  h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); }
+  section > p:not(.eyebrow) { color: var(--ink-700); }
+  .back { display: inline-block; margin-top: 1.5rem; color: var(--petrol-800); font-weight: 800; }
+</style>

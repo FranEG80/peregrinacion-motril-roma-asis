@@ -1,0 +1,149 @@
+---
+interface TimelineItem {
+  id: string;
+  sequence: number;
+  eyebrow: string;
+  title: string;
+  summary: string;
+  date?: string;
+  approximateTime?: string;
+  image?: string;
+  href: string;
+  meta?: string;
+}
+
+interface Props {
+  items: TimelineItem[];
+  variant: 'days' | 'places';
+  activeId?: string;
+  ariaLabel: string;
+}
+
+const { items, variant, activeId, ariaLabel } = Astro.props;
+---
+
+<div class="relative mt-10 md:mt-14" data-timeline data-variant={variant}>
+  <div class="absolute top-0 bottom-0 left-6 w-px bg-[#d5c5ad] md:left-[2.35rem]" aria-hidden="true">
+    <span class="timeline-progress block h-full w-full origin-top scale-y-0 bg-[#96322d]"></span>
+  </div>
+
+  <ol class="m-0 grid list-none gap-9 p-0 md:gap-12" aria-label={ariaLabel}>
+    {items.map((item) => (
+      <li
+        class:list={[
+          'timeline-item group relative grid grid-cols-[3rem_minmax(0,1fr)] gap-x-4 md:grid-cols-[4.7rem_minmax(0,1fr)] md:gap-x-7',
+          item.id === activeId && 'is-current',
+        ]}
+        data-timeline-item
+      >
+        <div class="relative z-10 col-start-1 row-start-1 flex justify-center pt-5 md:pt-7">
+          <span class="timeline-marker grid size-12 place-items-center rounded-full border border-[#b99561] bg-[#f8f3e9] font-serif text-sm font-bold tabular-nums text-[#722622] shadow-[0_0_0_7px_#f8f3e9] transition-[background-color,color,border-color] duration-300 md:size-[4.7rem] md:text-base" aria-hidden="true">
+            {String(item.sequence).padStart(2, '0')}
+          </span>
+        </div>
+
+        <article class="col-start-2 min-w-0">
+          <a
+            href={item.href}
+            aria-current={item.id === activeId ? 'step' : undefined}
+            class="journey-card grid gap-5 border border-[#cdbda4] bg-[#fffdf8]/70 p-3 text-current no-underline shadow-[0_16px_45px_rgb(63_46_29_/_0.08)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-[#9a3731] hover:shadow-[0_22px_55px_rgb(63_46_29_/_0.14)] motion-reduce:transform-none md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.78fr)] md:items-stretch md:gap-8 md:p-4"
+          >
+            <div class="flex min-w-0 flex-col justify-center px-2 py-2 md:px-4 md:py-5">
+              <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.7rem] font-bold tracking-[0.15em] text-[#8e2925] uppercase">
+                <span>{item.date || item.approximateTime || item.eyebrow}</span>
+                {item.meta && <span class="font-medium tracking-normal text-[#665c51] normal-case">{item.meta}</span>}
+              </div>
+              <h3
+                class="max-w-[19ch] font-serif text-[1.75rem] leading-[1.02] font-medium tracking-[-0.025em] text-[#26211d] sm:text-[2rem] md:text-[2.3rem]"
+                data-view-transition={variant === 'days' ? 'page-title' : undefined}
+                style={variant === 'days' ? `--view-transition-name: day-title-${item.id}` : undefined}
+              >
+                {item.title}
+              </h3>
+              <p class="mt-4 mb-0 max-w-[58ch] text-[0.98rem] leading-7 text-[#5d554c]">{item.summary}</p>
+              <span class="mt-5 inline-flex items-center gap-3 text-sm font-extrabold text-[#842d29]">
+                {variant === 'days' ? `Abrir jornada ${item.sequence}` : 'Abrir parada'}
+                <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+              </span>
+            </div>
+
+            {item.image ? (
+              <div
+                class="timeline-image relative min-h-52 overflow-hidden bg-[#d8ccba] md:min-h-64"
+                data-view-transition={variant === 'days' ? 'page-cover' : undefined}
+                style={variant === 'days' ? `--view-transition-name: day-cover-${item.id}` : undefined}
+              >
+                <img
+                  src={item.image}
+                  width="960"
+                  height="720"
+                  alt=""
+                  loading="lazy"
+                  class="absolute inset-0 h-full w-full object-cover saturate-[0.88] transition-[transform,filter] duration-700 group-hover:scale-[1.025] group-hover:saturate-100 motion-reduce:transition-none"
+                />
+                <span class="absolute right-3 bottom-3 border border-white/55 bg-[#7f2926]/90 px-3 py-1 text-[0.65rem] font-bold tracking-[0.13em] text-white uppercase backdrop-blur-sm">Capítulo {String(item.sequence).padStart(2, '0')}</span>
+              </div>
+            ) : (
+              <div class="grid min-h-52 place-items-center border border-dashed border-[#b7a993] bg-[#eee7da] px-4 text-center text-xs font-bold tracking-[0.1em] text-[#766b60] uppercase">Recuerdo sin fotografía</div>
+            )}
+          </a>
+        </article>
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .timeline-item.is-current .timeline-marker {
+    border-color: #96322d;
+    background: #96322d;
+    color: white;
+  }
+
+  .timeline-item.is-current .journey-card {
+    border-color: rgb(150 50 45 / .65);
+    box-shadow: 0 22px 58px rgb(63 46 29 / .13);
+  }
+</style>
+
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const cleanups: Array<() => void> = [];
+
+  document.querySelectorAll<HTMLElement>('[data-timeline]').forEach((timeline) => {
+    const mm = gsap.matchMedia();
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      const items = gsap.utils.toArray<HTMLElement>('[data-timeline-item]', timeline);
+      const progress = timeline.querySelector<HTMLElement>('.timeline-progress');
+
+      if (progress) {
+        gsap.to(progress, {
+          scaleY: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: timeline,
+            start: 'clamp(top 68%)',
+            end: 'clamp(bottom 68%)',
+            scrub: 0.45,
+          },
+        });
+      }
+
+      items.forEach((item) => {
+        ScrollTrigger.create({
+          trigger: item,
+          start: 'top 58%',
+          end: 'bottom 58%',
+          toggleClass: { targets: item, className: 'is-current' },
+        });
+      });
+    }, timeline);
+    cleanups.push(() => mm.revert());
+  });
+
+  window.addEventListener('pagehide', () => cleanups.forEach((cleanup) => cleanup()), { once: true });
+</script>

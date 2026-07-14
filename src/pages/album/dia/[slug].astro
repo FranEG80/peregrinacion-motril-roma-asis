@@ -1,0 +1,73 @@
+---
+import DayExperience from '../../../components/DayExperience';
+import Header from '../../../components/Header.astro';
+import { getDay, pilgrimage } from '../../../data/pilgrimage';
+import Layout from '../../../layouts/Layout.astro';
+import '../../../styles/day-experience.css';
+
+const day = getDay(Astro.params.slug || '');
+if (!day) return Astro.redirect('/album', 302);
+
+const date = new Intl.DateTimeFormat('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(`${day.date}T12:00:00`));
+---
+
+<Layout title={`Día ${day.number}: ${day.title} · ${pilgrimage.title}`} description={day.summary} transitionReadyId="day-hero">
+  <Header active="album" />
+  <main id="main-content">
+    <section id="day-hero" class="relative grid min-h-[52dvh] max-h-[660px] items-end overflow-hidden bg-[#241f1b] text-white">
+      <img
+        src={day.cover}
+        width="1600"
+        height="1067"
+        alt=""
+        fetchpriority="high"
+        class="absolute inset-0 h-full w-full object-cover"
+        data-view-transition="page-cover"
+        style={`--view-transition-name: day-cover-${day.id}`}
+      />
+      <div class="absolute inset-0 bg-[linear-gradient(0deg,rgb(27_22_19_/_0.92),rgb(27_22_19_/_0.16)_78%),linear-gradient(90deg,rgb(27_22_19_/_0.48),transparent)]" aria-hidden="true"></div>
+      <div class="relative mx-auto w-[min(1120px,calc(100%-2rem))] py-10 md:py-14">
+        <a href="/album" class="mb-7 inline-flex min-h-11 items-center text-sm font-bold text-white underline-offset-4 hover:underline">← Volver al itinerario</a>
+        <p class="mb-2 text-xs font-bold tracking-[0.16em] text-[#f3d39d] uppercase">Día {day.number} · {date} · {day.city}</p>
+        <h1
+          class="max-w-[15ch] font-serif text-4xl leading-[1.03] font-medium tracking-[-0.03em] sm:text-5xl md:text-[3.25rem]"
+          data-view-transition="page-title"
+          style={`--view-transition-name: day-title-${day.id}`}
+        >{day.title}</h1>
+        <p class="mt-4 mb-0 max-w-[62ch] text-base leading-7 text-[#f6eee4]">{day.summary}</p>
+      </div>
+    </section>
+
+    <nav class="border-b border-[#cdbfae] bg-[#f5f0e7]" aria-label="Cambiar de jornada">
+      <p class="m-0 border-b border-[#cdbfae]/70 px-4 py-2 text-[0.68rem] font-bold tracking-[0.12em] text-[#7c302a] uppercase sm:hidden">Desliza para cambiar de jornada →</p>
+      <div class="overflow-x-auto overscroll-x-contain">
+        <div class="mx-auto grid w-[min(1120px,100%)] snap-x snap-mandatory grid-cols-[repeat(5,minmax(9rem,1fr))]">
+        {pilgrimage.days.map((item) => (
+          <a
+            href={`/album/dia/${item.slug}`}
+            aria-current={item.id === day.id ? 'step' : undefined}
+            class="snap-start border-l border-[#cdbfae] px-4 py-3 text-[#413a34] no-underline transition-colors last:border-r hover:bg-[#ebe2d4] aria-[current=step]:bg-[#8e2925] aria-[current=step]:text-white"
+          >
+            <span class="block text-[0.66rem] font-bold tracking-[0.12em] uppercase">Día {item.number}</span>
+            <strong class="block max-w-[13rem] truncate font-serif text-[0.94rem] font-semibold">{item.title}</strong>
+          </a>
+        ))}
+        </div>
+      </div>
+    </nav>
+
+    <section class="relative overflow-hidden bg-[#f8f3e9] py-14 md:py-20" aria-labelledby="day-story-title">
+      <div class="pointer-events-none absolute top-20 -left-24 size-72 rounded-full border border-[#8e2925]/8" aria-hidden="true"></div>
+      <div class="relative mx-auto w-[min(1120px,calc(100%-2rem))]">
+        <div class="grid gap-4 border-b border-[#2b211d]/20 pb-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+          <div>
+            <p class="mb-2 text-xs font-bold tracking-[0.17em] text-[#8e2925] uppercase">Día {day.number} · {day.places.length} paradas</p>
+            <h2 id="day-story-title" class="font-serif text-3xl leading-tight font-medium text-[#26211d] md:text-[2.6rem]">El camino, parada a parada</h2>
+          </div>
+          <p class="m-0 max-w-[55ch] text-base leading-7 text-[#625950] md:justify-self-end">Historia, fotografías y selección conviven ahora en una sola secuencia. Sigue el hilo rojo o abre cada lugar para ampliar el recuerdo.</p>
+        </div>
+        <DayExperience client:load day={day} />
+      </div>
+    </section>
+  </main>
+</Layout>

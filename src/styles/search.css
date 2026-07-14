@@ -1,0 +1,126 @@
+.album-search {
+  display: block;
+  margin-top: 2rem;
+  color: inherit;
+}
+
+.album-search > label {
+  display: block;
+  margin-bottom: .55rem;
+  color: inherit;
+  font-weight: 850;
+}
+
+.search-field {
+  display: grid;
+  min-height: 3.4rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .6rem;
+  border: 1px solid var(--stone-500);
+  border-radius: 999px;
+  padding: .3rem .5rem .3rem 1rem;
+  background: var(--ivory-50);
+  color: var(--petrol-800);
+  box-shadow: 0 12px 34px rgb(52 42 29 / .12);
+}
+
+.search-field:focus-within {
+  border-color: var(--petrol-700);
+  box-shadow: 0 0 0 3px rgb(36 89 106 / .25), 0 12px 34px rgb(52 42 29 / .12);
+}
+
+.search-field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink-900);
+}
+
+.search-field input::placeholder {
+  color: var(--ink-700);
+  opacity: 1;
+}
+
+.search-field > svg {
+  color: var(--petrol-800);
+}
+
+.search-field button {
+  display: grid;
+  width: 2.7rem;
+  height: 2.7rem;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--petrol-800);
+  cursor: pointer;
+}
+
+.search-field button:hover { background: rgb(36 89 106 / .1); }
+
+.search-status {
+  margin: .55rem 0 0;
+  color: inherit;
+  font-size: .82rem;
+}
+
+.search-results {
+  display: grid;
+  gap: .65rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-results a {
+  display: block;
+  border: 1px solid var(--stone-300);
+  border-radius: .8rem;
+  padding: .9rem 1rem;
+  background: rgb(255 255 255 / .94);
+  color: var(--ink-900);
+  box-shadow: 0 8px 24px rgb(38 33 29 / .08);
+  text-decoration: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.search-results a:hover {
+  border-color: var(--petrol-700);
+  box-shadow: 0 12px 28px rgb(38 33 29 / .13);
+  transform: translateY(-1px);
+}
+
+.search-results span {
+  color: var(--petrol-700);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.search-results strong {
+  display: block;
+  color: var(--ink-900);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.search-results p {
+  margin: .2rem 0 0;
+  color: var(--ink-700);
+  font-size: .88rem;
+}
+
+.search-results .empty {
+  padding: 1rem;
+  border-radius: .8rem;
+  background: var(--stone-200);
+  color: var(--ink-900);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-results a:hover { transform: none; }
+}

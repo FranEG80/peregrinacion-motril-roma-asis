@@ -1,0 +1,82 @@
+---
+import Header from '../../components/Header.astro';
+import SearchExperience from '../../components/SearchExperience';
+import Timeline from '../../components/Timeline.astro';
+import { pilgrimage } from '../../data/pilgrimage';
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/search.css';
+
+const searchItems = pilgrimage.days.flatMap((day) => [
+  { id: day.id, day: `Día ${day.number}`, title: day.title, summary: day.summary, href: `/album/dia/${day.slug}`, type: 'Día' as const },
+  ...day.places.map((place) => ({ id: place.id, day: `Día ${day.number}`, title: place.name, summary: `${place.summary} ${place.description}`, href: `/album/dia/${day.slug}?lugar=${place.slug}`, type: 'Lugar' as const })),
+]);
+
+const timelineItems = pilgrimage.days.map((day) => ({
+  id: day.id,
+  sequence: day.number,
+  eyebrow: `Día ${day.number}`,
+  date: new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' }).format(new Date(`${day.date}T12:00:00`)),
+  title: day.title,
+  summary: day.summary,
+  image: day.cover,
+  href: `/album/dia/${day.slug}`,
+  meta: `${day.city} · ${day.places.length} paradas`,
+}));
+
+const totalStops = pilgrimage.days.reduce((total, day) => total + day.places.length, 0);
+---
+
+<Layout title={`Los cinco días · ${pilgrimage.title}`} description={pilgrimage.privateIntroduction} transitionReadyId="album-hero">
+  <Header active="album" />
+  <main id="main-content">
+    <section id="album-hero" class="relative overflow-hidden border-b border-[#2b211d]/10 bg-[#8e2925] text-[#fffaf0]">
+      <div class="absolute -top-20 right-[8%] size-72 rounded-full border border-[#fff4db]/15" aria-hidden="true"></div>
+      <div class="absolute top-10 right-[13%] size-40 rounded-full border border-[#fff4db]/15" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-0 h-px w-full bg-[linear-gradient(90deg,transparent,#f2d09a_35%,#f2d09a_65%,transparent)] opacity-45" aria-hidden="true"></div>
+      <div class="relative mx-auto grid w-[min(1120px,calc(100%-2rem))] gap-10 py-14 md:grid-cols-[0.9fr_1.1fr] md:items-end md:py-20 lg:gap-20">
+        <div>
+          <p class="mb-3 text-xs font-bold tracking-[0.18em] text-[#f1cf9d] uppercase">7—11 de julio · 2026</p>
+          <h1 class="max-w-[12ch] font-serif text-4xl leading-[1.02] font-medium tracking-[-0.035em] sm:text-5xl md:text-[3.25rem]">Roma y Asís, día a día</h1>
+          <div class="mt-8 flex max-w-[26rem] items-center gap-3 text-[0.68rem] font-bold tracking-[0.16em] text-[#f7e8d3] uppercase" aria-label="Ruta Motril, Roma y Asís">
+            <span>Motril</span><span class="h-px flex-1 bg-[#efce9d]/65" aria-hidden="true"></span>
+            <span>Roma</span><span class="h-px flex-1 bg-[#efce9d]/65" aria-hidden="true"></span>
+            <span>Asís</span>
+          </div>
+        </div>
+        <div class="max-w-[40rem] md:justify-self-end">
+          <p class="mt-0 text-[1.06rem] leading-7 text-[#f7eadc]">{pilgrimage.privateIntroduction}</p>
+          <dl class="my-7 grid grid-cols-3 border-y border-[#f6dfbd]/25 py-4 text-[#fff8ed]">
+            <div><dt class="text-[0.62rem] font-bold tracking-[0.14em] text-[#efce9d] uppercase">Jornadas</dt><dd class="m-0 mt-1 font-serif text-2xl">05</dd></div>
+            <div class="border-x border-[#f6dfbd]/20 px-4"><dt class="text-[0.62rem] font-bold tracking-[0.14em] text-[#efce9d] uppercase">Paradas</dt><dd class="m-0 mt-1 font-serif text-2xl">{String(totalStops).padStart(2, '0')}</dd></div>
+            <div class="pl-4"><dt class="text-[0.62rem] font-bold tracking-[0.14em] text-[#efce9d] uppercase">Destino</dt><dd class="m-0 mt-1 font-serif text-2xl">Asís</dd></div>
+          </dl>
+          <div class="[&_.album-search>label]:text-[#fff8ed] [&_.search-status]:text-[#f7e5cc]">
+            <SearchExperience client:idle items={searchItems} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-14 md:py-20" aria-labelledby="journey-title">
+      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
+        <div class="grid gap-4 border-b border-[#2b211d]/20 pb-8 md:grid-cols-[1fr_1.25fr] md:items-end">
+          <div>
+            <p class="mb-2 text-xs font-bold tracking-[0.17em] text-[#8e2925] uppercase">La bitácora del viaje</p>
+            <h2 id="journey-title" class="font-serif text-3xl leading-tight font-medium tracking-[-0.025em] text-[#26211d] md:text-[2.6rem]">Cinco jornadas.<br />Un recuerdo compartido.</h2>
+          </div>
+          <p class="m-0 max-w-[54ch] text-[1.02rem] leading-7 text-[#625950] md:justify-self-end">
+            Cada capítulo conserva el orden del camino, sus lugares y las fotografías que hicieron memorable la jornada.
+          </p>
+        </div>
+        <Timeline items={timelineItems} variant="days" ariaLabel="Recorrido de los cinco días de la peregrinación" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#f6e8d2]/20 bg-[#231d1a] py-7 text-[#f5eadb]">
+    <div class="mx-auto flex w-[min(1120px,calc(100%-2rem))] flex-wrap items-center justify-between gap-2 text-sm">
+      <p class="m-0 font-serif text-base">Peregrinación Roma · Asís</p>
+      <p class="m-0 text-[#cfc0af]">Motril · 7—11 julio</p>
+    </div>
+  </footer>
+</Layout>
