@@ -22,87 +22,62 @@ interface Props {
 const { items, variant, activeId, ariaLabel } = Astro.props;
 ---
 
-<div class="relative mt-10 md:mt-14" data-timeline data-variant={variant}>
-  <div class="absolute top-0 bottom-0 left-6 w-px bg-[#d5c5ad] md:left-[2.35rem]" aria-hidden="true">
-    <span class="timeline-progress block h-full w-full origin-top scale-y-0 bg-[#96322d]"></span>
-  </div>
-
-  <ol class="m-0 grid list-none gap-9 p-0 md:gap-12" aria-label={ariaLabel}>
+<div class="timeline" data-timeline data-variant={variant}>
+  <div class="timeline__rail" aria-hidden="true"><span class="timeline-progress"></span></div>
+  <ol aria-label={ariaLabel}>
     {items.map((item) => (
-      <li
-        class:list={[
-          'timeline-item group relative grid grid-cols-[3rem_minmax(0,1fr)] gap-x-4 md:grid-cols-[4.7rem_minmax(0,1fr)] md:gap-x-7',
-          item.id === activeId && 'is-current',
-        ]}
-        data-timeline-item
-      >
-        <div class="relative z-10 col-start-1 row-start-1 flex justify-center pt-5 md:pt-7">
-          <span class="timeline-marker grid size-12 place-items-center rounded-full border border-[#b99561] bg-[#f8f3e9] font-serif text-sm font-bold tabular-nums text-[#722622] shadow-[0_0_0_7px_#f8f3e9] transition-[background-color,color,border-color] duration-300 md:size-[4.7rem] md:text-base" aria-hidden="true">
-            {String(item.sequence).padStart(2, '0')}
-          </span>
-        </div>
-
-        <article class="col-start-2 min-w-0">
-          <a
-            href={item.href}
-            aria-current={item.id === activeId ? 'step' : undefined}
-            class="journey-card grid gap-5 border border-[#cdbda4] bg-[#fffdf8]/70 p-3 text-current no-underline shadow-[0_16px_45px_rgb(63_46_29_/_0.08)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-[#9a3731] hover:shadow-[0_22px_55px_rgb(63_46_29_/_0.14)] motion-reduce:transform-none md:grid-cols-[minmax(0,1fr)_minmax(18rem,0.78fr)] md:items-stretch md:gap-8 md:p-4"
-          >
-            <div class="flex min-w-0 flex-col justify-center px-2 py-2 md:px-4 md:py-5">
-              <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.7rem] font-bold tracking-[0.15em] text-[#8e2925] uppercase">
-                <span>{item.date || item.approximateTime || item.eyebrow}</span>
-                {item.meta && <span class="font-medium tracking-normal text-[#665c51] normal-case">{item.meta}</span>}
-              </div>
-              <h3
-                class="max-w-[19ch] font-serif text-[1.75rem] leading-[1.02] font-medium tracking-[-0.025em] text-[#26211d] sm:text-[2rem] md:text-[2.3rem]"
-                data-view-transition={variant === 'days' ? 'page-title' : undefined}
-                style={variant === 'days' ? `--view-transition-name: day-title-${item.id}` : undefined}
-              >
-                {item.title}
-              </h3>
-              <p class="mt-4 mb-0 max-w-[58ch] text-[0.98rem] leading-7 text-[#5d554c]">{item.summary}</p>
-              <span class="mt-5 inline-flex items-center gap-3 text-sm font-extrabold text-[#842d29]">
-                {variant === 'days' ? `Abrir jornada ${item.sequence}` : 'Abrir parada'}
-                <span class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
-              </span>
-            </div>
-
-            {item.image ? (
-              <div
-                class="timeline-image relative min-h-52 overflow-hidden bg-[#d8ccba] md:min-h-64"
-                data-view-transition={variant === 'days' ? 'page-cover' : undefined}
-                style={variant === 'days' ? `--view-transition-name: day-cover-${item.id}` : undefined}
-              >
-                <img
-                  src={item.image}
-                  width="960"
-                  height="720"
-                  alt=""
-                  loading="lazy"
-                  class="absolute inset-0 h-full w-full object-cover saturate-[0.88] transition-[transform,filter] duration-700 group-hover:scale-[1.025] group-hover:saturate-100 motion-reduce:transition-none"
-                />
-                <span class="absolute right-3 bottom-3 border border-white/55 bg-[#7f2926]/90 px-3 py-1 text-[0.65rem] font-bold tracking-[0.13em] text-white uppercase backdrop-blur-sm">Capítulo {String(item.sequence).padStart(2, '0')}</span>
-              </div>
-            ) : (
-              <div class="grid min-h-52 place-items-center border border-dashed border-[#b7a993] bg-[#eee7da] px-4 text-center text-xs font-bold tracking-[0.1em] text-[#766b60] uppercase">Recuerdo sin fotografía</div>
-            )}
-          </a>
-        </article>
+      <li class:list={['timeline-item', item.id === activeId && 'is-current']} data-timeline-item>
+        <span class="timeline-marker" aria-hidden="true">{String(item.sequence).padStart(2, '0')}</span>
+        <a href={item.href} aria-current={item.id === activeId ? 'step' : undefined} class="journey-entry">
+          {item.image ? (
+            <figure class="journey-entry__image" data-view-transition={variant === 'days' ? 'page-cover' : undefined} style={variant === 'days' ? `--view-transition-name: day-cover-${item.id}` : undefined}>
+              <img src={item.image} width="960" height="720" alt="" loading="lazy" decoding="async" />
+              <figcaption>Capítulo {String(item.sequence).padStart(2, '0')}</figcaption>
+            </figure>
+          ) : <div class="journey-entry__empty">Recuerdo sin fotografía</div>}
+          <div class="journey-entry__copy">
+            <p class="journey-entry__meta"><span>{item.date || item.approximateTime || item.eyebrow}</span>{item.meta && <span>{item.meta}</span>}</p>
+            <h3 data-view-transition={variant === 'days' ? 'page-title' : undefined} style={variant === 'days' ? `--view-transition-name: day-title-${item.id}` : undefined}>{item.title}</h3>
+            <p>{item.summary}</p>
+            <span class="journey-entry__link">{variant === 'days' ? `Abrir jornada ${item.sequence}` : 'Abrir parada'} <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
       </li>
     ))}
   </ol>
 </div>
 
 <style>
-  .timeline-item.is-current .timeline-marker {
-    border-color: #96322d;
-    background: #96322d;
-    color: white;
-  }
+  .timeline { position: relative; margin-top: 2rem; }
+  .timeline__rail { position: absolute; top: 0; bottom: 0; left: 1.15rem; width: 1px; background: var(--line); }
+  .timeline-progress { display: block; width: 100%; height: 100%; background: var(--gold); transform: scaleY(0); transform-origin: top; }
+  ol { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+  .timeline-item { position: relative; padding: 0 0 3rem 3.5rem; }
+  .timeline-marker { position: absolute; top: 0; left: 0; z-index: 1; display: grid; width: 2.3rem; height: 2.3rem; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--muted); font-family: var(--font-display); font-size: .72rem; font-variant-numeric: tabular-nums; transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease; }
+  .timeline-item.is-current .timeline-marker { border-color: var(--gold); background: var(--gold); color: var(--cream); }
+  .journey-entry { display: grid; gap: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.2rem; color: inherit; text-decoration: none; }
+  .journey-entry__image { position: relative; min-height: 13rem; margin: 0; overflow: hidden; background: var(--line); }
+  .journey-entry__image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85); transition: transform 400ms ease, filter 400ms ease; }
+  .journey-entry:hover .journey-entry__image img { filter: saturate(1); transform: scale(1.02); }
+  .journey-entry__image figcaption { position: absolute; right: 0; bottom: 0; padding: .35rem .55rem; background: rgb(250 249 246 / .92); color: var(--muted); font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .journey-entry__empty { display: grid; min-height: 11rem; place-items: center; border: 1px dashed var(--line); color: var(--muted); font-size: .68rem; text-transform: uppercase; }
+  .journey-entry__copy { align-self: center; max-width: 37rem; }
+  .journey-entry__meta { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin: 0 0 .65rem; color: var(--gold); font-size: .62rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+  .journey-entry__meta span + span { color: var(--muted); }
+  .journey-entry h3 { max-width: 20ch; font-size: clamp(1.65rem, 3vw, 2.1rem); }
+  .journey-entry__copy > p:not(.journey-entry__meta) { margin: .8rem 0 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+  .journey-entry__link { display: inline-flex; gap: .55rem; margin-top: 1rem; border-bottom: 1px solid var(--gold); color: var(--charcoal); font-size: .72rem; font-weight: 850; }
+  .journey-entry__link span { transition: transform 180ms ease; }
+  .journey-entry:hover .journey-entry__link span { transform: translateX(.2rem); }
 
-  .timeline-item.is-current .journey-card {
-    border-color: rgb(150 50 45 / .65);
-    box-shadow: 0 22px 58px rgb(63 46 29 / .13);
+  @media (min-width: 760px) {
+    .timeline__rail { left: 1.45rem; }
+    .timeline-item { padding-left: 5.2rem; padding-bottom: 4rem; }
+    .timeline-marker { width: 2.9rem; height: 2.9rem; font-size: .82rem; }
+    .journey-entry { grid-template-columns: minmax(15rem, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 4.5rem); }
+    .timeline-item:nth-child(even) .journey-entry { grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr); }
+    .timeline-item:nth-child(even) .journey-entry__image { order: 2; }
+    .timeline-item:nth-child(even) .journey-entry__copy { order: 1; }
   }
 </style>
 
@@ -111,39 +86,17 @@ const { items, variant, activeId, ariaLabel } = Astro.props;
   import ScrollTrigger from 'gsap/ScrollTrigger';
 
   gsap.registerPlugin(ScrollTrigger);
-
   const cleanups: Array<() => void> = [];
-
   document.querySelectorAll<HTMLElement>('[data-timeline]').forEach((timeline) => {
     const mm = gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      const items = gsap.utils.toArray<HTMLElement>('[data-timeline-item]', timeline);
       const progress = timeline.querySelector<HTMLElement>('.timeline-progress');
-
-      if (progress) {
-        gsap.to(progress, {
-          scaleY: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: timeline,
-            start: 'clamp(top 68%)',
-            end: 'clamp(bottom 68%)',
-            scrub: 0.45,
-          },
-        });
-      }
-
-      items.forEach((item) => {
-        ScrollTrigger.create({
-          trigger: item,
-          start: 'top 58%',
-          end: 'bottom 58%',
-          toggleClass: { targets: item, className: 'is-current' },
-        });
+      if (progress) gsap.to(progress, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: timeline, start: 'clamp(top 68%)', end: 'clamp(bottom 68%)', scrub: .35 } });
+      gsap.utils.toArray<HTMLElement>('[data-timeline-item]', timeline).forEach((item) => {
+        ScrollTrigger.create({ trigger: item, start: 'top 62%', end: 'bottom 62%', toggleClass: { targets: item, className: 'is-current' } });
       });
     }, timeline);
     cleanups.push(() => mm.revert());
   });
-
-  window.addEventListener('pagehide', () => cleanups.forEach((cleanup) => cleanup()), { once: true });
+  document.addEventListener('astro:before-swap', () => cleanups.forEach((cleanup) => cleanup()), { once: true });
 </script>

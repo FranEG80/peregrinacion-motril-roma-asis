@@ -18,9 +18,10 @@ const returnTo = Astro.url.searchParams.get('returnTo') || '/album';
   </main>
 </Layout>
 <style>
-  .access-page { display: grid; min-height: calc(100dvh - 5rem); place-items: center; padding: 1rem; }
-  section { width: min(100%, 34rem); border: 1px solid var(--stone-300); border-radius: 1.25rem; padding: clamp(1.5rem, 5vw, 3rem); background: rgb(255 255 255 / .75); box-shadow: var(--shadow-soft); }
-  h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); }
+  .access-page { display: grid; min-height: calc(100dvh - 4rem); place-items: center; padding: 1rem; }
+  section { position: relative; width: min(100%, 26rem); border: 1px solid var(--line); border-radius: .35rem; padding: clamp(1.3rem, 5vw, 2rem); background: rgb(250 249 246 / .92); box-shadow: var(--shadow-soft); }
+  section::after { position: absolute; right: -3rem; bottom: -2.5rem; width: 7rem; height: 7rem; background: url('/images/marginalia/scallop.png') center / contain no-repeat; content: ''; opacity: .17; pointer-events: none; }
+  h1 { font-size: clamp(2rem, 7vw, 2.8rem); }
   section > p:not(.eyebrow) { color: var(--ink-700); }
-  .back { display: inline-block; margin-top: 1.5rem; color: var(--petrol-800); font-weight: 800; }
+  .back { display: inline-block; margin-top: 1.2rem; color: var(--muted); font-size: .82rem; font-weight: 800; }
 </style>

@@ -1,4 +1,5 @@
 ---
+import { Eye, EyeOff } from 'lucide-preact';
 interface Props { enhanced?: boolean; returnTo?: string; error?: string; }
 const { enhanced = false, returnTo = '/album', error = '' } = Astro.props;
 ---
@@ -8,7 +9,10 @@ const { enhanced = false, returnTo = '/album', error = '' } = Astro.props;
   <label for={enhanced ? 'dialog-password' : 'page-password'}>Contraseña compartida</label>
   <div class="password-field">
     <input id={enhanced ? 'dialog-password' : 'page-password'} name="password" type="password" autocomplete="current-password" required aria-describedby={enhanced ? 'dialog-access-error' : 'page-access-error'} />
-    <button type="button" data-toggle-password>Mostrar</button>
+    <button type="button" data-toggle-password aria-label="Mostrar contraseña" aria-pressed="false">
+      <Eye size={18} strokeWidth={1.7} data-eye />
+      <EyeOff size={18} strokeWidth={1.7} data-eye-off hidden />
+    </button>
   </div>
   <p id={enhanced ? 'dialog-access-error' : 'page-access-error'} class="form-message" role="alert" aria-live="polite">{error}</p>
   <button class="button" type="submit">Entrar al álbum</button>
@@ -22,7 +26,10 @@ const { enhanced = false, returnTo = '/album', error = '' } = Astro.props;
       if (!password) return;
       const visible = password.type === 'text';
       password.type = visible ? 'password' : 'text';
-      toggle.textContent = visible ? 'Mostrar' : 'Ocultar';
+      toggle.setAttribute('aria-label', visible ? 'Mostrar contraseña' : 'Ocultar contraseña');
+      toggle.setAttribute('aria-pressed', String(!visible));
+      toggle.querySelector<SVGElement>('[data-eye]')?.toggleAttribute('hidden', !visible);
+      toggle.querySelector<SVGElement>('[data-eye-off]')?.toggleAttribute('hidden', visible);
     });
     if (!form.hasAttribute('data-access-form')) return;
     form.addEventListener('submit', async (event) => {
@@ -47,12 +54,13 @@ const { enhanced = false, returnTo = '/album', error = '' } = Astro.props;
 </script>
 
 <style>
-  .access-form { display: grid; gap: .65rem; margin-top: 1.5rem; }
-  label { font-weight: 850; }
-  .password-field { display: grid; grid-template-columns: minmax(0, 1fr) auto; overflow: clip; border: 1px solid var(--stone-500); border-radius: .75rem; background: white; }
-  .password-field:focus-within { border-color: var(--petrol-700); box-shadow: 0 0 0 3px rgb(36 89 106 / .18); }
-  input { min-width: 0; min-height: 3.25rem; border: 0; padding-inline: 1rem; outline: 0; }
-  .password-field button { min-width: 4.8rem; border: 0; border-inline-start: 1px solid var(--stone-300); background: var(--ivory-100); color: var(--petrol-800); cursor: pointer; font-weight: 850; }
-  .form-message { min-height: 1.6em; margin: 0; color: var(--terracotta-700); font-size: .86rem; font-weight: 750; }
+  .access-form { display: grid; gap: .55rem; margin-top: 1.2rem; }
+  label { font-size: .82rem; font-weight: 800; }
+  .password-field { display: grid; grid-template-columns: minmax(0, 1fr) 2.9rem; overflow: clip; border: 1px solid var(--line); border-radius: .2rem; background: white; }
+  .password-field:focus-within { border-color: var(--gold); box-shadow: 0 0 0 3px rgb(155 122 67 / .13); }
+  input { min-width: 0; min-height: 2.85rem; border: 0; padding-inline: .9rem; outline: 0; }
+  .password-field button { display: grid; place-items: center; border: 0; border-inline-start: 1px solid var(--line); background: var(--paper); color: var(--charcoal); cursor: pointer; }
+  .password-field button:hover { background: #eee4d5; }
+  .password-field [hidden] { display: none; }
+  .form-message { min-height: 1.5em; margin: 0; color: var(--rust); font-size: .8rem; font-weight: 750; }
 </style>
-

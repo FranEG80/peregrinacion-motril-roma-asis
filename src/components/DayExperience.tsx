@@ -1,228 +1,235 @@
-import { Check, ChevronLeft, ChevronRight, Download, Images, X } from 'lucide-preact';
+import { Check, ChevronLeft, ChevronRight, Download, Filter, Play, X } from 'lucide-preact';
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import type { PhotoAsset, PilgrimageDay, Place } from '../domain/pilgrimage';
+import type { GalleryDay, GalleryMedia } from '../data/gallery';
 
-type DialogView = { type: 'place'; place: Place } | { type: 'photo'; place: Place; photoIndex: number } | { type: 'download' } | null;
-type Batch = { label: string; count: number; estimatedBytes: number; url: string };
+type DownloadFile = { id: string; name: string; url: string };
 
-function formatBytes(bytes: number) {
-  if (bytes < 1_000_000) return `${Math.max(1, Math.round(bytes / 1_000))} KB`;
-  return `${(bytes / 1_000_000).toFixed(bytes > 100_000_000 ? 0 : 1)} MB`;
+function formatBlockTime(from?: string, to?: string) {
+  if (!from) return 'Parada del itinerario';
+  const start = from.slice(11, 16);
+  return to ? `${start}–${to.slice(11, 16)}` : start;
 }
 
-function PhotoFigure({ photo, selected, onToggle, onOpen }: { photo: PhotoAsset; selected: boolean; onToggle: () => void; onOpen: () => void }) {
-  const duplicateCaption = !photo.alt || photo.alt === photo.caption;
-  return (
-    <figure class={`photo-card ${selected ? 'is-selected' : ''}`}>
-      <label class="photo-select">
-        <input type="checkbox" checked={selected} onChange={onToggle} />
-        <span><Check aria-hidden="true" size={18} />{selected ? 'Seleccionada' : 'Seleccionar'}</span>
-      </label>
-      <button type="button" class="photo-open" onClick={onOpen} aria-label={`Ampliar: ${photo.caption}`}>
-        <img src={photo.src} width={photo.width} height={photo.height} alt={photo.alt || photo.caption} loading="lazy" />
-      </button>
-      <figcaption aria-hidden={duplicateCaption ? 'true' : undefined}>{photo.caption}</figcaption>
-    </figure>
-  );
-}
-
-export default function DayExperience({ day }: { day: PilgrimageDay }) {
-  const allPhotos = useMemo(() => day.places.flatMap((place) => place.photos), [day]);
+export default function DayExperience({ day }: { day: GalleryDay }) {
+  const allMedia = useMemo(() => day.blocks.flatMap((block) => block.media), [day.blocks]);
+  const images = useMemo(() => allMedia.filter((item) => item.mediaType === 'image'), [allMedia]);
   const [selected, setSelected] = useState<Set<string>>(new Set());
-  const [view, setView] = useState<DialogView>(null);
-  const [quality, setQuality] = useState<'webp' | 'original'>('webp');
-  const [batches, setBatches] = useState<Batch[]>([]);
-  const [downloadError, setDownloadError] = useState('');
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [downloadOpen, setDownloadOpen] = useState(false);
+  const [files, setFiles] = useState<DownloadFile[]>([]);
+  const [error, setError] = useState('');
   const [preparing, setPreparing] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
 
+  const visibleBlocks = useMemo(() => {
+    if (!activeTag) return day.blocks;
+    return day.blocks
+      .map((block) => ({ ...block, media: block.media.filter((item) => item.keywords.includes(activeTag)) }))
+      .filter((block) => block.media.length);
+  }, [activeTag, day.blocks]);
+  const visibleMedia = useMemo(() => visibleBlocks.flatMap((block) => block.media), [visibleBlocks]);
+  const active = allMedia.find((item) => item.id === activeId);
+  const tags = useMemo(() => {
+    const counts = new Map<string, number>();
+    allMedia.forEach((item) => item.keywords.forEach((tag) => counts.set(tag, (counts.get(tag) || 0) + 1)));
+    return [...counts].map(([tag, count]) => ({ tag, count })).sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag, 'es')).slice(0, 32);
+  }, [allMedia]);
+
   useEffect(() => {
     try {
-      const stored = JSON.parse(sessionStorage.getItem(`selection:${day.id}`) || '[]') as string[];
-      setSelected(new Set(stored.filter((id) => allPhotos.some((photo) => photo.id === id))));
+      const saved = JSON.parse(sessionStorage.getItem(`selection:${day.id}`) || '[]') as string[];
+      setSelected(new Set(saved.filter((id) => images.some((item) => item.id === id))));
     } catch {}
-  }, [day.id]);
+  }, [day.id, images]);
 
   useEffect(() => {
     try { sessionStorage.setItem(`selection:${day.id}`, JSON.stringify([...selected])); } catch {}
   }, [day.id, selected]);
 
   useEffect(() => {
-    if (view && !dialogRef.current?.open) dialogRef.current?.showModal();
-  }, [view]);
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if ((activeId || downloadOpen) && !dialog.open) dialog.showModal();
+    const closeOnBackdrop = (event: MouseEvent) => {
+      if (event.target === dialog) dialog.close();
+    };
+    dialog.addEventListener('click', closeOnBackdrop);
+    return () => dialog.removeEventListener('click', closeOnBackdrop);
+  }, [activeId, downloadOpen]);
 
   useEffect(() => {
-    const openFromUrl = () => {
-      const slug = new URL(window.location.href).searchParams.get('lugar');
-      const place = day.places.find((candidate) => candidate.slug === slug);
-      if (place) setView({ type: 'place', place });
-      else if (dialogRef.current?.open) dialogRef.current.close();
+    const onKey = (event: KeyboardEvent) => {
+      if (!active || downloadOpen) return;
+      const index = visibleMedia.findIndex((item) => item.id === active.id);
+      if (event.key === 'ArrowLeft' && index > 0) setActiveId(visibleMedia[index - 1].id);
+      if (event.key === 'ArrowRight' && index < visibleMedia.length - 1) setActiveId(visibleMedia[index + 1].id);
     };
-    openFromUrl();
-    window.addEventListener('popstate', openFromUrl);
-    return () => window.removeEventListener('popstate', openFromUrl);
-  }, [day.places]);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [active, downloadOpen, visibleMedia]);
 
   const toggle = (id: string) => setSelected((current) => {
     const next = new Set(current);
     next.has(id) ? next.delete(id) : next.add(id);
     return next;
   });
-  const selectPhotos = (photos: PhotoAsset[]) => setSelected((current) => new Set([...current, ...photos.map((photo) => photo.id)]));
-  const clearPhotos = (photos?: PhotoAsset[]) => setSelected((current) => photos ? new Set([...current].filter((id) => !photos.some((photo) => photo.id === id))) : new Set());
-
-  const open = (next: DialogView, trigger?: HTMLElement | null) => {
-    if (trigger) triggerRef.current = trigger;
-    setBatches([]);
-    setDownloadError('');
-    setView(next);
+  const openMedia = (item: GalleryMedia, trigger: HTMLElement) => {
+    triggerRef.current = trigger;
+    setDownloadOpen(false);
+    setActiveId(item.id);
   };
-
-  const openPlace = (place: Place, trigger: HTMLElement) => {
-    const url = new URL(window.location.href);
-    url.searchParams.set('lugar', place.slug);
-    history.pushState({ place: place.slug }, '', url);
-    open({ type: 'place', place }, trigger);
-  };
-
-  const close = () => dialogRef.current?.close();
-  const onDialogClose = () => {
-    setView(null);
-    const url = new URL(window.location.href);
-    if (url.searchParams.has('lugar')) { url.searchParams.delete('lugar'); history.replaceState({}, '', url); }
+  const closeDialog = () => dialogRef.current?.close();
+  const onClose = () => {
+    setActiveId(null);
+    setDownloadOpen(false);
     triggerRef.current?.focus();
   };
-
-  const selectedPhotos = allPhotos.filter((photo) => selected.has(photo.id));
-  const estimatedBytes = selectedPhotos.reduce((total, photo) => total + (quality === 'webp' ? photo.webpBytes : photo.originalBytes), 0);
+  const selectedImages = images.filter((item) => selected.has(item.id));
+  const currentIndex = active ? visibleMedia.findIndex((item) => item.id === active.id) : -1;
 
   async function prepareDownload() {
     setPreparing(true);
-    setDownloadError('');
-    setBatches([]);
+    setError('');
+    setFiles([]);
     try {
       const response = await fetch('/api/download-tickets', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ dayId: day.id, photoIds: selectedPhotos.map((photo) => photo.id), quality }),
+        body: JSON.stringify({ dayId: day.id, photoIds: selectedImages.map((item) => item.id) }),
       });
       const result = await response.json();
-      if (!response.ok) throw new Error(result.error || 'No se ha podido preparar la descarga.');
-      setBatches(result.batches);
-    } catch (error) {
-      setDownloadError(error instanceof Error ? error.message : 'No se ha podido preparar la descarga.');
-    } finally { setPreparing(false); }
+      if (!response.ok) throw new Error(result.error || 'No se han podido preparar las descargas.');
+      setFiles(result.files);
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : 'No se han podido preparar las descargas.');
+    } finally {
+      setPreparing(false);
+    }
   }
 
   return (
     <div class="day-experience">
+      {tags.length > 0 && (
+        <details class="tag-filter">
+          <summary><Filter size={15} strokeWidth={1.8} aria-hidden="true" /> Filtrar por etiquetas {activeTag && <span>· {activeTag}</span>}</summary>
+          <div class="tag-list">
+            {tags.map(({ tag, count }) => (
+              <button key={tag} type="button" class={activeTag === tag ? 'is-active' : ''} aria-pressed={activeTag === tag} onClick={() => setActiveTag((current) => current === tag ? null : tag)}>
+                {tag}<span>{count}</span>
+              </button>
+            ))}
+            {activeTag && <button type="button" class="tag-reset" onClick={() => setActiveTag(null)}>Quitar filtro</button>}
+          </div>
+        </details>
+      )}
+
       <ol class="places-stack" aria-label={`Recorrido del día ${day.number}`}>
-        {day.places.map((place) => {
-          const placeSelected = place.photos.filter((photo) => selected.has(photo.id)).length;
-          return (
-            <li class="place-chapter" key={place.id}>
-              <span class="place-marker" aria-hidden="true">{String(place.sequence).padStart(2, '0')}</span>
-              <article id={`lugar-${place.slug}`} class="place-section">
-                <header class="place-heading">
-                  <div>
-                    <p class="eyebrow">Parada {place.sequence}{place.approximateTime ? ` · ${place.approximateTime}` : ''}</p>
-                    <h2>{place.name}</h2>
-                    <p class="place-summary">{place.summary}</p>
-                  </div>
-                  <div class="place-heading-meta">
-                    <span>{place.photos.length ? `${place.photos.length} ${place.photos.length === 1 ? 'fotografía' : 'fotografías'}` : 'Sin fotografías'}</span>
-                    {place.certainty === 'probable' && <span>Identificación probable</span>}
-                  </div>
-                </header>
-
-                <div class="place-story">
-                  <p>{place.description}</p>
-                  <button class="place-detail" type="button" onClick={(event) => openPlace(place, event.currentTarget)}>
-                    Abrir la ficha <span aria-hidden="true">↗</span>
-                  </button>
+        {visibleBlocks.map((block, index) => (
+          <li class="place-chapter" key={block.id}>
+            <span class="place-marker" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <article class="place-section">
+              <header class="place-heading">
+                <div>
+                  <p class="eyebrow">Parada {index + 1} · {formatBlockTime(block.from, block.to)}</p>
+                  <h2>{block.title}</h2>
+                  <p class="place-summary">{block.summary}</p>
                 </div>
+                <span class="place-count">{block.media.length ? `${block.media.length} ${block.media.length === 1 ? 'archivo' : 'archivos'}` : 'Sin archivo'}</span>
+              </header>
 
-                {place.photos.length ? (
-                  <>
-                    <div class="place-actions" aria-label={`Selección de fotos de ${place.name}`}>
-                      <span>{placeSelected} de {place.photos.length} seleccionadas</span>
-                      <button type="button" onClick={() => selectPhotos(place.photos)}>Seleccionar todas</button>
-                      <button type="button" onClick={() => clearPhotos(place.photos)}>Deseleccionar</button>
-                    </div>
-                    <div class="photo-grid">
-                      {place.photos.map((photo, index) => <PhotoFigure key={photo.id} photo={photo} selected={selected.has(photo.id)} onToggle={() => toggle(photo.id)} onOpen={() => open({ type: 'photo', place, photoIndex: index })} />)}
-                    </div>
-                  </>
-                ) : (
-                  <p class="place-empty">No hay fotografías de esta visita. La parada se conserva en el recorrido por su significado.</p>
-                )}
-              </article>
-            </li>
-          );
-        })}
+              {block.description.trim() !== block.summary.trim() && (
+                <details class="place-note">
+                  <summary>Leer nota del lugar</summary>
+                  <p>{block.description}</p>
+                </details>
+              )}
+
+              {block.media.length ? (
+                <div class="media-grid">
+                  {block.media.map((item) => (
+                    <figure class={`media-tile ${item.mediaType === 'video' ? 'media-tile--video' : ''} ${selected.has(item.id) ? 'is-selected' : ''}`} key={item.id}>
+                      {item.mediaType === 'image' && (
+                        <button type="button" class="media-select" aria-label={`${selected.has(item.id) ? 'Quitar de la selección' : 'Seleccionar'}: ${item.title}`} aria-pressed={selected.has(item.id)} onClick={() => toggle(item.id)}>
+                          <Check size={15} strokeWidth={2} aria-hidden="true" />
+                        </button>
+                      )}
+                      <button type="button" class="media-open" onClick={(event) => openMedia(item, event.currentTarget)} aria-label={`${item.mediaType === 'video' ? 'Reproducir' : 'Ampliar'}: ${item.title}`}>
+                        {item.mediaType === 'image' ? (
+                          <img src={item.thumbnailSrc} width="960" height="720" alt="" loading="lazy" decoding="async" />
+                        ) : (
+                          <span class="video-placeholder" aria-hidden="true"><Play size={34} strokeWidth={1.5} /></span>
+                        )}
+                      </button>
+                      <figcaption class="sr-only">{item.title}. {item.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              ) : (
+                <p class="place-empty">Esta parada forma parte del itinerario, pero no tiene fotografías asociadas en el archivo del día.</p>
+              )}
+            </article>
+          </li>
+        ))}
       </ol>
 
       {selected.size > 0 && (
         <aside class="selection-bar" aria-label="Fotos seleccionadas">
-          <div><strong>{selected.size} {selected.size === 1 ? 'foto seleccionada' : 'fotos seleccionadas'}</strong><span aria-live="polite">Listas para descargar</span></div>
-          <button class="button button--quiet" type="button" onClick={() => clearPhotos()}>Deseleccionar</button>
-          <button class="button" type="button" onClick={(event) => open({ type: 'download' }, event.currentTarget)}><Download aria-hidden="true" size={20} />Descargar</button>
+          <strong>{selected.size} {selected.size === 1 ? 'foto' : 'fotos'}</strong>
+          <button class="selection-clear" type="button" onClick={() => setSelected(new Set())}>Deseleccionar</button>
+          <button class="button" type="button" onClick={(event) => { triggerRef.current = event.currentTarget; setActiveId(null); setDownloadOpen(true); }}>
+            <Download size={17} strokeWidth={1.8} aria-hidden="true" /> Descargar
+          </button>
         </aside>
       )}
 
-      <dialog ref={dialogRef} onClose={onDialogClose} aria-labelledby="experience-dialog-title" closedby="any">
-        {view && (
-          <div class="experience-dialog">
-            <button type="button" class="dialog-x" onClick={close} aria-label="Cerrar"><X aria-hidden="true" size={25} /></button>
-            {view.type === 'place' && (
-              <div>
-                <p class="eyebrow">Lugar {view.place.sequence}{view.place.approximateTime ? ` · ${view.place.approximateTime}` : ''}</p>
-                <h2 id="experience-dialog-title">{view.place.name}</h2>
-                <p class="place-description">{view.place.description}</p>
-                {view.place.editorialNote && <p class="mt-5 border-l-2 border-[#a2302b] bg-[#eee5d8] px-4 py-3 text-sm leading-6 text-[#554c44]"><strong class="text-[#8e2925]">Nota del itinerario.</strong> {view.place.editorialNote}</p>}
-                {view.place.photos.length ? (
-                  <div class="dialog-photo-grid">
-                    {view.place.photos.map((photo, index) => <button type="button" onClick={() => setView({ type: 'photo', place: view.place, photoIndex: index })} aria-label={`Ampliar: ${photo.caption}`}><img src={photo.src} width={photo.width} height={photo.height} alt="" loading="lazy" /></button>)}
-                  </div>
-                ) : <p class="mt-5 text-sm font-bold text-[#6a6057]">Esta parada no tiene fotografías.</p>}
+      <dialog ref={dialogRef} onClose={onClose} aria-labelledby="experience-dialog-title" closedby="any" class={downloadOpen ? 'download-dialog' : 'media-dialog'}>
+        <div class="experience-dialog">
+          <button type="button" class="dialog-x" onClick={closeDialog} aria-label="Cerrar"><X size={20} strokeWidth={1.7} aria-hidden="true" /></button>
+
+          {active && (
+            <div class="lightbox">
+              <div class="lightbox-media">
+                {active.mediaType === 'image' ? (
+                  <img src={active.src} alt={active.caption} />
+                ) : (
+                  <video key={active.id} controls autoplay preload="metadata" playsinline src={active.src} aria-label={active.title} />
+                )}
+                <button type="button" class="lightbox-nav lightbox-nav--previous" disabled={currentIndex <= 0} onClick={() => setActiveId(visibleMedia[currentIndex - 1].id)} aria-label="Archivo anterior">
+                  <ChevronLeft size={24} aria-hidden="true" />
+                </button>
+                <button type="button" class="lightbox-nav lightbox-nav--next" disabled={currentIndex >= visibleMedia.length - 1} onClick={() => setActiveId(visibleMedia[currentIndex + 1].id)} aria-label="Archivo siguiente">
+                  <ChevronRight size={24} aria-hidden="true" />
+                </button>
               </div>
-            )}
-            {view.type === 'photo' && (() => {
-              const photo = view.place.photos[view.photoIndex];
-              return (
-                <div class="lightbox">
-                  <p class="eyebrow">{view.place.name} · Foto {view.photoIndex + 1} de {view.place.photos.length}</p>
-                  <h2 id="experience-dialog-title" class="sr-only">Fotografía ampliada</h2>
-                  <img src={photo.src} width={photo.width} height={photo.height} alt={photo.alt || photo.caption} />
-                  <p class="lightbox-caption">{photo.caption}</p>
-                  <div class="lightbox-actions">
-                    <button class="button button--secondary" type="button" onClick={() => setView({ type: 'place', place: view.place })}>Volver al lugar</button>
-                    <button class="button button--quiet" type="button" disabled={view.photoIndex === 0} onClick={() => setView({ ...view, photoIndex: view.photoIndex - 1 })}><ChevronLeft aria-hidden="true" size={21} />Anterior</button>
-                    <button class="button button--quiet" type="button" disabled={view.photoIndex === view.place.photos.length - 1} onClick={() => setView({ ...view, photoIndex: view.photoIndex + 1 })}>Siguiente<ChevronRight aria-hidden="true" size={21} /></button>
-                    <label class="lightbox-select"><input type="checkbox" checked={selected.has(photo.id)} onChange={() => toggle(photo.id)} />Seleccionar esta foto</label>
-                  </div>
+              <aside class="lightbox-copy">
+                <p class="eyebrow">{active.mediaType === 'video' ? 'Vídeo' : 'Imagen'} {currentIndex + 1} de {visibleMedia.length}</p>
+                <h2 id="experience-dialog-title">{active.title}</h2>
+                <p class="lightbox-caption">{active.caption}</p>
+                <div class="lightbox-tags">
+                  {active.keywords.map((tag) => <button key={tag} type="button" onClick={() => { setActiveTag(tag); closeDialog(); }}>{tag}</button>)}
                 </div>
-              );
-            })()}
-            {view.type === 'download' && (
-              <div class="download-view">
-                <p class="eyebrow">Descarga por partes</p>
-                <h2 id="experience-dialog-title">Preparar {selected.size} fotos</h2>
-                <p>La opción recomendada mantiene la resolución completa y reduce el peso sin conservar datos privados de ubicación.</p>
-                <fieldset>
-                  <legend>Calidad de descarga</legend>
-                  <label class={quality === 'webp' ? 'is-checked' : ''}><input type="radio" name="quality" value="webp" checked={quality === 'webp'} onChange={() => { setQuality('webp'); setBatches([]); }} /><span><strong>WebP de alta calidad</strong><small>Resolución completa · calidad 88 · recomendado</small></span></label>
-                  <label class={quality === 'original' ? 'is-checked' : ''}><input type="radio" name="quality" value="original" checked={quality === 'original'} onChange={() => { setQuality('original'); setBatches([]); }} /><span><strong>Archivos originales</strong><small>Más pesados y con los metadatos originales</small></span></label>
-                </fieldset>
-                <div class="download-summary"><Images aria-hidden="true" size={23} /><span><strong>{selected.size} fotos · {formatBytes(estimatedBytes)}</strong><small>Usa una conexión Wi‑Fi para descargas grandes.</small></span></div>
-                {!batches.length && <button class="button" type="button" disabled={preparing} onClick={prepareDownload}>{preparing ? 'Preparando…' : 'Preparar descarga'}</button>}
-                <p class="download-error" role="alert" aria-live="polite">{downloadError}</p>
-                {batches.length > 0 && <div class="batch-list">{batches.map((batch) => <a class="button" href={batch.url}><Download aria-hidden="true" size={20} />{batch.label} · {batch.count} fotos</a>)}</div>}
-              </div>
-            )}
-          </div>
-        )}
+                {active.mediaType === 'image' && (
+                  <button type="button" class="lightbox-select" aria-pressed={selected.has(active.id)} onClick={() => toggle(active.id)}>
+                    <Check size={16} aria-hidden="true" /> {selected.has(active.id) ? 'Seleccionada' : 'Seleccionar foto'}
+                  </button>
+                )}
+              </aside>
+            </div>
+          )}
+
+          {downloadOpen && (
+            <div class="download-view">
+              <p class="eyebrow">Descargas privadas</p>
+              <h2 id="experience-dialog-title">Preparar {selected.size} {selected.size === 1 ? 'foto' : 'fotos'}</h2>
+              <p>Se generan enlaces temporales para los archivos WebP seleccionados.</p>
+              {!files.length && <button class="button" type="button" disabled={preparing} onClick={prepareDownload}>{preparing ? 'Preparando…' : 'Preparar descargas'}</button>}
+              <p class="download-error" role="alert">{error}</p>
+              {files.length > 0 && <div class="batch-list">{files.map((file) => <a key={file.id} class="button" href={file.url} download={file.name}><Download size={17} aria-hidden="true" />{file.name}</a>)}</div>}
+            </div>
+          )}
+        </div>
       </dialog>
     </div>
   );

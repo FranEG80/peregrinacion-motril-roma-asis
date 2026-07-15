@@ -2,72 +2,87 @@
 import DayExperience from '../../../components/DayExperience';
 import Header from '../../../components/Header.astro';
 import { getDay, pilgrimage } from '../../../data/pilgrimage';
+import { getGalleryDay } from '../../../data/gallery';
 import Layout from '../../../layouts/Layout.astro';
 import '../../../styles/day-experience.css';
 
 const day = getDay(Astro.params.slug || '');
 if (!day) return Astro.redirect('/album', 302);
-
+let galleryDay;
+let galleryError = '';
+try { galleryDay = await getGalleryDay(day.slug); } catch (error) { galleryError = error instanceof Error ? error.message : 'No se ha podido cargar la galería.'; }
+const displayDay = galleryDay || day;
 const date = new Intl.DateTimeFormat('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(`${day.date}T12:00:00`));
+const marks = ['arch', 'vatican', 'colosseum', 'assisi-tower', 'olive-branch'];
 ---
 
-<Layout title={`Día ${day.number}: ${day.title} · ${pilgrimage.title}`} description={day.summary} transitionReadyId="day-hero">
+<Layout title={`Día ${day.number}: ${displayDay.title} · ${pilgrimage.title}`} description={displayDay.summary} transitionReadyId="day-hero">
   <Header active="album" />
   <main id="main-content">
-    <section id="day-hero" class="relative grid min-h-[52dvh] max-h-[660px] items-end overflow-hidden bg-[#241f1b] text-white">
-      <img
-        src={day.cover}
-        width="1600"
-        height="1067"
-        alt=""
-        fetchpriority="high"
-        class="absolute inset-0 h-full w-full object-cover"
-        data-view-transition="page-cover"
-        style={`--view-transition-name: day-cover-${day.id}`}
-      />
-      <div class="absolute inset-0 bg-[linear-gradient(0deg,rgb(27_22_19_/_0.92),rgb(27_22_19_/_0.16)_78%),linear-gradient(90deg,rgb(27_22_19_/_0.48),transparent)]" aria-hidden="true"></div>
-      <div class="relative mx-auto w-[min(1120px,calc(100%-2rem))] py-10 md:py-14">
-        <a href="/album" class="mb-7 inline-flex min-h-11 items-center text-sm font-bold text-white underline-offset-4 hover:underline">← Volver al itinerario</a>
-        <p class="mb-2 text-xs font-bold tracking-[0.16em] text-[#f3d39d] uppercase">Día {day.number} · {date} · {day.city}</p>
-        <h1
-          class="max-w-[15ch] font-serif text-4xl leading-[1.03] font-medium tracking-[-0.03em] sm:text-5xl md:text-[3.25rem]"
-          data-view-transition="page-title"
-          style={`--view-transition-name: day-title-${day.id}`}
-        >{day.title}</h1>
-        <p class="mt-4 mb-0 max-w-[62ch] text-base leading-7 text-[#f6eee4]">{day.summary}</p>
+    <section id="day-hero" class="day-hero">
+      <img src={displayDay.cover} width="1600" height="1067" alt="" fetchpriority="high" data-view-transition="page-cover" style={`--view-transition-name: day-cover-${day.id}`} />
+      <div class="day-hero__shade" aria-hidden="true"></div>
+      <div class="container day-hero__copy">
+        <a href="/album">← Volver al itinerario</a>
+        <p class="eyebrow">Día {day.number} · {date} · {day.city}</p>
+        <h1 data-view-transition="page-title" style={`--view-transition-name: day-title-${day.id}`}>{displayDay.title}</h1>
+        <p>{displayDay.summary}</p>
       </div>
     </section>
 
-    <nav class="border-b border-[#cdbfae] bg-[#f5f0e7]" aria-label="Cambiar de jornada">
-      <p class="m-0 border-b border-[#cdbfae]/70 px-4 py-2 text-[0.68rem] font-bold tracking-[0.12em] text-[#7c302a] uppercase sm:hidden">Desliza para cambiar de jornada →</p>
-      <div class="overflow-x-auto overscroll-x-contain">
-        <div class="mx-auto grid w-[min(1120px,100%)] snap-x snap-mandatory grid-cols-[repeat(5,minmax(9rem,1fr))]">
+    <nav class="day-switcher" aria-label="Cambiar de jornada">
+      <div class="container day-switcher__scroll">
         {pilgrimage.days.map((item) => (
-          <a
-            href={`/album/dia/${item.slug}`}
-            aria-current={item.id === day.id ? 'step' : undefined}
-            class="snap-start border-l border-[#cdbfae] px-4 py-3 text-[#413a34] no-underline transition-colors last:border-r hover:bg-[#ebe2d4] aria-[current=step]:bg-[#8e2925] aria-[current=step]:text-white"
-          >
-            <span class="block text-[0.66rem] font-bold tracking-[0.12em] uppercase">Día {item.number}</span>
-            <strong class="block max-w-[13rem] truncate font-serif text-[0.94rem] font-semibold">{item.title}</strong>
+          <a href={`/album/dia/${item.slug}`} aria-current={item.id === day.id ? 'step' : undefined}>
+            <span>Día {item.number}</span>
+            <strong>{item.title}</strong>
           </a>
         ))}
-        </div>
       </div>
     </nav>
 
-    <section class="relative overflow-hidden bg-[#f8f3e9] py-14 md:py-20" aria-labelledby="day-story-title">
-      <div class="pointer-events-none absolute top-20 -left-24 size-72 rounded-full border border-[#8e2925]/8" aria-hidden="true"></div>
-      <div class="relative mx-auto w-[min(1120px,calc(100%-2rem))]">
-        <div class="grid gap-4 border-b border-[#2b211d]/20 pb-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+    <section class="day-story section" aria-labelledby="day-story-title">
+      <img class="day-story__mark" src={`/images/marginalia/${marks[day.number - 1]}.png`} width="760" height="520" alt="" loading="lazy" />
+      <div class="container">
+        <div class="day-story__heading">
           <div>
-            <p class="mb-2 text-xs font-bold tracking-[0.17em] text-[#8e2925] uppercase">Día {day.number} · {day.places.length} paradas</p>
-            <h2 id="day-story-title" class="font-serif text-3xl leading-tight font-medium text-[#26211d] md:text-[2.6rem]">El camino, parada a parada</h2>
+            <p class="eyebrow">Día {day.number} · archivo multimedia</p>
+            <h2 id="day-story-title" class="section-title">El camino, momento a momento</h2>
           </div>
-          <p class="m-0 max-w-[55ch] text-base leading-7 text-[#625950] md:justify-self-end">Historia, fotografías y selección conviven ahora en una sola secuencia. Sigue el hilo rojo o abre cada lugar para ampliar el recuerdo.</p>
+          <p>Las imágenes y vídeos conservan el orden del día. Abre cada pieza para leer su ficha completa o filtra por palabras clave.</p>
         </div>
-        <DayExperience client:load day={day} />
+        {galleryDay ? <DayExperience client:load day={galleryDay} /> : <p class="gallery-error">{galleryError}</p>}
       </div>
     </section>
   </main>
 </Layout>
+
+<style>
+  .day-hero { position: relative; display: grid; min-height: min(42dvh, 440px); align-items: end; overflow: hidden; background: var(--charcoal); color: white; }
+  .day-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .day-hero__shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgb(36 35 31 / .88), rgb(36 35 31 / .2) 78%), linear-gradient(90deg, rgb(36 35 31 / .42), transparent); }
+  .day-hero__copy { position: relative; padding-block: clamp(2rem, 5vw, 3.5rem); }
+  .day-hero__copy > a { display: inline-flex; min-height: 2.5rem; align-items: center; margin-bottom: 1rem; color: #f4ede1; font-size: .72rem; font-weight: 800; text-underline-offset: .25rem; }
+  .day-hero .eyebrow { margin-bottom: .5rem; color: #d9bc87; }
+  .day-hero h1 { max-width: 16ch; font-size: clamp(2.1rem, 5vw, 3rem); }
+  .day-hero h1 + p { max-width: 62ch; margin: .75rem 0 0; color: #eee5d8; font-size: .9rem; line-height: 1.6; }
+  .day-switcher { border-bottom: 1px solid var(--line); background: var(--cream); }
+  .day-switcher__scroll { display: grid; grid-template-columns: repeat(5, minmax(8.6rem, 1fr)); overflow-x: auto; padding-inline: 0; scrollbar-width: thin; }
+  .day-switcher a { min-width: 0; border-left: 1px solid var(--line); padding: .7rem .8rem; color: var(--muted); text-decoration: none; transition: background-color 180ms ease, color 180ms ease; }
+  .day-switcher a:last-child { border-right: 1px solid var(--line); }
+  .day-switcher a:hover { background: var(--paper); color: var(--charcoal); }
+  .day-switcher a[aria-current='step'] { background: var(--charcoal); color: var(--cream); }
+  .day-switcher span { display: block; color: var(--gold); font-size: .56rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+  .day-switcher a[aria-current='step'] span { color: #d7b97e; }
+  .day-switcher strong { display: block; overflow: hidden; font-family: var(--font-display); font-size: .78rem; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+  .day-story { position: relative; overflow: clip; }
+  .day-story__mark { position: absolute; top: 2rem; right: -1.5rem; width: clamp(7rem, 14vw, 11rem); max-height: 11rem; object-fit: contain; opacity: .09; pointer-events: none; }
+  .day-story__heading { position: relative; z-index: 1; display: grid; gap: 1rem; border-bottom: 1px solid var(--line); padding-bottom: 1.8rem; }
+  .day-story__heading > p { max-width: 54ch; margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+  .gallery-error { margin-top: 2rem; border-left: 2px solid var(--rust); padding: .8rem 1rem; background: #f1e4df; color: var(--rust); }
+
+  @media (min-width: 760px) {
+    .day-story__heading { grid-template-columns: .9fr 1.1fr; align-items: end; }
+    .day-story__heading > p { justify-self: end; }
+  }
+</style>

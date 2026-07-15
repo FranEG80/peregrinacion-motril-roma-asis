@@ -1,90 +1,224 @@
 ---
+import { ArrowRight, X } from 'lucide-preact';
 import AccessForm from '../components/AccessForm.astro';
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import { pilgrimage } from '../data/pilgrimage';
+import { getHomeDayPreviews } from '../data/gallery';
+
+const days = getHomeDayPreviews();
+const marginalia = ['vatican', 'arch', 'colosseum', 'assisi-tower', 'olive-branch'];
+const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' });
 ---
 
 <Layout title={`${pilgrimage.title} · Álbum privado`} description={pilgrimage.publicIntroduction[0]} transitionReadyId="home-hero">
   <Header active="home" />
   <main id="main-content">
-    <section id="home-hero" class="grid min-h-[calc(100svh-4rem)] bg-[#8e2925] text-[#fff9ef] lg:grid-cols-[0.85fr_1.15fr]">
-      <div class="relative z-10 flex items-center px-[max(1rem,calc((100vw-1120px)/2))] py-14 lg:pr-14">
-        <div class="max-w-[34rem]">
-          <p data-hero-reveal class="mb-4 text-xs font-bold tracking-[0.2em] text-[#f0d09e] uppercase">{pilgrimage.dates}</p>
-          <h1 data-hero-reveal class="font-serif text-4xl leading-[1.02] font-medium tracking-[-0.035em] sm:text-5xl md:text-[3.25rem]">{pilgrimage.title}</h1>
-          <p data-hero-reveal class="mt-5 max-w-[28ch] font-serif text-xl leading-snug text-[#f8e9d7] md:text-2xl">{pilgrimage.subtitle}</p>
-          <button data-hero-reveal class="mt-8 inline-flex min-h-12 items-center justify-center gap-3 border border-[#fff1dc] bg-[#fff8ed] px-6 text-sm font-bold text-[#80241f] transition-transform duration-200 hover:-translate-y-0.5 motion-reduce:transition-none" type="button" data-open-access>
-            Entrar en el álbum <span aria-hidden="true">→</span>
+    <section id="home-hero" class="home-hero">
+      <div class="container home-hero__inner">
+        <div class="home-hero__copy">
+          <div class="home-hero__brand" data-hero-reveal>
+            <img src="/brand/pilgrimage-mark-512.png" width="76" height="76" alt="" />
+            <span>Cuaderno de peregrinación</span>
+          </div>
+          <p class="eyebrow" data-hero-reveal>{pilgrimage.dates}</p>
+          <h1 class="display-title" data-hero-reveal>{pilgrimage.title}</h1>
+          <p class="home-hero__lead" data-hero-reveal>{pilgrimage.subtitle}</p>
+          <button class="button home-hero__cta" type="button" data-open-access data-hero-reveal>
+            Entrar en el álbum <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
+          </button>
+        </div>
+
+        <figure class="home-hero__art" data-hero-art>
+          <img src="/images/editorial/rome-assisi-pencil.webp" width="2048" height="1153" alt="Ilustración a lápiz que enlaza la columnata de Roma con el perfil medieval de Asís" fetchpriority="high" />
+          <figcaption>Roma — Asís · cinco jornadas</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="home-intro section" aria-labelledby="intro-title">
+      <div class="container home-intro__grid">
+        <div>
+          <p class="eyebrow">Nuestro recuerdo compartido</p>
+          <h2 id="intro-title" class="section-title">Cinco días guardados como un cuaderno de viaje.</h2>
+        </div>
+        <div class="home-intro__text">
+          {pilgrimage.publicIntroduction.map((paragraph) => <p>{paragraph}</p>)}
+          <button class="text-link" type="button" data-open-access>
+            Abrir el archivo privado <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
           </button>
         </div>
       </div>
-
-      <div class="relative min-h-[44svh] overflow-hidden bg-[#332824] lg:min-h-0" data-hero-image>
-        <img class="absolute inset-0 h-full w-full object-cover" src={pilgrimage.hero} width="2200" height="1467" alt="Panorámica de Roma con el Coliseo y la ciudad al fondo" fetchpriority="high" />
-        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgb(142_41_37_/_0.35),transparent_40%),linear-gradient(0deg,rgb(30_24_21_/_0.34),transparent_50%)]" aria-hidden="true"></div>
-        <div class="absolute right-5 bottom-5 grid size-28 rotate-6 place-items-center rounded-full border border-[#fff3df]/70 bg-[#8e2925]/85 text-center text-[#fff8ed] shadow-xl backdrop-blur-sm md:right-10 md:bottom-10 md:size-32" aria-hidden="true">
-          <span class="font-serif text-lg leading-tight">Motril<br /><small class="font-sans text-[0.62rem] tracking-[0.14em] uppercase">Roma · Asís</small></span>
-        </div>
-      </div>
+      <img class="marginalia marginalia--column" src="/images/marginalia/column.png" width="178" height="760" alt="" loading="lazy" />
     </section>
 
-    <section class="py-14 md:py-20">
-      <div class="mx-auto grid w-[min(1040px,calc(100%-2rem))] gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
-        <div>
-          <p class="mb-2 text-xs font-bold tracking-[0.18em] text-[#8e2925] uppercase">Nuestro recuerdo compartido</p>
-          <h2 class="font-serif text-3xl leading-tight font-medium tracking-[-0.025em] text-[#26211d] md:text-[2.65rem]">Lo vivido merece un lugar propio.</h2>
-        </div>
-        <div class="max-w-[42rem] text-[1.02rem] leading-7 text-[#5d554c]">
-          {pilgrimage.publicIntroduction.map((paragraph) => <p class="mt-0 mb-5">{paragraph}</p>)}
-          <button class="mt-2 inline-flex min-h-12 items-center border border-[#8e2925] px-5 text-sm font-bold text-[#8e2925] transition-colors hover:bg-[#8e2925] hover:text-white" type="button" data-open-access>Descubrir los cinco días</button>
-        </div>
+    <section class="journey-story" aria-labelledby="days-title">
+      <div class="container journey-story__heading">
+        <p class="eyebrow">El viaje, día a día</p>
+        <h2 id="days-title" class="section-title">De las basílicas de Roma a la piedra clara de Asís</h2>
+        <p>Una mirada breve a lo vivido en cada jornada. Las galerías completas quedan reservadas al grupo y a sus familias.</p>
       </div>
-    </section>
 
-    <section class="border-y border-[#372c26]/15 bg-[#251f1c] py-14 text-[#fff8ed] md:py-20" aria-labelledby="preview-title">
-      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
-        <div class="flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <p class="mb-2 text-xs font-bold tracking-[0.18em] text-[#dfbc83] uppercase">Cinco jornadas</p>
-            <h2 id="preview-title" class="font-serif text-3xl leading-tight font-medium md:text-[2.65rem]">Una memoria hecha de lugares</h2>
-          </div>
-          <p class="m-0 max-w-[34rem] text-sm leading-6 text-[#d9cbbc]">El relato completo y las galerías están protegidos para el grupo y sus familias.</p>
-        </div>
-
-        <div class="mt-9 grid gap-4 sm:grid-cols-3" data-preview-grid>
-          {pilgrimage.days.slice(0, 3).map((day) => (
-            <figure class="preview-photo group m-0 border border-white/15 bg-[#332a26] p-2">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src={day.cover} width="1600" height="1067" alt="" loading="lazy" class="h-full w-full object-cover saturate-[0.8] transition duration-500 group-hover:scale-[1.03] group-hover:saturate-100 motion-reduce:transition-none" />
+      <div class="journey-chapters">
+        {days.map((day, index) => (
+          <article class:list={['day-chapter', index >= 3 && 'day-chapter--assisi']} data-chapter>
+            <img class:list={['marginalia', 'day-chapter__mark', `day-chapter__mark--${index + 1}`]} src={`/images/marginalia/${marginalia[index]}.png`} width="760" height="520" alt="" loading="lazy" />
+            <div class="container day-chapter__grid">
+              <div class="day-chapter__copy">
+                <div class="day-chapter__meta">
+                  <span>Día {String(day.number).padStart(2, '0')}</span>
+                  <span>{dateFormatter.format(new Date(`${day.date}T12:00:00`))}</span>
+                  <span>{day.city}</span>
+                </div>
+                <h3>{day.title}</h3>
+                <p>{day.summary}</p>
+                <ul aria-label="Hitos de la jornada">
+                  {day.highlights.map((highlight) => <li>{highlight}</li>)}
+                </ul>
+                <button class="text-link" type="button" data-open-access>
+                  Ver jornada <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
+                </button>
               </div>
-              <figcaption class="flex items-center justify-between gap-3 px-2 py-3 text-sm text-[#f4e6d5]"><span>Día {day.number} · {day.city}</span><span aria-hidden="true">0{day.number}</span></figcaption>
-            </figure>
-          ))}
-        </div>
 
-        <button class="mt-8 inline-flex min-h-12 items-center border border-[#f0d09e] px-5 text-sm font-bold text-[#fff7e9] transition-colors hover:bg-[#fff7e9] hover:text-[#251f1c]" type="button" data-open-access>Acceder con contraseña</button>
+              <div class="day-chapter__photos" aria-label={`Dos recuerdos del día ${day.number}`}>
+                <figure class="day-photo day-photo--main">
+                  <img src={day.images[0]} width="1600" height="1067" alt={`Recuerdo destacado del día ${day.number}: ${day.highlights[0]}`} loading="lazy" decoding="async" />
+                  <figcaption>{day.highlights[0]}</figcaption>
+                </figure>
+                <figure class="day-photo day-photo--secondary">
+                  <img src={day.images[1]} width="1600" height="1067" alt={`Segundo recuerdo del día ${day.number}: ${day.highlights[1]}`} loading="lazy" decoding="async" />
+                  <figcaption>{day.highlights[1]}</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   </main>
 
-  <footer class="bg-[#171311] py-7 text-[#e9ddcf]">
-    <div class="mx-auto flex w-[min(1120px,calc(100%-2rem))] flex-wrap justify-between gap-2 text-sm">
-      <p class="m-0 font-serif text-base">Un álbum para conservar lo vivido juntos.</p>
-      <p class="m-0 text-[#ad9f91]">Fotografías provisionales hasta importar el archivo del grupo.</p>
+  <footer class="home-footer">
+    <div class="container">
+      <img src="/images/marginalia/route.png" width="760" height="265" alt="" loading="lazy" />
+      <p>Un álbum para conservar lo vivido juntos.</p>
+      <small>Motril · Roma · Asís · julio de 2026</small>
     </div>
   </footer>
 
   <dialog id="access-dialog" aria-labelledby="access-title" closedby="any">
-    <div class="relative p-6 md:p-10">
-      <form method="dialog" class="absolute top-4 right-4"><button type="submit" class="min-h-11 border-0 bg-[#e7ded1] px-4 text-sm font-bold text-[#3d352e]">Cerrar</button></form>
-      <p class="mb-2 text-xs font-bold tracking-[0.16em] text-[#8e2925] uppercase">Contenido privado</p>
-      <h2 id="access-title" class="max-w-[12ch] pr-16 font-serif text-3xl leading-tight font-medium text-[#26211d] md:text-[2.6rem]">Entrar en el álbum</h2>
-      <p class="text-[#5d554c]">Usa la contraseña compartida con los peregrinos y sus familias.</p>
+    <div class="access-dialog__inner">
+      <form method="dialog" class="access-dialog__close">
+        <button type="submit" aria-label="Cerrar acceso"><X size={19} strokeWidth={1.7} aria-hidden="true" /></button>
+      </form>
+      <p class="eyebrow">Contenido privado</p>
+      <h2 id="access-title">Entrar en el álbum</h2>
+      <p>Usa la contraseña compartida con los peregrinos y sus familias.</p>
       <AccessForm enhanced />
     </div>
   </dialog>
 </Layout>
+
+<style>
+  .home-hero { position: relative; overflow: clip; border-bottom: 1px solid var(--line); background: var(--cream); }
+  .home-hero::before { position: absolute; inset: 0; background: url('/images/textures/pilgrimage-pattern.webp') repeat; background-size: 34rem; content: ''; opacity: .08; pointer-events: none; }
+  .home-hero__inner { position: relative; display: grid; min-height: min(720px, calc(100svh - 4rem)); align-items: center; gap: clamp(2rem, 5vw, 5rem); padding-block: clamp(3rem, 7vw, 6rem); }
+  .home-hero__copy { position: relative; z-index: 2; max-width: 34rem; }
+  .home-hero__brand { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; color: var(--muted); font-size: .66rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+  .home-hero__brand img { width: 3.6rem; height: 3.6rem; object-fit: contain; }
+  .home-hero h1 { max-width: 10ch; color: var(--charcoal); }
+  .home-hero__lead { max-width: 31ch; margin: 1.2rem 0 0; color: var(--muted); font-family: var(--font-display); font-size: clamp(1.2rem, 2.2vw, 1.6rem); line-height: 1.35; }
+  .home-hero__cta { margin-top: 1.7rem; }
+  .home-hero__art { position: relative; z-index: 1; margin: 0; }
+  .home-hero__art img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; mix-blend-mode: multiply; }
+  .home-hero__art figcaption { margin-top: .65rem; color: var(--muted); font-size: .64rem; font-weight: 750; letter-spacing: .15em; text-align: right; text-transform: uppercase; }
+
+  .home-intro { position: relative; overflow: clip; }
+  .home-intro__grid { display: grid; gap: 2rem; }
+  .home-intro__grid > * { position: relative; z-index: 1; }
+  .home-intro__text { max-width: 42rem; color: var(--muted); }
+  .home-intro__text p { margin: 0 0 1rem; }
+  .text-link { display: inline-flex; min-height: 2.6rem; align-items: center; gap: .65rem; border: 0; border-bottom: 1px solid var(--gold); padding: .2rem 0; background: transparent; color: var(--charcoal); cursor: pointer; font-size: .78rem; font-weight: 850; text-decoration: none; }
+  .text-link svg { transition: transform 180ms ease; }
+  .text-link:hover svg { transform: translateX(.2rem); }
+  .marginalia { position: absolute; z-index: 1; object-fit: contain; filter: contrast(1.6); mix-blend-mode: multiply; opacity: .3; pointer-events: none; }
+  .marginalia--column { right: max(1rem, calc((100vw - 1160px) / 2 - 5rem)); bottom: -3rem; width: 5.4rem; transform: rotate(4deg); }
+
+  .journey-story { border-top: 1px solid var(--line); }
+  .journey-story__heading { display: grid; gap: .8rem; padding-block: clamp(3rem, 6vw, 5rem); }
+  .journey-story__heading h2 { max-width: 25ch; }
+  .journey-story__heading > p:last-child { max-width: 54ch; margin: 0; color: var(--muted); }
+  .journey-chapters { counter-reset: day; }
+  .day-chapter { position: relative; overflow: clip; border-top: 1px solid var(--line); padding-block: clamp(3.5rem, 8vw, 7rem); counter-increment: day; }
+  .day-chapter--assisi { background-color: rgb(250 249 246 / .55); background-image: linear-gradient(rgb(250 249 246 / .94), rgb(250 249 246 / .94)), url('/images/textures/pilgrimage-pattern.webp'); background-size: auto, 30rem; }
+  .day-chapter__grid { position: relative; display: grid; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .day-chapter__copy { position: relative; z-index: 2; max-width: 31rem; }
+  .day-chapter__meta { display: flex; flex-wrap: wrap; gap: .55rem 1rem; margin-bottom: 1rem; color: var(--gold); font-size: .64rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+  .day-chapter__meta span + span::before { margin-right: 1rem; color: var(--line); content: '·'; }
+  .day-chapter h3 { max-width: 17ch; font-size: clamp(1.9rem, 4vw, 2.3rem); }
+  .day-chapter__copy > p { margin: 1rem 0; color: var(--muted); line-height: 1.7; }
+  .day-chapter ul { margin: 1.2rem 0; padding: 0; list-style: none; }
+  .day-chapter li { display: flex; align-items: center; gap: .7rem; padding-block: .35rem; color: var(--muted); font-size: .8rem; }
+  .day-chapter li::before { width: 1.7rem; height: 1px; background: var(--gold); content: ''; }
+  .day-chapter__photos { position: relative; min-height: clamp(22rem, 48vw, 34rem); }
+  .day-photo { position: absolute; margin: 0; background: var(--line); }
+  .day-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.88) contrast(.97); }
+  .day-photo figcaption { position: absolute; right: 0; bottom: 0; padding: .45rem .65rem; background: rgb(250 249 246 / .9); color: var(--muted); font-size: .62rem; letter-spacing: .06em; }
+  .day-photo--main { inset: 0 12% 12% 0; }
+  .day-photo--secondary { right: 0; bottom: 0; width: 42%; height: 45%; border: .45rem solid var(--paper); }
+  .day-chapter:nth-child(even) .day-chapter__copy { order: 2; justify-self: end; }
+  .day-chapter:nth-child(even) .day-chapter__photos { order: 1; }
+  .day-chapter:nth-child(even) .day-photo--main { inset: 0 0 12% 12%; }
+  .day-chapter:nth-child(even) .day-photo--secondary { right: auto; left: 0; }
+  .day-chapter__mark { width: clamp(7.5rem, 13vw, 11rem); opacity: .26; }
+  .day-chapter__mark--1 { top: 1.25rem; left: max(.75rem, calc((100vw - 1160px) / 2 - 5rem)); }
+  .day-chapter__mark--2 { right: max(.75rem, calc((100vw - 1160px) / 2 - 5rem)); bottom: 1.5rem; transform: rotate(-4deg); }
+  .day-chapter__mark--3 { bottom: 1.5rem; left: max(.75rem, calc((100vw - 1160px) / 2 - 6rem)); width: clamp(10rem, 18vw, 15rem); }
+  .day-chapter__mark--4 { right: max(.75rem, calc((100vw - 1160px) / 2 - 5rem)); bottom: 1rem; }
+  .day-chapter__mark--5 { top: 1.5rem; left: max(.75rem, calc((100vw - 1160px) / 2 - 4rem)); transform: rotate(-12deg); }
+
+  .home-footer { border-top: 1px solid var(--line); padding-block: 3rem; background: var(--charcoal); color: var(--cream); text-align: center; }
+  .home-footer img { width: min(28rem, 80%); margin: 0 auto 1rem; filter: invert(1); opacity: .38; }
+  .home-footer p { margin: 0; font-family: var(--font-display); font-size: 1.2rem; }
+  .home-footer small { color: #c9bdab; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; }
+
+  #access-dialog { width: min(420px, calc(100% - 1.25rem)); overflow: auto; }
+  .access-dialog__inner { position: relative; padding: 1.6rem; }
+  .access-dialog__inner h2 { max-width: 13ch; padding-right: 2rem; font-size: 2rem; }
+  .access-dialog__inner > p:not(.eyebrow) { margin: .7rem 0 0; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+  .access-dialog__close { position: absolute; top: .7rem; right: .7rem; }
+  .access-dialog__close button { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 0; background: transparent; color: var(--charcoal); cursor: pointer; }
+  .access-dialog__close button:hover { background: var(--paper); }
+
+  @media (min-width: 820px) {
+    .home-hero__inner { grid-template-columns: minmax(18rem, .72fr) minmax(28rem, 1.28fr); }
+    .home-hero__art { margin-right: -7vw; }
+    .home-intro__grid { grid-template-columns: .85fr 1.15fr; gap: 5rem; }
+    .journey-story__heading { grid-template-columns: .85fr 1.15fr; align-items: end; }
+    .journey-story__heading .eyebrow { grid-column: 1 / -1; }
+    .journey-story__heading > p:last-child { justify-self: end; }
+    .day-chapter__grid { grid-template-columns: .78fr 1.22fr; }
+    .day-chapter:nth-child(even) .day-chapter__grid { grid-template-columns: 1.22fr .78fr; }
+  }
+
+  @media (max-width: 819px) {
+    .home-hero__inner { min-height: auto; }
+    .home-hero__art { margin-inline: -1.25rem; }
+    .day-chapter__copy { max-width: 38rem; }
+    .day-chapter__photos { min-height: min(82vw, 31rem); }
+    .day-chapter:nth-child(even) .day-chapter__copy,
+    .day-chapter:nth-child(even) .day-chapter__photos { order: initial; }
+  }
+
+  @media (max-width: 540px) {
+    .home-hero__art figcaption { padding-inline: 1.25rem; }
+    .home-hero__cta { width: auto; }
+    .day-chapter__photos { min-height: 21rem; }
+    .day-photo--main,
+    .day-chapter:nth-child(even) .day-photo--main { inset: 0 7% 14% 0; }
+    .day-photo--secondary { width: 48%; height: 42%; }
+    .day-chapter:nth-child(even) .day-photo--secondary { right: 0; left: auto; }
+  }
+</style>
 
 <script>
   import gsap from 'gsap';
@@ -93,28 +227,45 @@ import { pilgrimage } from '../data/pilgrimage';
   gsap.registerPlugin(ScrollTrigger);
 
   const dialog = document.querySelector<HTMLDialogElement>('#access-dialog');
-  document.querySelectorAll<HTMLButtonElement>('[data-open-access]').forEach((button) => button.addEventListener('click', () => dialog?.showModal()));
-  const query = new URLSearchParams(window.location.search);
-  if (query.has('access')) dialog?.showModal();
+  let opener: HTMLElement | null = null;
+  const openers = document.querySelectorAll<HTMLButtonElement>('[data-open-access]');
+  const openDialog = (event: Event) => {
+    opener = event.currentTarget as HTMLElement;
+    if (dialog && !dialog.open) dialog.showModal();
+  };
+  openers.forEach((button) => button.addEventListener('click', openDialog));
+  const restoreFocus = () => opener?.focus();
+  const closeOnBackdrop = (event: MouseEvent) => {
+    if (event.target === dialog) dialog?.close();
+  };
+  dialog?.addEventListener('close', restoreFocus);
+  dialog?.addEventListener('click', closeOnBackdrop);
+  if (new URLSearchParams(window.location.search).has('access')) dialog?.showModal();
 
   const mm = gsap.matchMedia();
   mm.add('(prefers-reduced-motion: no-preference)', () => {
     const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
     intro
-      .from('[data-hero-reveal]', { autoAlpha: 0, y: 24, duration: 0.72, stagger: 0.1 })
-      .from('[data-hero-image] img', { scale: 1.07, duration: 1.25, ease: 'power2.out' }, 0);
+      .from('[data-hero-reveal]', { autoAlpha: 0, y: 18, duration: .65, stagger: .08 })
+      .from('[data-hero-art]', { autoAlpha: 0, x: 20, duration: .9 }, .12);
 
-    gsap.from('.preview-photo', {
-      autoAlpha: 0,
-      y: 28,
-      duration: 0.72,
-      stagger: 0.12,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: '[data-preview-grid]', start: 'top 82%', once: true },
+    gsap.utils.toArray<HTMLElement>('[data-chapter]').forEach((chapter) => {
+      gsap.from(chapter.querySelectorAll('.day-chapter__copy, .day-chapter__photos'), {
+        autoAlpha: 0,
+        y: 22,
+        duration: .72,
+        stagger: .1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: chapter, start: 'top 82%', once: true },
+      });
     });
-
     return () => intro.kill();
   });
 
-  document.addEventListener('astro:before-swap', () => mm.revert(), { once: true });
+  document.addEventListener('astro:before-swap', () => {
+    mm.revert();
+    openers.forEach((button) => button.removeEventListener('click', openDialog));
+    dialog?.removeEventListener('close', restoreFocus);
+    dialog?.removeEventListener('click', closeOnBackdrop);
+  }, { once: true });
 </script>
