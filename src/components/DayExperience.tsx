@@ -1,6 +1,7 @@
 import { Check, ChevronLeft, ChevronRight, Download, Filter, Play, X } from 'lucide-preact';
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { GalleryDay, GalleryMedia } from '../data/gallery';
+import ZipDownloadButton from './ZipDownloadButton';
 
 type DownloadFile = { id: string; name: string; url: string };
 
@@ -30,6 +31,15 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
       .filter((block) => block.media.length);
   }, [activeTag, day.blocks]);
   const visibleMedia = useMemo(() => visibleBlocks.flatMap((block) => block.media), [visibleBlocks]);
+  const downloadableMedia = useMemo(() => {
+    const seen = new Set<string>();
+    return allMedia.filter((item) => {
+      if (seen.has(item.id)) return false;
+      seen.add(item.id);
+      return true;
+    });
+  }, [allMedia]);
+  const videoCount = downloadableMedia.filter((item) => item.mediaType === 'video').length;
   const active = allMedia.find((item) => item.id === activeId);
   const tags = useMemo(() => {
     const counts = new Map<string, number>();
@@ -88,6 +98,7 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
   };
   const selectedImages = images.filter((item) => selected.has(item.id));
   const currentIndex = active ? visibleMedia.findIndex((item) => item.id === active.id) : -1;
+  const originalBlock = (id: string) => day.blocks.find((item) => item.id === id);
 
   async function prepareDownload() {
     setPreparing(true);
@@ -111,19 +122,25 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
 
   return (
     <div class="day-experience">
-      {tags.length > 0 && (
-        <details class="tag-filter">
-          <summary><Filter size={15} strokeWidth={1.8} aria-hidden="true" /> Filtrar por etiquetas {activeTag && <span>· {activeTag}</span>}</summary>
-          <div class="tag-list">
-            {tags.map(({ tag, count }) => (
-              <button key={tag} type="button" class={activeTag === tag ? 'is-active' : ''} aria-pressed={activeTag === tag} onClick={() => setActiveTag((current) => current === tag ? null : tag)}>
-                {tag}<span>{count}</span>
-              </button>
-            ))}
-            {activeTag && <button type="button" class="tag-reset" onClick={() => setActiveTag(null)}>Quitar filtro</button>}
-          </div>
-        </details>
-      )}
+      <div class="day-actions">
+        {tags.length > 0 && (
+          <details class="tag-filter">
+            <summary><Filter size={15} strokeWidth={1.8} aria-hidden="true" /> Filtrar por etiquetas {activeTag && <span>· {activeTag}</span>}</summary>
+            <div class="tag-list">
+              {tags.map(({ tag, count }) => (
+                <button key={tag} type="button" class={activeTag === tag ? 'is-active' : ''} aria-pressed={activeTag === tag} onClick={() => setActiveTag((current) => current === tag ? null : tag)}>
+                  {tag}<span>{count}</span>
+                </button>
+              ))}
+              {activeTag && <button type="button" class="tag-reset" onClick={() => setActiveTag(null)}>Quitar filtro</button>}
+            </div>
+          </details>
+        )}
+        <div class="day-zip">
+          <ZipDownloadButton dayId={day.id} label={`Descargar el día completo (${downloadableMedia.length} archivos)`} fileCount={downloadableMedia.length} />
+          <p>{videoCount ? `Incluye ${videoCount} ${videoCount === 1 ? 'vídeo' : 'vídeos'}; la descarga puede ocupar bastante.` : 'Los archivos se descargan en su calidad almacenada.'}</p>
+        </div>
+      </div>
 
       <ol class="places-stack" aria-label={`Recorrido del día ${day.number}`}>
         {visibleBlocks.map((block, index) => (
@@ -136,7 +153,21 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
                   <h2>{block.title}</h2>
                   <p class="place-summary">{block.summary}</p>
                 </div>
-                <span class="place-count">{block.media.length ? `${block.media.length} ${block.media.length === 1 ? 'archivo' : 'archivos'}` : 'Sin archivo'}</span>
+                <div class="place-actions">
+                  <span class="place-count">
+                    {originalBlock(block.id)?.media.length
+                      ? `${originalBlock(block.id)?.media.length} ${originalBlock(block.id)?.media.length === 1 ? 'archivo' : 'archivos'}`
+                      : 'Sin archivo'}
+                  </span>
+                  {(originalBlock(block.id)?.media.length || 0) > 0 && (
+                    <ZipDownloadButton
+                      dayId={day.id}
+                      blockId={block.id}
+                      label="Descargar parada"
+                      fileCount={originalBlock(block.id)?.media.length || 0}
+                    />
+                  )}
+                </div>
               </header>
 
               {block.description.trim() !== block.summary.trim() && (
