@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { getDay, pilgrimage } from './pilgrimage';
+import photoLocationsSource from './photo-locations.json';
 
 const allowedDays = new Set(['07julio2026', '08julio2026', '09julio2026', '10julio2026', '11julio2026']);
 
@@ -11,8 +12,20 @@ const manifestSchema = z.object({
     capturedAt: z.string(), title: z.string().min(1), caption: z.string().min(1), keywords: z.array(z.string()),
   })),
 });
+const photoLocationsSchema = z.object({
+  version: z.literal(1),
+  generatedAt: z.string(),
+  items: z.record(z.string(), z.object({
+    lat: z.number(),
+    lon: z.number(),
+    poiId: z.string().optional(),
+    label: z.string().min(1),
+    inferred: z.boolean().optional(),
+  })),
+});
+const photoLocations = photoLocationsSchema.parse(photoLocationsSource);
 
-export type GalleryMedia = z.infer<typeof manifestSchema>['items'][number] & { src: string; thumbnailSrc: string };
+export type GalleryMedia = z.infer<typeof manifestSchema>['items'][number] & { src: string; thumbnailSrc: string; locationLabel?: string };
 export type GalleryBlock = { id: string; title: string; summary: string; description: string; from?: string; to?: string; media: GalleryMedia[] };
 export type GalleryDay = { id: string; number: number; slug: string; date: string; city: string; title: string; summary: string; cover: string; blocks: GalleryBlock[] };
 export type HomeDayPreview = Pick<GalleryDay, 'id' | 'number' | 'slug' | 'date' | 'city' | 'title' | 'summary'> & { images: [string, string]; highlights: string[] };
@@ -124,12 +137,20 @@ export async function getGalleryDay(slug: string): Promise<GalleryDay | undefine
   const sourceItems = manifest.items.filter((item) => item.key.startsWith(`${setup.prefix}/`)).sort((a, b) => a.capturedAt.localeCompare(b.capturedAt) || a.key.localeCompare(b.key));
   const media = await Promise.all(sourceItems.map(async (item) => {
     const src = r2Url(item.key);
-    return { ...item, src, thumbnailSrc: r2Url(`thumbnail/${item.key}`) };
+    return { ...item, src, thumbnailSrc: r2Url(`thumbnail/${item.key}`), locationLabel: photoLocations.items[item.id]?.label };
   }));
   const blocks = setup.blocks.map((block, index) => {
     const place = block.placeId ? sourceDay.places.find((item) => item.id === block.placeId) : undefined;
     const { placeId: _placeId, includeMedia: _includeMedia, ...displayBlock } = block;
-    return { ...displayBlock, description: block.description || place?.description || block.summary, id: `${slug}-${index + 1}`, media: media.filter((item) => belongsToBlock(item.capturedAt, block)) };
+    const fallbackLocation = block.from || block.to ? block.title : undefined;
+    return {
+      ...displayBlock,
+      description: block.description || place?.description || block.summary,
+      id: `${slug}-${index + 1}`,
+      media: media
+        .filter((item) => belongsToBlock(item.capturedAt, block))
+        .map((item) => ({ ...item, locationLabel: item.locationLabel || fallbackLocation })),
+    };
   });
   const assigned = new Set(blocks.flatMap((block) => block.media.map((item) => item.id)));
   const remaining = media.filter((item) => !assigned.has(item.id));

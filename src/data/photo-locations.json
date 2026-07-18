@@ -1,0 +1,4705 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-18T19:16:32.884Z",
+  "items": {
+    "ee0656c4-0d73-49bf-a086-56455384ecd6": {
+      "lat": 41.885758,
+      "lon": 12.5054,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "869bbadd-a12f-4e93-894c-86ea01cc8df2": {
+      "lat": 41.885947,
+      "lon": 12.505344,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "2c88d1fe-6e03-4b30-bf84-726595f86dd9": {
+      "lat": 41.886811,
+      "lon": 12.503161,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "7eedc9f2-5c92-4d9f-a375-b648f7be9d76": {
+      "lat": 41.885758,
+      "lon": 12.5054,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "907b42e1-2014-412d-b592-4b9a2a22f9c6": {
+      "lat": 41.885661,
+      "lon": 12.505414,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "2ab3e447-0aa4-48dd-bcaa-cd0e476de991": {
+      "lat": 41.885842,
+      "lon": 12.505469,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "a4467583-2258-4b68-b5d7-25b0b4d6c09b": {
+      "lat": 41.889286,
+      "lon": 12.498007999999999,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "7b0c23e6-dafd-4879-bd39-1a6d01bc61df": {
+      "lat": 41.885758,
+      "lon": 12.5054,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "b06bcc69-330c-4c93-89e1-14b7cf50b01b": {
+      "lat": 41.889331,
+      "lon": 12.497625,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "5feeef0a-a02d-4e91-b2b1-4812f568931f": {
+      "lat": 41.886161,
+      "lon": 12.504156,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "4d7ddf91-b220-4b89-a3a9-ad42fd1a94b8": {
+      "lat": 41.886458,
+      "lon": 12.505278,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "cba953a7-594b-41e9-a8d4-92d346a8d25e": {
+      "lat": 41.886528,
+      "lon": 12.505269,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "acd68794-3ec2-4936-90f1-c7e6ccce0bc6": {
+      "lat": 41.886027999999996,
+      "lon": 12.505769,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "e61a591a-ec82-4053-98ab-733ed5bc83e4": {
+      "lat": 41.885711,
+      "lon": 12.505411,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "beb1a0b0-f41f-4cf0-97df-b9114daa7311": {
+      "lat": 41.885875,
+      "lon": 12.504269,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "16cc3fea-fc81-44be-a3fc-87994ef00044": {
+      "lat": 41.900939,
+      "lon": 12.480706,
+      "poiId": "piazza-colonna",
+      "label": "Piazza Colonna"
+    },
+    "f50241c1-6d33-4818-ada6-6f15e3f994ac": {
+      "lat": 41.886219,
+      "lon": 12.504042,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "e6611cda-78ad-44ec-9de7-27c8b8b687bd": {
+      "lat": 41.886147,
+      "lon": 12.506458,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "59e1be01-24a5-4d42-a5ce-4724569dc86c": {
+      "lat": 41.885803,
+      "lon": 12.505353,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "c806052e-2acd-4659-bc3a-4f969818a922": {
+      "lat": 41.885557999999996,
+      "lon": 12.505294,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "caf2a5da-5225-4f6f-b741-bf0c1db2f577": {
+      "lat": 41.901019,
+      "lon": 12.480819000114666,
+      "poiId": "galleria-alberto-sordi",
+      "label": "Galleria Alberto Sordi"
+    },
+    "b00dee92-f97e-4567-87fe-f288674fb546": {
+      "lat": 41.885819,
+      "lon": 12.505397,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "f3293192-019a-479f-b6b7-7b253e21c2fd": {
+      "lat": 41.899222,
+      "lon": 12.4733,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "93356606-632d-4082-9718-ffbe45c9d66e": {
+      "lat": 41.885897,
+      "lon": 12.505344,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "537d887a-2695-402c-bf4d-f9194247f57e": {
+      "lat": 41.900833,
+      "lon": 12.483424999999999,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "430dff0c-b354-4aa7-ae1d-898fa0db9785": {
+      "lat": 41.886264,
+      "lon": 12.504222,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "1ee876f3-e7ad-42f6-b5d5-3da42872fccc": {
+      "lat": 41.885808,
+      "lon": 12.505356,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "c97b385d-144d-4fef-ad01-5329e45a4a62": {
+      "lat": 41.899356,
+      "lon": 12.475089,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "7baafdc1-7f44-40b6-b98c-ad84e49e4eff": {
+      "lat": 41.885672,
+      "lon": 12.505464,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "3bea73ed-ea76-4fe4-923d-aec4e9be3169": {
+      "lat": 41.889286,
+      "lon": 12.497718999880654,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "185b9ff4-6125-4cab-91eb-587e5cfb841f": {
+      "lat": 41.900836,
+      "lon": 12.483292,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "b2df7876-330a-4310-9bfd-6cab7c5e912d": {
+      "lat": 41.885956,
+      "lon": 12.505342,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "61008af8-58cf-4061-a910-b092d517228a": {
+      "lat": 41.885342,
+      "lon": 12.505186,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "46eb4cc1-b740-4d89-9081-cf26ef4803c1": {
+      "lat": 41.899764,
+      "lon": 12.473111,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "38eb11c0-47aa-4b21-9729-b8a9615bc56a": {
+      "lat": 41.886466999999996,
+      "lon": 12.504239,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "698c7f39-e4cb-421e-954f-5353ce15c520": {
+      "lat": 41.886806,
+      "lon": 12.507375,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "abc5f067-ac6e-497c-b6eb-bba65c40b674": {
+      "lat": 41.885647,
+      "lon": 12.505411,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "99e62d27-b5e8-48e3-80dd-99ba38fbcacf": {
+      "lat": 41.886192,
+      "lon": 12.506806,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "12ae5343-bccd-4c52-905f-cdaefc33e365": {
+      "lat": 41.886433,
+      "lon": 12.506731,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "51bdb2fa-f882-4199-9e1a-12d9057f4179": {
+      "lat": 41.89953900013087,
+      "lon": 12.476586,
+      "poiId": "panteon",
+      "label": "Panteón de Agripa"
+    },
+    "69fca185-ebc8-4f23-a7bc-95ccbb1f563d": {
+      "lat": 41.898942,
+      "lon": 12.473186,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "f8239c29-8c61-4dda-a1f9-63df9a59facc": {
+      "lat": 41.886106,
+      "lon": 12.506997,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "c20072d5-2bb5-4338-80ec-ccfe9a2edca4": {
+      "lat": 41.886027999999996,
+      "lon": 12.505772,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "3e2ea1fa-bc1c-4f64-80b1-b46336b645d7": {
+      "lat": 41.911972,
+      "lon": 12.4763,
+      "label": "Piazzale Flaminio, Roma"
+    },
+    "2d96009f-a714-4ec0-b0b0-aeb363111eca": {
+      "lat": 41.905803,
+      "lon": 12.482178,
+      "label": "Plaza de España, Roma"
+    },
+    "1b620906-6f1f-409a-9989-e19a0fdc1713": {
+      "lat": 41.885906,
+      "lon": 12.505439,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "ff0b6cf6-677c-415d-ae40-bcb6200ae18a": {
+      "lat": 41.886027999999996,
+      "lon": 12.505772,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "1693bcc8-89cf-4c5d-939f-5a44af2cef37": {
+      "lat": 41.889369,
+      "lon": 12.497563999999999,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "885d8535-c536-466d-9e00-34e42a80532d": {
+      "lat": 41.8861,
+      "lon": 12.506325,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "0f70522c-3ac3-458f-aaec-068bae62a42c": {
+      "lat": 41.889224999999996,
+      "lon": 12.498106,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "b875a692-22c6-453d-82b2-0e95f54c6a0e": {
+      "lat": 41.885892,
+      "lon": 12.505622,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "d97a73a3-8915-4257-ad5f-479921ea1d45": {
+      "lat": 41.886258,
+      "lon": 12.506836,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "775b412d-5241-4ccd-b06b-8cfcda348481": {
+      "lat": 41.900774999999996,
+      "lon": 12.479586,
+      "poiId": "piazza-colonna",
+      "label": "Piazza Colonna"
+    },
+    "6a968dd8-abe1-4344-b1af-850bae24b634": {
+      "lat": 41.89915,
+      "lon": 12.4731,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "b54ea640-5b97-4252-b8a7-aee52453c22b": {
+      "lat": 41.886883,
+      "lon": 12.505147,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "22095020-0bdd-42c5-b223-69f5dbd08bdd": {
+      "lat": 41.900197,
+      "lon": 12.478931,
+      "poiId": "piazza-montecitorio",
+      "label": "Piazza di Montecitorio"
+    },
+    "a463a849-5c42-4dab-9352-77aa30a4d3c0": {
+      "lat": 41.885822,
+      "lon": 12.505381,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "ead3d9ee-b6f4-4b0d-8ab9-41332babacf8": {
+      "lat": 41.885822,
+      "lon": 12.505081,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "7c5007f8-9e8e-4f8c-9b5b-c88ab9d00501": {
+      "lat": 41.885903,
+      "lon": 12.505533,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "4e4b4e6e-d584-47da-b98f-e5d7c747a2e0": {
+      "lat": 41.887169,
+      "lon": 12.502883,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "be9a1bf2-80c7-4cc3-af73-145288bdd03a": {
+      "lat": 41.885692,
+      "lon": 12.505417,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "488476e1-7f0e-44c6-824f-5dcc64653262": {
+      "lat": 41.8991309998791,
+      "lon": 12.473414,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "711b5ec7-5866-4ef5-a5f7-6959adfab225": {
+      "lat": 41.910736,
+      "lon": 12.476522000000001,
+      "label": "Piazza del Popolo, Roma"
+    },
+    "1a7f695b-3928-4b19-9ff3-6677d7d28eeb": {
+      "lat": 41.889297,
+      "lon": 12.497681,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "cf32d8ac-d357-4b78-9145-42117449d5ab": {
+      "lat": 41.885747,
+      "lon": 12.505264,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "e643d0cb-d69f-4df2-98b7-ce07bd1e4fe4": {
+      "lat": 41.912042,
+      "lon": 12.476269,
+      "label": "Piazzale Flaminio, Roma"
+    },
+    "49305565-53c9-4c2b-a4e1-83decb757798": {
+      "lat": 41.886947,
+      "lon": 12.504514,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "4a12c12d-f6ca-4ab3-8b24-ca25c5e5da41": {
+      "lat": 41.885342,
+      "lon": 12.505186,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "5a5b48aa-2456-4733-ab8b-e234e9b53ff7": {
+      "lat": 41.885753,
+      "lon": 12.5054,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "b36ff9fd-7739-462d-a55a-bfd4099a2642": {
+      "lat": 41.885583,
+      "lon": 12.505322,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "5cdecff3-e8e3-4ca4-9e6b-00774f5512bf": {
+      "lat": 41.885892,
+      "lon": 12.505369,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "1e65e1a5-cd3d-4983-adf7-b806d196565b": {
+      "lat": 41.885883,
+      "lon": 12.505367,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "00a804c3-0cd8-4912-b217-7cb0b8029b8f": {
+      "lat": 41.900802999999996,
+      "lon": 12.483097,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "3bad2410-0e40-4d6a-9ba8-17097c03bc29": {
+      "lat": 41.886242,
+      "lon": 12.506831,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "91630eba-d3c6-4e7f-bf78-abb7f9d474fb": {
+      "lat": 41.885761,
+      "lon": 12.5054,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "508a0d7b-dc8b-45c9-901b-fc8cd2bbf548": {
+      "lat": 41.884364,
+      "lon": 12.488764,
+      "label": "Municipio Roma I, Roma"
+    },
+    "8ed59430-fe14-484e-9a7d-79a279945f33": {
+      "lat": 41.898997,
+      "lon": 12.472961,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "8f644153-93f5-4b40-9d1f-c6e38ccf674a": {
+      "lat": 41.889406,
+      "lon": 12.497556,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "c2aeb7da-6ff1-4d2b-b615-ce3c2ed96f28": {
+      "lat": 41.885658,
+      "lon": 12.505428,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "070c67f0-d319-404a-ad1e-9e6d880a9c5f": {
+      "lat": 41.886756,
+      "lon": 12.504306,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "be982f1f-b61c-4153-9baa-ac4480ebe5e3": {
+      "lat": 41.900786,
+      "lon": 12.483122,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "59f9a613-a4ff-4d6f-836c-88720b76032e": {
+      "lat": 41.886264,
+      "lon": 12.506458,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "6511a17f-86b1-4a52-9cbf-d670acd76e6b": {
+      "lat": 41.885872,
+      "lon": 12.504681,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "bd29c27b-29d6-4a1f-8c8c-dde69db68d1e": {
+      "lat": 41.886192,
+      "lon": 12.506806,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "371ffed9-252b-40e9-b8a0-0f9857b1e8d2": {
+      "lat": 41.885761,
+      "lon": 12.5054,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "fedd402e-76a1-43eb-a172-d906f313111f": {
+      "lat": 41.9008,
+      "lon": 12.483072,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "e7ae4ffb-b195-435b-9c47-5fd7be420a44": {
+      "lat": 41.886233,
+      "lon": 12.504047,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "c7e1a774-6a47-430d-8389-1e9bea6360a7": {
+      "lat": 41.900743999999996,
+      "lon": 12.483122,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "f7cb0eb8-3322-4fe7-a9c5-04c848a9dcdb": {
+      "lat": 41.886264,
+      "lon": 12.504222,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "fa933d6f-725e-492e-a06b-8283f28a8654": {
+      "lat": 41.886856,
+      "lon": 12.504397,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "00b68f45-2a83-4ccb-b08a-715b82cd56ff": {
+      "lat": 41.885672,
+      "lon": 12.505464,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "967b5c26-73ae-40f5-a193-fdc9e21fe03a": {
+      "lat": 41.885794,
+      "lon": 12.505556,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "f3922078-4e68-4de5-9b81-8ad20bb7d6cc": {
+      "lat": 41.886192,
+      "lon": 12.506806,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "71c10b92-4e24-4901-b279-fd8b0c3f25d2": {
+      "lat": 41.900703,
+      "lon": 12.483192,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "eca64f02-fadb-4325-a8e6-d76e554b85d7": {
+      "lat": 41.900763999999995,
+      "lon": 12.483131,
+      "poiId": "fontana-trevi",
+      "label": "Fontana di Trevi"
+    },
+    "81f7505e-9c54-4cd2-bcf1-0b094eae8e36": {
+      "lat": 41.886156,
+      "lon": 12.506731,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "4f5af0bb-eaaf-4d0c-8b82-cc3509512c3c": {
+      "lat": 41.886242,
+      "lon": 12.506831,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "20e00814-fa89-4131-911f-f60b9c896002": {
+      "lat": 41.886258,
+      "lon": 12.506836,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "b03d6955-0564-4815-bab7-4f421d741325": {
+      "lat": 41.889186,
+      "lon": 12.497656,
+      "poiId": "san-clemente",
+      "label": "Basílica de San Clemente"
+    },
+    "f601d3da-3f69-4152-8bfd-3ce24b8b243c": {
+      "lat": 41.886094,
+      "lon": 12.506972,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "08e862e7-f24b-4462-9798-abf55cecdb36": {
+      "lat": 41.886158,
+      "lon": 12.5064,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "3f146029-2911-44c7-b6ae-9408c71fe608": {
+      "lat": 41.884381,
+      "lon": 12.488793999999999,
+      "label": "Municipio Roma I, Roma"
+    },
+    "a89bd8dc-0a92-473d-81f4-888bf210a66e": {
+      "lat": 41.886608,
+      "lon": 12.509656,
+      "label": "Viale Carlo Felice, Roma"
+    },
+    "45a22a1e-62c5-4da7-a1f2-e74be8e1c258": {
+      "lat": 41.899228,
+      "lon": 12.476628,
+      "poiId": "panteon",
+      "label": "Panteón de Agripa"
+    },
+    "9aba5a09-a01c-4d7b-8401-7058091c611d": {
+      "lat": 41.886047,
+      "lon": 12.504811,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "96ccf130-c655-4979-9ef3-86dbf492b3f8": {
+      "lat": 41.902052999999995,
+      "lon": 12.472019,
+      "label": "Piazza di Ponte Umberto Primo, Roma"
+    },
+    "340d47f5-3599-4a81-8942-ceebfba61794": {
+      "lat": 41.89978100011935,
+      "lon": 12.473122,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "136df47f-1f48-44f5-a966-74b16ada9358": {
+      "lat": 41.899525,
+      "lon": 12.476583,
+      "poiId": "panteon",
+      "label": "Panteón de Agripa"
+    },
+    "1578803b-60b9-42bb-8032-aa8585931b95": {
+      "lat": 41.905808,
+      "lon": 12.482208,
+      "label": "Plaza de España, Roma"
+    },
+    "871593d1-0136-41ba-bd71-e5508787bce3": {
+      "lat": 41.886125,
+      "lon": 12.506253,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "a0702de5-2df0-46a4-aa81-96ef65102752": {
+      "lat": 41.885869,
+      "lon": 12.505369,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "966ca2c9-304c-4b11-a4e5-89f8ff372c49": {
+      "lat": 41.886489,
+      "lon": 12.504347,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense"
+    },
+    "c5aff921-2ac4-469b-aace-fedc50d81543": {
+      "lat": 41.899406,
+      "lon": 12.473169,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "52f4c941-1107-4693-bd45-7b4f4eb59203": {
+      "lat": 41.89906700015158,
+      "lon": 12.476806,
+      "poiId": "panteon",
+      "label": "Panteón de Agripa"
+    },
+    "d4692de9-4d4f-4ffa-a940-fed5f8a793bf": {
+      "lat": 41.886508,
+      "lon": 12.509311000085404,
+      "label": "Municipio Roma I, Roma"
+    },
+    "06786c47-5be0-4b21-b15d-8eb8e8bebdda": {
+      "lat": 41.899169,
+      "lon": 12.473056,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "fd1595ca-feef-45cf-b2d6-ab5786124aff": {
+      "lat": 41.886939,
+      "lon": 12.506722,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "b0d9e015-e1e8-4473-8d96-de99f83a83dd": {
+      "lat": 41.886639,
+      "lon": 12.504511,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "a3793a77-902b-492f-a655-922f1f2a5482": {
+      "lat": 41.886608,
+      "lon": 12.509758,
+      "label": "Viale Carlo Felice, Roma"
+    },
+    "f1b45287-f422-4bab-af51-d76195a27545": {
+      "lat": 41.88615,
+      "lon": 12.506719,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "d46fff50-3bee-4e35-a422-3867b5ed6fa6": {
+      "lat": 41.900732999999995,
+      "lon": 12.47960299991848,
+      "poiId": "piazza-colonna",
+      "label": "Piazza Colonna"
+    },
+    "a4b2fcb3-9c82-42de-9fe8-d8c375ba566f": {
+      "lat": 41.90575,
+      "lon": 12.482189,
+      "label": "Plaza de España, Roma"
+    },
+    "9169eed8-f009-4119-a4d0-25806c36efdc": {
+      "lat": 41.911522,
+      "lon": 12.475933,
+      "label": "Piazza del popolo, Roma"
+    },
+    "71e071ac-236d-49de-a26a-ed9f56fe841c": {
+      "lat": 41.900222,
+      "lon": 12.478475,
+      "poiId": "piazza-montecitorio",
+      "label": "Piazza di Montecitorio"
+    },
+    "8c8209c6-1bb7-4adc-b1fe-b8f64761230a": {
+      "lat": 41.887194,
+      "lon": 12.506317,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "44a570a7-8d0a-44a2-88fc-ee14860fa22c": {
+      "lat": 41.912025,
+      "lon": 12.476283,
+      "label": "Piazzale Flaminio, Roma"
+    },
+    "25317aa7-5b4f-4120-9715-d859ab0bae80": {
+      "lat": 41.885156,
+      "lon": 12.485377999999999,
+      "label": "Via del Circo Massimo, Roma"
+    },
+    "acc163e7-c0e4-4fc5-b7aa-0cf80b0a4c56": {
+      "lat": 41.899425,
+      "lon": 12.473169,
+      "poiId": "piazza-navona",
+      "label": "Piazza Navona"
+    },
+    "a8065bcb-7593-4cfa-84e9-99ba6b58f2eb": {
+      "lat": 41.900856,
+      "lon": 12.480178,
+      "poiId": "piazza-colonna",
+      "label": "Piazza Colonna"
+    },
+    "ecf8956f-11d8-4eb3-bb93-31bc58eadb5c": {
+      "lat": 41.887356,
+      "lon": 12.505844,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "a1c2d7bc-091d-4370-acff-3847cc14c3f6": {
+      "lat": 42.084503000000005,
+      "lon": 11.846008000000001,
+      "label": "Via dei Ligustri, Civitavecchia"
+    },
+    "025e5348-e922-4a60-a3d7-d28709aefbed": {
+      "lat": 42.084503000000005,
+      "lon": 11.846008000000001,
+      "label": "Via dei Ligustri, Civitavecchia"
+    },
+    "27f89389-f028-4baf-9988-9432fb211f8c": {
+      "lat": 41.885883,
+      "lon": 12.505367,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "3f241a4d-28f7-4bb3-a713-ef08a37e0d64": {
+      "lat": 41.886314,
+      "lon": 12.506492,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán"
+    },
+    "330fa116-76f6-4361-a4ff-668a4846a4d7": {
+      "lat": 41.902133,
+      "lon": 12.454263999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ffafb2f9-40b1-4897-9584-3ba0534ef00b": {
+      "lat": 41.901997,
+      "lon": 12.454108,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ce9f8606-f67b-4d7f-8600-ac83610042dc": {
+      "lat": 41.901981,
+      "lon": 12.453852999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "7f6f981a-c908-43f5-bc45-2654746f5153": {
+      "lat": 41.902119,
+      "lon": 12.454464,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1313830a-334c-44bd-9b5e-2011f7226747": {
+      "lat": 41.902028,
+      "lon": 12.453916999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3b4c8099-afa0-4e5b-b71e-95d7bf61b206": {
+      "lat": 41.902007999999995,
+      "lon": 12.453728,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "009c1d82-fa3a-4253-aa81-7fe6e0954836": {
+      "lat": 41.902139,
+      "lon": 12.453778,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "dfe81b46-4c78-45a9-bc44-83ef4f752c04": {
+      "lat": 41.908485999999996,
+      "lon": 12.457528,
+      "label": "Via degli Scipioni, Roma"
+    },
+    "e9c68ea5-342a-4e16-a4ff-a2eeeb37d92c": {
+      "lat": 41.902386,
+      "lon": 12.456567,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "4b839b71-8e7c-49aa-b01a-899b258fe9f1": {
+      "lat": 41.902125,
+      "lon": 12.453961,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "30a3d770-80f9-4b67-a79e-b2aeb7539520": {
+      "lat": 41.902108,
+      "lon": 12.453838999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "eed84184-de32-49b3-8e32-03fd1887fba7": {
+      "lat": 41.902169,
+      "lon": 12.454296999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b9f60142-f3d6-44ae-bdfe-d9d440c02fe1": {
+      "lat": 41.9021,
+      "lon": 12.454424999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "52c6beaf-994d-4e96-850b-77b13366d6a8": {
+      "lat": 41.902072,
+      "lon": 12.453883,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "5f3fdd17-1b16-4f72-a96b-108be7a9868a": {
+      "lat": 41.902263999999995,
+      "lon": 12.454849999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "5e6bf16e-41c4-45fa-9df1-ba8096e9d66a": {
+      "lat": 41.902083,
+      "lon": 12.454949999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "bc75f053-062c-4243-93fd-f274d9073a74": {
+      "lat": 41.902417,
+      "lon": 12.454397,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "99278ed7-379c-43af-afef-97d172c8c993": {
+      "lat": 41.902203,
+      "lon": 12.454886,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "471a7af5-d78c-44bc-95a1-ab564581ede2": {
+      "lat": 41.901981,
+      "lon": 12.453761,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "494681a2-c5bb-4e36-9974-f2ef6c2dcf56": {
+      "lat": 41.90215,
+      "lon": 12.454072,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "7a49f7fb-a6b8-493a-8fd9-5422f2d0e537": {
+      "lat": 41.902547,
+      "lon": 12.454561,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "837bf5a1-b8ef-4c79-93e3-e4ce5e7aeb83": {
+      "lat": 41.902192,
+      "lon": 12.454968999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3df8644b-f166-415c-b0f9-e0a4a1b18c32": {
+      "lat": 41.905833,
+      "lon": 12.454103,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "e37f846d-c7f0-4b93-b544-d6e3e8741639": {
+      "lat": 41.902175,
+      "lon": 12.453742,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "bf12cad9-e525-4649-b8be-f4c66be53f28": {
+      "lat": 41.902592,
+      "lon": 12.455630999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "20d9e46b-0d2f-43d2-a106-39464d89db8e": {
+      "lat": 41.902243999999996,
+      "lon": 12.454747,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "c425ffb7-ea1b-4078-81f8-8fe62b09fa15": {
+      "lat": 41.902172,
+      "lon": 12.454960999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "f64b470a-9f61-4e8f-8c7c-d5059c1fb14f": {
+      "lat": 41.905811,
+      "lon": 12.454638999999998,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "fadbfcff-7a79-4eb0-88ed-b6ef83a6fe68": {
+      "lat": 41.905986,
+      "lon": 12.454225,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "2b771097-96cc-4dc8-ae9a-a2585cd5092b": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "21818f57-585a-48c7-904b-2ac3c6c96ce0": {
+      "lat": 41.902046999999996,
+      "lon": 12.453844,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "cf39783f-4fa7-4276-a231-64cdfcd61a30": {
+      "lat": 41.902131,
+      "lon": 12.454536,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ff6b99cf-6ac1-4cee-a8c3-c870f2c810b5": {
+      "lat": 41.902194,
+      "lon": 12.454989,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3cc438b6-e90f-4a28-bf6e-f4e0ece37451": {
+      "lat": 41.902194,
+      "lon": 12.454880999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "d5e70cd7-87e8-43f9-b6dc-81eb7c11e53b": {
+      "lat": 41.902153,
+      "lon": 12.454925,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "12f42e20-8b5a-45bd-97ed-262cc2e8a05b": {
+      "lat": 41.905556,
+      "lon": 12.454125,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "c14d5975-5a50-48c5-8dad-56e8d91f72e8": {
+      "lat": 41.902175,
+      "lon": 12.453742,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "15ed4d40-b32d-4f1a-b263-bff37364f882": {
+      "lat": 41.905139,
+      "lon": 12.454099999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "e181191c-c42d-433b-8e2c-102e06e68453": {
+      "lat": 41.902314,
+      "lon": 12.455064,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "4b6d118d-6369-48ae-ad1d-c534f5410a55": {
+      "lat": 41.902317,
+      "lon": 12.455064,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "32d602bb-1226-493d-af2d-2c32244ff3b3": {
+      "lat": 41.902271999999996,
+      "lon": 12.459247,
+      "label": "Via della Conciliazione, Roma"
+    },
+    "663cf509-a5ca-421b-8c5d-8f216b37b5e0": {
+      "lat": 41.905992,
+      "lon": 12.454542,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "f1b70a37-e5fa-4a5a-9de4-2c71a8da6d3d": {
+      "lat": 41.902333,
+      "lon": 12.455252999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1a51a122-dec0-40ca-bc5b-555ffc11d873": {
+      "lat": 41.903922,
+      "lon": 12.45765,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3aa6c245-e176-4747-9164-ebc4a3a9c95c": {
+      "lat": 41.902260999999996,
+      "lon": 12.459586,
+      "label": "Via della Conciliazione, Roma"
+    },
+    "160084e6-097d-4811-a5b8-654655126f1c": {
+      "lat": 41.906911,
+      "lon": 12.453653,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "6f7a9d9a-a021-42e5-9aca-6f3d990dd93b": {
+      "lat": 41.902508,
+      "lon": 12.454227999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "f2a24455-d724-4a07-b6fc-0c7f29f3a376": {
+      "lat": 41.902214,
+      "lon": 12.454772,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "47782a78-aed7-4bae-9797-a885a07a75cb": {
+      "lat": 41.906344,
+      "lon": 12.453653,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "09383faa-12f9-4a8c-9b86-031c147f5083": {
+      "lat": 41.902111,
+      "lon": 12.454585999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "e8a65382-5d83-47ae-a3a2-ebc79b50e375": {
+      "lat": 41.902260999999996,
+      "lon": 12.458483,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b021e1ee-fff8-43fa-97e0-64f0f5ee9587": {
+      "lat": 41.906444,
+      "lon": 12.454847,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "b0481155-89ef-4b40-a250-edc90976ed8b": {
+      "lat": 41.901188999999995,
+      "lon": 12.458063999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b6b7c547-f386-4145-869b-df99fb2e04e1": {
+      "lat": 41.906475,
+      "lon": 12.454822,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "49d1c8c8-90e0-4663-999f-bba4accc13c7": {
+      "lat": 41.902039,
+      "lon": 12.454291999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "cff421a5-b1c2-4148-8f96-370848c4a795": {
+      "lat": 41.905797,
+      "lon": 12.45285,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "bc5bd6a3-4f8e-49e2-b49a-8415700c8578": {
+      "lat": 41.905797,
+      "lon": 12.45285,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "e0fe1ec5-9a6b-4f12-a040-7d47285b592e": {
+      "lat": 41.902508,
+      "lon": 12.454227999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "417e6f4f-2375-4475-811e-28f37749ba44": {
+      "lat": 41.906022,
+      "lon": 12.454564,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "ab703a95-7dcb-4044-a07a-92bbefa05aae": {
+      "lat": 41.904697,
+      "lon": 12.454092,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "c5a5ff79-7d5c-47ef-ab96-e35bee6f4c8e": {
+      "lat": 41.905403,
+      "lon": 12.454117,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "34b0fe44-b554-4b60-98db-196100d8bc3f": {
+      "lat": 41.902442,
+      "lon": 12.455083,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "97174cb8-485b-4571-b0d8-42bfe2f6b316": {
+      "lat": 41.908975,
+      "lon": 12.456256,
+      "label": "Viale Giulio Cesare, Roma"
+    },
+    "a7d1a47b-c6aa-4914-b716-7c5c2c0bf6cf": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "6fbcf2ec-786f-4f6a-bea3-b6888170b3ab": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "8f7e7ea6-6d51-4945-9a66-ef3936ef9965": {
+      "lat": 41.902916999999995,
+      "lon": 12.457505999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "a429432b-0180-4e79-8b72-2edb2b3019ea": {
+      "lat": 41.902508,
+      "lon": 12.454227999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "95a82341-ee7c-4c51-9e85-b9b57b25e99d": {
+      "lat": 41.902175,
+      "lon": 12.454925,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "c240c485-32bf-41ed-a804-f5a605050847": {
+      "lat": 41.902142,
+      "lon": 12.454452999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "230083f2-b0b2-447a-a7da-e9b7286f0b85": {
+      "lat": 41.902144,
+      "lon": 12.454317,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "6c4555c0-0db0-47e2-b4db-a7b55690657e": {
+      "lat": 41.906131,
+      "lon": 12.454505999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "0a63d0f3-2c4f-43ea-b303-033251ba40d0": {
+      "lat": 41.901108,
+      "lon": 12.455278,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "937f2c77-ee1c-4b47-bf26-b66507f60fae": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1689fa86-5c64-452c-8999-c2a43c378cf9": {
+      "lat": 41.908485999999996,
+      "lon": 12.457528,
+      "label": "Via degli Scipioni, Roma"
+    },
+    "04293f5c-089f-4e3d-b3eb-b25b505d05e8": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "d060ccfa-b2ab-48a3-902f-c339a83ec036": {
+      "lat": 41.902983,
+      "lon": 12.457256,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "6aa748bd-273a-45ad-9137-12232635ff6b": {
+      "lat": 41.902271999999996,
+      "lon": 12.457014,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b8c8ae9b-6987-470c-a28f-875f8a9e17b8": {
+      "lat": 41.906447,
+      "lon": 12.453453,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "717260a2-f5b0-4674-801b-10ae63c60874": {
+      "lat": 41.902125,
+      "lon": 12.454274999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "fe59ce90-da86-4745-a847-e0a13378789a": {
+      "lat": 41.905699999999996,
+      "lon": 12.454996999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "9ecc2b59-ef66-4c52-ad30-caa952067985": {
+      "lat": 41.902156,
+      "lon": 12.454594,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "692f48bd-853f-4517-a709-1d990aea4280": {
+      "lat": 41.9061,
+      "lon": 12.458177999999998,
+      "label": "Piazza del Risorgimento, Roma"
+    },
+    "6afdfe0b-6015-4f1c-af15-58398cb9951d": {
+      "lat": 41.902080999999995,
+      "lon": 12.454111,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "4eeac711-b796-4830-bc98-700e325dc508": {
+      "lat": 41.902508,
+      "lon": 12.454227999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "e2b3c09e-3761-4435-b631-ca6c761d300d": {
+      "lat": 41.906341999999995,
+      "lon": 12.453192,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "ef62e5ce-3de8-494c-af9f-b89da89a3209": {
+      "lat": 41.905136,
+      "lon": 12.454122,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "2b8c346c-514c-434c-ad36-2493f4007f4e": {
+      "lat": 41.902631,
+      "lon": 12.454642,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1eb6947a-9aca-49c8-9720-4316e9b216e3": {
+      "lat": 41.901814,
+      "lon": 12.456097,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "dd03fd44-a2f6-48dc-8673-8707e328338b": {
+      "lat": 41.902091999999996,
+      "lon": 12.454324999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3e0ba289-628b-4147-a501-c6e15c0c8f73": {
+      "lat": 41.905853,
+      "lon": 12.454130999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "235af20f-8140-4e5e-b9d8-4f963ee27bdf": {
+      "lat": 41.9017,
+      "lon": 12.453878,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "7b3816ed-003d-4a6e-aa0d-a596d14c4297": {
+      "lat": 41.905978,
+      "lon": 12.454828,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "03342816-4361-4910-92ff-d9717467f165": {
+      "lat": 41.902394,
+      "lon": 12.454367,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "5f2673ad-d76c-46d2-8acc-5460fea30791": {
+      "lat": 41.908485999999996,
+      "lon": 12.457528,
+      "label": "Via degli Scipioni, Roma"
+    },
+    "de6e9a62-7cfa-4662-9e60-bf800bbe731e": {
+      "lat": 41.902499999999996,
+      "lon": 12.454341999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "66e3b57e-6951-40e0-af2d-42625a2570c5": {
+      "lat": 41.905711,
+      "lon": 12.455025,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "7797280f-59fe-40bf-975a-0b25c496b28b": {
+      "lat": 41.900883,
+      "lon": 12.455744,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "fa651da3-a1a8-43b3-8428-2dd9f303754a": {
+      "lat": 41.908344,
+      "lon": 12.458006,
+      "label": "Via Ottaviano, Roma"
+    },
+    "10419f34-0d13-4691-9b5a-07567eeecb95": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "65eb087c-9ddd-4de5-ac22-c4fa58db25a2": {
+      "lat": 41.901108,
+      "lon": 12.455278,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "2aef0ea5-77b2-452a-88dd-9b1b394a1b05": {
+      "lat": 41.905711,
+      "lon": 12.455025,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "320c3131-2744-42a8-99f7-087ce539cab1": {
+      "lat": 41.906442,
+      "lon": 12.454830999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "95962951-7db2-4460-8b89-fe3f69228c43": {
+      "lat": 41.902314,
+      "lon": 12.455461,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b3aa2618-3488-4e71-8497-68b7edc702a2": {
+      "lat": 41.902183,
+      "lon": 12.453907999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "788954ab-c588-4818-b997-bb5f51d3cdaa": {
+      "lat": 41.902442,
+      "lon": 12.456646999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "9f656020-f5fd-47fa-9fe4-84dd92c9abae": {
+      "lat": 41.902139,
+      "lon": 12.454156,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "e8907433-28a5-49c7-9e5e-fe701686640c": {
+      "lat": 41.902181,
+      "lon": 12.454899999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "e465c65e-2db0-4894-b304-d33308779bd7": {
+      "lat": 41.907019,
+      "lon": 12.454219,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "f77bc324-6b5b-4011-99e4-69409485dc33": {
+      "lat": 41.902497,
+      "lon": 12.456417,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "c0366a8e-57e0-40e4-84c6-27f4f8988b5a": {
+      "lat": 41.90405,
+      "lon": 12.45455,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ac4f0e49-6877-4155-9519-5cd1586e1270": {
+      "lat": 41.902194,
+      "lon": 12.454744,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "eaa9d6c1-5a56-40ef-baa8-c4124105cbf7": {
+      "lat": 41.901997,
+      "lon": 12.454108,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "880f35be-061b-467b-980e-52b65fb34970": {
+      "lat": 41.902131,
+      "lon": 12.4545,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ba977385-f9ce-44fe-b090-2f9f4be51485": {
+      "lat": 41.902139,
+      "lon": 12.454003,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ca90ec3a-7678-4d66-96ad-24f3c1493924": {
+      "lat": 41.905797,
+      "lon": 12.45285,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "95f585ae-5402-4160-bb06-10c04a37d8d7": {
+      "lat": 41.903605999999996,
+      "lon": 12.454531,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "9de08a8a-fd36-41a7-b53e-e58add2971ca": {
+      "lat": 41.901689,
+      "lon": 12.453239,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "610e29ff-4813-4e6c-8814-e87d2ce54a07": {
+      "lat": 41.902192,
+      "lon": 12.454799999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "cd16e5d9-62da-4314-8918-0a1d27b804c1": {
+      "lat": 41.905797,
+      "lon": 12.45285,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "afc59daa-c8f9-4b64-975d-55cf54276050": {
+      "lat": 41.902046999999996,
+      "lon": 12.453911,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "f667ea3e-35bd-4ccc-8b60-7d57b6b0a256": {
+      "lat": 41.902131,
+      "lon": 12.454317,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "dc351bfd-015a-401a-814f-81f73010aedb": {
+      "lat": 41.905017,
+      "lon": 12.454191999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "bff61202-213b-43c6-bd58-3071d6df4731": {
+      "lat": 41.908485999999996,
+      "lon": 12.457528,
+      "label": "Via degli Scipioni, Roma"
+    },
+    "f966be70-29f7-4ab2-80c9-7209b5820e82": {
+      "lat": 41.902108,
+      "lon": 12.453838999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b91c7ccf-27ab-435e-990f-0da93a48e3a3": {
+      "lat": 41.902042,
+      "lon": 12.454099999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "bf159448-81ef-45c4-8b05-2bb3aaa107b4": {
+      "lat": 41.902156,
+      "lon": 12.454505999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "2e0dfa42-078c-44c3-8ad3-dedd12045033": {
+      "lat": 41.902169,
+      "lon": 12.454927999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "55a6db9d-8567-4c5f-b582-e16dd4b81372": {
+      "lat": 41.902302999999996,
+      "lon": 12.46068900009267,
+      "label": "Via della Conciliazione, Roma"
+    },
+    "9ab1da53-e1d0-427d-a76b-f537c0b4e07d": {
+      "lat": 41.9017,
+      "lon": 12.453880999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "433a02b5-b4af-4855-aa2d-a395bc1960a4": {
+      "lat": 41.902052999999995,
+      "lon": 12.454322,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "d529a1a9-4096-4417-bd8a-4da62c9ae34e": {
+      "lat": 41.910606,
+      "lon": 12.478886,
+      "label": "Viale del Belvedere, Roma"
+    },
+    "0a42141b-1049-451d-b525-f8b673644a83": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3907c60b-73bf-4887-bb70-879354858860": {
+      "lat": 41.902058,
+      "lon": 12.453888999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b3baf0c8-8200-4b50-a036-6d128ced76f2": {
+      "lat": 41.901792,
+      "lon": 12.453368999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "a4170417-f690-4bf1-bf6a-466ce9d4334e": {
+      "lat": 41.905789,
+      "lon": 12.454930999999998,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "a6da196d-c1d8-406b-903b-d7f8a407fd0a": {
+      "lat": 41.902181,
+      "lon": 12.454982999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "231d227c-ef8a-4783-ace6-b3d157db8957": {
+      "lat": 41.902181,
+      "lon": 12.454911,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "598837d9-c017-474b-9c27-4fc632710479": {
+      "lat": 41.902967,
+      "lon": 12.456947,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "37096f39-ab9d-4f19-924b-1bdef5c8a843": {
+      "lat": 41.902192,
+      "lon": 12.454011,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "7641c4a9-9797-472b-8b08-6b5bf719c709": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "9c865cf5-7410-49ec-b57d-286b997749d2": {
+      "lat": 41.905556,
+      "lon": 12.454125,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "dc521661-9262-4b92-885a-06cbaf57630a": {
+      "lat": 41.902183,
+      "lon": 12.454631,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "d3c43e4f-9045-4007-a0ae-d907fb13cfd4": {
+      "lat": 41.902035999999995,
+      "lon": 12.453608,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "7c243ef5-f7fc-474a-948d-a32f4ff55d67": {
+      "lat": 41.902114,
+      "lon": 12.453966999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "aec3d890-d81a-40c0-8dd1-2f3ad5d6bad1": {
+      "lat": 41.902077999999996,
+      "lon": 12.454436,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "25981c39-471b-4def-9d46-99565a81d8d1": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "81ddcba6-29de-4b42-9cc0-dc71e246756b": {
+      "lat": 41.902636,
+      "lon": 12.455758,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "79b57f26-fc44-4f2c-906c-06c4b0497701": {
+      "lat": 41.902297,
+      "lon": 12.454808,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "23854a9d-d1ab-41ff-851a-855b91365499": {
+      "lat": 41.902161,
+      "lon": 12.454272,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "23c36676-9a49-4bf6-84ec-1efacdf0fcc1": {
+      "lat": 41.902592,
+      "lon": 12.455625,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "ab05ad38-ac3f-494d-abac-f838690180d9": {
+      "lat": 41.902206,
+      "lon": 12.4546,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "05278241-be59-4b67-b651-bf08774c8ab9": {
+      "lat": 41.902263999999995,
+      "lon": 12.454849999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "4f96d1b9-a096-4f2f-8e24-ee30654b0a20": {
+      "lat": 41.902267,
+      "lon": 12.459242,
+      "label": "Via della Conciliazione, Roma"
+    },
+    "ef630513-ad21-4e1f-a989-58af4c349c64": {
+      "lat": 41.904422,
+      "lon": 12.455105999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "84a511a1-c5bf-4525-bceb-5566eecc7428": {
+      "lat": 41.905267,
+      "lon": 12.454127999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "17bd2d44-fd08-4224-9400-878c9f089a29": {
+      "lat": 41.906138999999996,
+      "lon": 12.454286,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "a954ccb3-0356-4950-be2b-510c401d0bc7": {
+      "lat": 41.902125,
+      "lon": 12.454274999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "582e478d-120f-4286-9872-a2cc5cbbf14a": {
+      "lat": 41.902217,
+      "lon": 12.454699999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "caf6a0e9-68c3-4b86-b421-c5ada1924901": {
+      "lat": 41.902194,
+      "lon": 12.454744,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "e9ad0d40-bea6-4acb-90aa-250a58fa168b": {
+      "lat": 41.905797,
+      "lon": 12.45285,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "5d686000-6df5-4a29-bf52-f17ff5a4a809": {
+      "lat": 41.901689,
+      "lon": 12.453239,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "546b8b04-4a99-45ac-ae83-cc051ed083e9": {
+      "lat": 41.905685999999996,
+      "lon": 12.454986,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "7644b471-500d-49f3-9dc7-3563d7850b1a": {
+      "lat": 41.902175,
+      "lon": 12.454908,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "649de794-0060-4692-b993-f95fd23c999d": {
+      "lat": 41.902103,
+      "lon": 12.454013999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "33f1f8f7-fde1-44b7-a4ed-f4848f4505cd": {
+      "lat": 41.902125,
+      "lon": 12.454594,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3efa1223-1684-42f4-b49a-86af54a2c6dc": {
+      "lat": 41.905358,
+      "lon": 12.454108,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "586b5535-6cb7-47e5-806d-1ea004b0adde": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "8487fea9-6d0a-46ee-8925-ce70f3d780cc": {
+      "lat": 41.904858,
+      "lon": 12.454346999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "3f4ab36d-8df4-49fe-85ca-429176323aa5": {
+      "lat": 41.901058,
+      "lon": 12.457072,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "f66cf141-cd3e-4156-81a6-3d3f4f7a14b0": {
+      "lat": 41.905656,
+      "lon": 12.454932999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "f15620a6-811a-4b9f-a608-15428ddfb9ad": {
+      "lat": 41.901714,
+      "lon": 12.453869,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1d7c1f3b-f13c-46d3-b267-740451e5cbc6": {
+      "lat": 41.900883,
+      "lon": 12.455744,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "60e8b37f-5ada-4cb8-b858-7f475dece943": {
+      "lat": 41.905853,
+      "lon": 12.453657999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "206131f3-f44f-4f01-86ba-ba8b5297a2ca": {
+      "lat": 41.902211,
+      "lon": 12.454944,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "eba4605d-db4e-4dab-9d87-386f80863170": {
+      "lat": 41.906136,
+      "lon": 12.454502999999999,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "ba3c84aa-1061-4321-a793-84bfd5d8e027": {
+      "lat": 41.902042,
+      "lon": 12.454246999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "c46977ba-f9e9-4503-bf69-d150dda70a2c": {
+      "lat": 41.908485999999996,
+      "lon": 12.457528,
+      "label": "Via degli Scipioni, Roma"
+    },
+    "6154002b-e7d5-4c1b-b188-baa6ccafcca0": {
+      "lat": 41.909292,
+      "lon": 12.456235999999999,
+      "label": "Viale Giulio Cesare, Roma"
+    },
+    "d5dafacf-163a-492e-9d2b-fa974b60be05": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "966f0f3d-30c7-4c7a-ad38-73b255925068": {
+      "lat": 41.902243999999996,
+      "lon": 12.458475,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "c9bd52b7-1103-4819-a115-9d6636445e10": {
+      "lat": 41.905066999999995,
+      "lon": 12.454158,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "5351e174-ab6d-451e-b26a-edabd23f05e1": {
+      "lat": 41.902139,
+      "lon": 12.454310999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "201d754f-9af0-40e6-8748-fd115654f4c0": {
+      "lat": 41.905822,
+      "lon": 12.454619,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "603df5d4-662d-4ac9-bc22-1d967a6b4b1f": {
+      "lat": 41.905797,
+      "lon": 12.45285,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "b183a2fb-70aa-4972-a33d-5a668a186700": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1a33a931-80a8-4273-8892-848925b9e0fb": {
+      "lat": 41.9022,
+      "lon": 12.454982999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3dbf7f91-3ea9-4b2d-8e2b-5e1d6a54f5ea": {
+      "lat": 41.904697,
+      "lon": 12.454092,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "beb62653-4360-47e7-943a-47c193c06300": {
+      "lat": 41.905730999999996,
+      "lon": 12.455039,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "d78ee9cb-62d7-4b8b-8512-ab3a2ca876c0": {
+      "lat": 41.902274999999996,
+      "lon": 12.454761,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "3d64d38a-1f77-4068-b88f-c08959e51bc7": {
+      "lat": 41.902981,
+      "lon": 12.457053,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "05fda245-6841-4fde-b7ba-cf8c594289a4": {
+      "lat": 41.902181,
+      "lon": 12.454842,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "8449e262-da97-4ae0-9433-0ba37ca91b16": {
+      "lat": 41.902119,
+      "lon": 12.454469,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "88f01185-46a7-465d-8958-23fdb23a2eb7": {
+      "lat": 41.902819,
+      "lon": 12.454433,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "091305fd-7af7-4f0c-8967-a3218bff3947": {
+      "lat": 41.902058,
+      "lon": 12.454030999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "103cd16d-0432-4dba-9806-6393f5b6b722": {
+      "lat": 41.901981,
+      "lon": 12.453966999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "8bed5067-c1ab-4568-9441-2a00ce76c857": {
+      "lat": 41.902206,
+      "lon": 12.458464,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "53773a65-dd5b-4f3f-a256-9bea52c06690": {
+      "lat": 41.905864,
+      "lon": 12.453653,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "f65bf803-58d4-4f13-b87f-9a876a77645b": {
+      "lat": 41.902508,
+      "lon": 12.454227999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "cc188675-b6e4-43a9-a65c-e4a20161bc3f": {
+      "lat": 41.902119,
+      "lon": 12.454388999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "a0635f57-3461-4502-8553-a4906ed89804": {
+      "lat": 41.901372,
+      "lon": 12.454730999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "f149c64d-13ad-4b08-aa17-7b67b798845f": {
+      "lat": 41.901706,
+      "lon": 12.453897,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b214c88e-4dbd-4c50-b019-240e1f5b6b86": {
+      "lat": 41.902203,
+      "lon": 12.458469,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1af09abb-be32-4ff9-a668-1df2490d47cd": {
+      "lat": 41.902203,
+      "lon": 12.458466999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "b3572b81-47d1-4546-9dda-627d940afd6b": {
+      "lat": 41.905861,
+      "lon": 12.454944,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "c652aca5-d795-43db-9dac-41e2c12caa09": {
+      "lat": 41.901803,
+      "lon": 12.455143999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "7f8b8038-7bf2-4eb2-8a81-44890e175db5": {
+      "lat": 41.909183,
+      "lon": 12.456703,
+      "label": "Viale Giulio Cesare, Roma"
+    },
+    "ab95714b-f4c8-4533-bf9e-760d2206df1f": {
+      "lat": 41.902072,
+      "lon": 12.453883,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "17229d97-4073-4bb8-944e-6ecf56e77132": {
+      "lat": 41.901714,
+      "lon": 12.453869,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "f1a0270c-d3db-4644-b08b-e94d42c1aa6b": {
+      "lat": 41.902181,
+      "lon": 12.454908,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "05958936-a1bb-4489-beed-8496bd16d99e": {
+      "lat": 41.905789,
+      "lon": 12.454930999999998,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "2fe35d7e-4c4b-4a32-8cf5-e674f296065c": {
+      "lat": 41.906575,
+      "lon": 12.452936,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "baf6c463-4ace-4f7c-b7f2-1088f825d425": {
+      "lat": 41.905225,
+      "lon": 12.454156,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "caa98b20-bd5d-4d95-9b59-9820fae3d142": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "d5debea9-c496-4b9e-99ae-dd7ffba15052": {
+      "lat": 41.901188999999995,
+      "lon": 12.458063999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "1c972430-b706-4eeb-9de8-73ab514e8075": {
+      "lat": 41.903692,
+      "lon": 12.454853,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "be479b2a-3d0c-4918-be52-007db9c3036f": {
+      "lat": 41.905211,
+      "lon": 12.454022,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "b2b060d1-5186-4b72-ab60-6f027326ee30": {
+      "lat": 41.9022,
+      "lon": 12.454982999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "0143ef74-340e-44e0-ad9c-be35bb5a1790": {
+      "lat": 41.905586,
+      "lon": 12.454381,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "cd9e2626-37ac-4a62-a48e-1b06d9e0201e": {
+      "lat": 41.908203,
+      "lon": 12.456622,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "8c643048-aa98-4122-9aa4-ab4febddd44e": {
+      "lat": 41.902203,
+      "lon": 12.458466999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "9fdb07a1-1451-48a6-8cbb-4ec1241eccdb": {
+      "lat": 41.908485999999996,
+      "lon": 12.457528,
+      "label": "Via degli Scipioni, Roma"
+    },
+    "1ad9f001-3769-4454-ac1f-71bc85d06af6": {
+      "lat": 41.906107999999996,
+      "lon": 12.455069,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "9cd3ef1f-7546-43f7-88a2-fd35f0f3e389": {
+      "lat": 41.902302999999996,
+      "lon": 12.46068900009267,
+      "label": "Via della Conciliazione, Roma"
+    },
+    "8852631d-65d3-4ae3-9c2a-2d324d1c2c0f": {
+      "lat": 41.905986,
+      "lon": 12.454219,
+      "poiId": "museos-vaticanos",
+      "label": "Museos Vaticanos"
+    },
+    "fa840ad5-b46d-4163-844c-88a28e97d50b": {
+      "lat": 41.909283,
+      "lon": 12.457431,
+      "label": "Viale Giulio Cesare, Roma"
+    },
+    "6b7c772a-8b70-4f52-ae01-457ee5993415": {
+      "lat": 41.901989,
+      "lon": 12.454044,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro"
+    },
+    "8e5b627e-98f5-4269-b495-1d99351ae08f": {
+      "lat": 41.896992,
+      "lon": 12.49923099989096,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "3076a40d-814f-4a69-abb1-ca8217d5aa2d": {
+      "lat": 41.897008,
+      "lon": 12.499085999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "beca1b4b-1f8e-4271-b3a8-4feae9ffb077": {
+      "lat": 41.897,
+      "lon": 12.499077999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "b1fa7861-3646-4ae6-a22e-d6c14ef793c4": {
+      "lat": 41.89678099989606,
+      "lon": 12.499739,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "b629bc2f-4c1b-4743-ade3-93e79779cec9": {
+      "lat": 41.897019,
+      "lon": 12.499314,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "13e20a0d-db84-4932-9534-ecc01bc79ed7": {
+      "lat": 41.89733900010592,
+      "lon": 12.498914,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "ef863280-0abb-498e-9139-5b6c9ba63e19": {
+      "lat": 41.897383,
+      "lon": 12.498828,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2f135be3-d9b6-49e4-9633-031ae190015c": {
+      "lat": 41.897403,
+      "lon": 12.498781,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "97b3fee5-5f20-44dd-9dd3-b86b4cd45bb1": {
+      "lat": 41.897428,
+      "lon": 12.498733,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "a347da14-9825-43e8-b02c-06c82f729819": {
+      "lat": 41.897531,
+      "lon": 12.498586,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "ca640d04-39d7-4f4c-ae14-c8bd5a41e742": {
+      "lat": 41.897492,
+      "lon": 12.498657999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "41dceabf-3164-4676-878d-cc9aa5deaecb": {
+      "lat": 41.897258,
+      "lon": 12.498493999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "f897d5a8-8351-41a4-92f7-7e499a4d59dc": {
+      "lat": 41.897567,
+      "lon": 12.498522,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "89e1944d-94c0-4a89-b269-776d47b067b0": {
+      "lat": 41.897514,
+      "lon": 12.498622,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "7b874b4b-7c97-4b46-abb7-1fee72462585": {
+      "lat": 41.897564,
+      "lon": 12.498527999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "e8204a3a-adb5-4a5e-8a25-ab2813b1d996": {
+      "lat": 41.897564,
+      "lon": 12.498527999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "25320150-7668-436f-9da5-57a966064ff1": {
+      "lat": 41.897536,
+      "lon": 12.498583,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "cf7dbdf2-c9a2-4117-b59f-12eee4114d88": {
+      "lat": 41.897564,
+      "lon": 12.498532999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "17e2e8e9-281c-42e2-86ce-38b472d88cb0": {
+      "lat": 41.897543999999996,
+      "lon": 12.498555999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "cf509d69-4da8-49d8-b5a5-54c6cfb4e12a": {
+      "lat": 41.897444,
+      "lon": 12.498702999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "151f0a8a-9c9a-4358-b53b-0e69e366c773": {
+      "lat": 41.897564,
+      "lon": 12.498527999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "0137ec98-746f-4883-bea8-a5cdc6f28cfe": {
+      "lat": 41.897553,
+      "lon": 12.498546999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "172b0192-16c2-49f5-8215-bbc4b6f1f2a6": {
+      "lat": 41.8975,
+      "lon": 12.498641999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "6f54a595-7064-4749-8043-badeb3767f21": {
+      "lat": 41.897531,
+      "lon": 12.498588999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "42d77698-5e68-43d2-a341-d67e8628ab1f": {
+      "lat": 41.897514,
+      "lon": 12.498622,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "c8650967-7389-41e7-b3f1-ac43b2f88f05": {
+      "lat": 41.89745,
+      "lon": 12.498493999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "d758b993-c05d-4ae6-932e-c3cdbfaa939b": {
+      "lat": 41.8975,
+      "lon": 12.498641999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "0e7907d1-fef1-442d-a0a7-ddfe76bb6ee6": {
+      "lat": 41.897525,
+      "lon": 12.498591999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "35f82fc5-4f47-4d8c-9577-0aa0cc267cf4": {
+      "lat": 41.897525,
+      "lon": 12.498591999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "fa9e5d5a-cba6-49da-952e-8a54bbd9d00c": {
+      "lat": 41.897553,
+      "lon": 12.4985529998783,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "8f7cb749-f11a-4511-944d-a5f5f8ff2e04": {
+      "lat": 41.89745300011258,
+      "lon": 12.498691999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "f5b33fe6-dac7-4caf-841a-53f8acb11c13": {
+      "lat": 41.897475,
+      "lon": 12.498614,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "313bae67-aa61-4082-ae54-594d8bbadff8": {
+      "lat": 41.897475,
+      "lon": 12.498614,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "f3976893-1cd5-46d2-9108-7c7c9f87ebba": {
+      "lat": 41.897458,
+      "lon": 12.498643999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "30d9ccd1-441f-4b2f-b8ca-c67ed314c82a": {
+      "lat": 41.897458,
+      "lon": 12.498643999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "565ed9b4-fa10-4e5b-a412-d1cdf5339314": {
+      "lat": 41.897525,
+      "lon": 12.498597000104525,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "75bae3e3-80e2-4567-80dc-f04f738f9c84": {
+      "lat": 41.897422,
+      "lon": 12.498686,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "0c6d062d-f53b-4903-bb68-26c946129581": {
+      "lat": 41.897531,
+      "lon": 12.498597000104525,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2d9170a5-94dc-498f-9e47-d5192249c68a": {
+      "lat": 41.897775,
+      "lon": 12.498819,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "55ee27c0-38be-4b9a-8097-68bbe5be3be0": {
+      "lat": 41.897775,
+      "lon": 12.498819,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "e755ec06-8216-49e2-ad5b-264627276beb": {
+      "lat": 41.897725,
+      "lon": 12.498781,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "43c3e304-807a-4528-936d-f6be9dc857b2": {
+      "lat": 41.897922,
+      "lon": 12.498930999845463,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "06d9f1eb-2d99-45b6-a411-fe303d4659a9": {
+      "lat": 41.897522,
+      "lon": 12.498586,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "17bc70f7-a1cf-4851-98b7-f3890d35071a": {
+      "lat": 41.897506,
+      "lon": 12.498688999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "14fd944c-4879-4d98-8bca-c1e2c36d87f3": {
+      "lat": 41.897739,
+      "lon": 12.498558,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "b09433a4-dd92-473c-b844-cd30de0ed4f7": {
+      "lat": 41.897683000109254,
+      "lon": 12.498522,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "8e0544b4-d542-4279-8fbe-8785b958fb70": {
+      "lat": 41.897572,
+      "lon": 12.498517,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "14c13254-8460-4ceb-a47c-6f56a79e5583": {
+      "lat": 41.897567,
+      "lon": 12.498519000144487,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "54f95ebc-e9fd-4e4a-955c-908ace33a1ef": {
+      "lat": 41.897533000128156,
+      "lon": 12.498614,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2223f629-eace-4918-80f2-bbbdeae2c758": {
+      "lat": 41.897525,
+      "lon": 12.498610999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "c0b47443-03c1-458a-ad62-7dc4683530c7": {
+      "lat": 41.897564,
+      "lon": 12.49855,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "20452fcd-396f-4373-ad1b-8639b4d398e5": {
+      "lat": 41.897533000128156,
+      "lon": 12.498593999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "69bd2dad-2fbc-4fcf-85eb-e45d4cf0cd15": {
+      "lat": 41.897602999871246,
+      "lon": 12.498469000135666,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "70ef017f-7544-4ad0-aef6-80423b9b6e47": {
+      "lat": 41.897602999871246,
+      "lon": 12.498469000135666,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "58a33626-2c60-425f-ac1d-c9d031aad2cb": {
+      "lat": 41.897560999999996,
+      "lon": 12.498577999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2e53bb32-c8bb-4e28-aede-e1aa29de8eea": {
+      "lat": 41.897583000121166,
+      "lon": 12.498497000075947,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "dd3fabc1-a117-41c5-8e02-2bd6b6991d40": {
+      "lat": 41.897503,
+      "lon": 12.498617,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "9872d1d5-87ba-406e-bf06-f59ed5c2cf39": {
+      "lat": 41.897533000128156,
+      "lon": 12.498572,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "80d5ef0c-6584-46e5-bcf6-db6d9210dc34": {
+      "lat": 41.897533000128156,
+      "lon": 12.498572,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "35fe5d4a-960e-4d99-a876-ea6d0b66901e": {
+      "lat": 41.897594,
+      "lon": 12.498481,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "5296ae6d-d681-4253-bbd2-9a3cf44d72d4": {
+      "lat": 41.897605999999996,
+      "lon": 12.498488999899081,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2acf6b4e-94db-4d93-a602-864c9e011a6c": {
+      "lat": 41.897594,
+      "lon": 12.498488999899081,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "980c2695-795e-46a3-a630-110fa5898e6d": {
+      "lat": 41.897553,
+      "lon": 12.498543999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "35161158-b593-403b-abc0-5ee191cf8ac7": {
+      "lat": 41.897592,
+      "lon": 12.498482999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "e9520dd8-e13a-4962-8928-89696d8c1718": {
+      "lat": 41.89755,
+      "lon": 12.498564,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "0b59aa9d-6752-46f9-b01b-fd53c6ebd720": {
+      "lat": 41.897294,
+      "lon": 12.498971999999998,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "358cf0f8-eb3e-4352-a596-1c8a9b69fa96": {
+      "lat": 41.897531,
+      "lon": 12.498588999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2b07babf-15aa-44aa-8b6c-552f3c43d330": {
+      "lat": 41.897164,
+      "lon": 12.499130999879094,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "07297f8b-5ed9-4e91-b81d-c2a5701c2b25": {
+      "lat": 41.897597,
+      "lon": 12.49843900011708,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "3b5f98d4-e5ba-4e9b-9d03-eaee94744f22": {
+      "lat": 41.897678,
+      "lon": 12.49841900012786,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "d101a1b5-5772-4c72-9d5e-c3862167f551": {
+      "lat": 41.897605999999996,
+      "lon": 12.498481,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "c3135702-cb38-4bfc-959c-671e6bd3be9c": {
+      "lat": 41.897708,
+      "lon": 12.498444,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "52215765-d871-4893-9d49-60615b790325": {
+      "lat": 41.897556,
+      "lon": 12.49855,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "2cdcfbe8-9bf1-418e-b0dd-e08d9f89b966": {
+      "lat": 41.897678,
+      "lon": 12.498446999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "5be8a216-f1a0-414d-8d40-06dceb0adfa4": {
+      "lat": 41.89763899991118,
+      "lon": 12.498472,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "0a99c80e-b226-49ed-889b-44e81867af93": {
+      "lat": 41.897628,
+      "lon": 12.498475,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "b06e7222-0360-4777-95ef-6e8bc4e4d99f": {
+      "lat": 41.897608,
+      "lon": 12.498467,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "21708169-be17-444f-ae15-775b39773771": {
+      "lat": 41.897581,
+      "lon": 12.498505999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "ed842042-4ba4-473c-9726-ea745f6db4ea": {
+      "lat": 41.897583000121166,
+      "lon": 12.498505999999999,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor"
+    },
+    "7a8d8acc-9a0a-45b7-85f9-489fd75e2ae3": {
+      "lat": 41.895828,
+      "lon": 12.499941999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "675ae84f-6056-4d20-a285-8fbcf4ad8c94": {
+      "lat": 41.895844,
+      "lon": 12.499936,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "7b2a0014-509b-43df-a10c-5c3b8a8772ba": {
+      "lat": 41.895844,
+      "lon": 12.499991999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "b67785c2-2b5c-4d9c-8052-96525bc57740": {
+      "lat": 41.895744,
+      "lon": 12.500456,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "84419986-f134-4448-af51-3876a381461f": {
+      "lat": 41.895744,
+      "lon": 12.500456,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "683baf1b-b309-43e2-a3a5-e39604f40b6c": {
+      "lat": 41.895778,
+      "lon": 12.500358,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "dcdc67e5-2ccb-4b9a-bb22-6a2101ca9124": {
+      "lat": 41.895742,
+      "lon": 12.499866999885096,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "f5e02ba1-3a4c-4b68-8a52-d7263ae555cb": {
+      "lat": 41.895742,
+      "lon": 12.499866999885096,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "ee628eaa-be49-434c-8924-a5b6c009805b": {
+      "lat": 41.895622,
+      "lon": 12.500125,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "3a110b44-a92b-4b5a-b48f-a7508a787d0e": {
+      "lat": 41.895664,
+      "lon": 12.500083,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "8c6dc43e-1403-4179-a58b-79b4c8cd65a3": {
+      "lat": 41.896389,
+      "lon": 12.498753000141182,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "6c761862-5027-4e61-9458-b3858ea25a7a": {
+      "lat": 41.896508,
+      "lon": 12.499082999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "8fde3884-a16b-4406-a5e3-f9df943d383f": {
+      "lat": 41.896508,
+      "lon": 12.499082999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "c357e744-8e1d-4cc1-80c1-e4b1491fa85c": {
+      "lat": 41.896572,
+      "lon": 12.499177999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "f69c87c0-c327-4c2c-aab7-7fe18760bb30": {
+      "lat": 41.896560999882915,
+      "lon": 12.499149999999998,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "d60c60b6-f5ce-4e63-ad75-18026529081f": {
+      "lat": 41.896661,
+      "lon": 12.499047,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "805e7382-ef28-4cf8-9df5-75d40bde7b04": {
+      "lat": 41.89655,
+      "lon": 12.498906,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "ac2b745a-d9d7-4f29-8dc8-02c2a3d29c17": {
+      "lat": 41.896560999882915,
+      "lon": 12.498956,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "cf75edcf-ba53-444a-a372-2ac04d95f9c9": {
+      "lat": 41.89628899987668,
+      "lon": 12.498638999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "8f341d9e-be62-431a-82dd-0e5e352bbdb5": {
+      "lat": 41.896233,
+      "lon": 12.498560999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "548a8ae3-24c5-4b1f-97c4-1eafb3b1ccaf": {
+      "lat": 41.896233,
+      "lon": 12.498560999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "e6d54548-0d42-40b9-abbb-54f864ec4ebb": {
+      "lat": 41.896233,
+      "lon": 12.498560999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "f7937f89-b57a-4a56-b84f-8534edc119ae": {
+      "lat": 41.896233,
+      "lon": 12.498560999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "a84ecad8-9307-4c53-b8e6-70bc8d91be07": {
+      "lat": 41.896228,
+      "lon": 12.498793999999998,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "1460e23e-8164-4b01-8e2e-916de6546e79": {
+      "lat": 41.895953,
+      "lon": 12.498753000141182,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "36f14668-72fd-40f2-b84b-e95429870f0c": {
+      "lat": 41.896167,
+      "lon": 12.498869,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "72f1ac2d-ab0f-48e5-8ca9-33b613d53b54": {
+      "lat": 41.896167,
+      "lon": 12.498869,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "29d1e2a4-dc12-495e-919b-5a09b4aa58da": {
+      "lat": 41.896392,
+      "lon": 12.498992,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "18d7b9ee-1134-4ee9-aeee-2460785145dd": {
+      "lat": 41.896392,
+      "lon": 12.498992,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "eff9373b-faa3-4ded-b7f0-0b527a082f6f": {
+      "lat": 41.896411,
+      "lon": 12.498982999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "6e24f796-5e79-46ec-9798-9b2ff5c83a09": {
+      "lat": 41.896411,
+      "lon": 12.498982999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "969601fb-00c9-4473-92ce-f57b36bc5ad8": {
+      "lat": 41.8964,
+      "lon": 12.498985999999999,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "08d5b12d-02b8-4f9b-ac8d-8e5b01d933bf": {
+      "lat": 41.8964,
+      "lon": 12.498971999999998,
+      "poiId": "santa-prassede",
+      "label": "Basílica de Santa Práxedes"
+    },
+    "97cba328-88b9-410e-a07b-391c71887b7e": {
+      "lat": 41.892022,
+      "lon": 12.494568999999998,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Cerca de Basílica de San Pietro in Vincoli"
+    },
+    "0c2a5b1e-c306-4e39-99c8-f2b3a1bd1387": {
+      "lat": 41.892169,
+      "lon": 12.493756,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "195c9573-c265-4f7e-a9d1-7254f8f0fb62": {
+      "lat": 41.893741999999996,
+      "lon": 12.492716999999999,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "1085622c-bd63-4d27-97a4-fbb899ed12e7": {
+      "lat": 41.893741999999996,
+      "lon": 12.492716999999999,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "9e23ebd4-a0b3-412e-9574-bc8c27c3c1a1": {
+      "lat": 41.893741999999996,
+      "lon": 12.492716999999999,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "d0ce0121-76f3-4f5e-ad02-33b48c30c008": {
+      "lat": 41.893878,
+      "lon": 12.49303300008128,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "40fab7ff-ccc5-44fe-abfa-f1438afa1f99": {
+      "lat": 41.893878,
+      "lon": 12.49303300008128,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "2d6db32f-21df-49b3-9f62-26be1f3947ec": {
+      "lat": 41.893878,
+      "lon": 12.49303300008128,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "e7809cd9-75da-4e6f-a280-eb05010b3a1b": {
+      "lat": 41.893755999999996,
+      "lon": 12.493030999999998,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "21815bdf-34fd-4642-8721-a26ae158f0af": {
+      "lat": 41.893755999999996,
+      "lon": 12.493030999999998,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "204e1010-8cf5-4ebe-a96a-c20fec6eb7a2": {
+      "lat": 41.893755999999996,
+      "lon": 12.493052999921364,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "60c46fea-cb74-4797-9040-821b7bc72ac7": {
+      "lat": 41.893753,
+      "lon": 12.493072,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "3f399acd-2af1-4c4c-8b63-112425988a2e": {
+      "lat": 41.893753,
+      "lon": 12.493072,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "3ebfda64-9b57-4852-9250-e6f30e42fc2c": {
+      "lat": 41.893894,
+      "lon": 12.493122,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "41e6d668-a3d6-4c0c-852d-b0f67bcb8e32": {
+      "lat": 41.893831,
+      "lon": 12.493127999999999,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "98ffc200-72b0-4918-be85-1563d9fb2581": {
+      "lat": 41.893764,
+      "lon": 12.493096999999999,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "53e59a77-7298-4040-b0d2-84304d1b4084": {
+      "lat": 41.893755999999996,
+      "lon": 12.493211000079308,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Basílica de San Pietro in Vincoli"
+    },
+    "062a0bb4-bd8e-4b72-83bc-7888d1174bda": {
+      "lat": 41.89204699992528,
+      "lon": 12.492042,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Cerca de Basílica de San Pietro in Vincoli"
+    },
+    "2ce94c6a-4851-4f54-8f0a-aec79eb0353c": {
+      "lat": 41.892108,
+      "lon": 12.491928,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Cerca de Basílica de San Pietro in Vincoli"
+    },
+    "39bcd186-7a03-4525-95a6-810280cc710a": {
+      "lat": 41.891981,
+      "lon": 12.491769,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Cerca de Basílica de San Pietro in Vincoli"
+    },
+    "83301a79-6c2c-4d9f-b48b-6199f7f0414e": {
+      "lat": 41.891981,
+      "lon": 12.491766999929093,
+      "poiId": "san-pietro-in-vincoli",
+      "label": "Cerca de Basílica de San Pietro in Vincoli"
+    },
+    "f056a860-01a2-42a7-8f5d-de183a2ab138": {
+      "lat": 41.891811,
+      "lon": 12.491636,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "755b5c20-5bec-4ac5-9084-e7ee647f7a3c": {
+      "lat": 41.891814,
+      "lon": 12.491639,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "f9ae05fa-2f3f-47a2-afec-62b5a5f62b09": {
+      "lat": 41.891572,
+      "lon": 12.491724999999999,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "2c5ea4d1-1f72-48ed-a5bb-76944c82d217": {
+      "lat": 41.891543999999996,
+      "lon": 12.491716999931285,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "b46d34cb-ee36-492e-b2d9-383f7cc38c0f": {
+      "lat": 41.890872,
+      "lon": 12.491586,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "8e3e7742-dcde-483b-95f9-14d4bd5c3e8c": {
+      "lat": 41.890469,
+      "lon": 12.490988999999999,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "cdcd1a59-54b0-4b52-972f-69e44b51e37f": {
+      "lat": 41.890458,
+      "lon": 12.490958,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "8fcd569f-4e73-47b2-ae34-4dd2603e6ffd": {
+      "lat": 41.890444,
+      "lon": 12.490953,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "72df81f5-6819-4241-8db2-8de9e4f01ca2": {
+      "lat": 41.890525,
+      "lon": 12.490986,
+      "poiId": "coliseo",
+      "label": "Coliseo"
+    },
+    "b3f1ad6c-8585-42e9-b502-e2ed77e2c30c": {
+      "lat": 41.892433,
+      "lon": 12.488392,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "ebf11932-51a2-4190-b66d-d058bc5aff80": {
+      "lat": 41.892456,
+      "lon": 12.488382999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "396f1b59-0910-4375-b1bd-53cfb4980da6": {
+      "lat": 41.892486,
+      "lon": 12.488156,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "c166f03d-8e0f-4179-ab83-a56787486348": {
+      "lat": 41.892778,
+      "lon": 12.487749999999998,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "2d5cc94c-cd20-40d3-8ba4-3014aeae44c3": {
+      "lat": 41.892936,
+      "lon": 12.487488999999998,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "d019a36f-4efe-4222-9661-e8ba32525876": {
+      "lat": 41.893006,
+      "lon": 12.4871,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "b82f1f38-6e7b-4b2b-8a17-b69f484cd1a5": {
+      "lat": 41.892989,
+      "lon": 12.487089,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "466ccc60-f2f6-47e3-abd8-615e4c7d88c9": {
+      "lat": 41.892997,
+      "lon": 12.487072,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "154953bf-b707-484a-bb13-fc92dc6c93b4": {
+      "lat": 41.892997,
+      "lon": 12.487069,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "bde91818-78e7-4b17-b159-bf5ecdab4c5a": {
+      "lat": 41.893383,
+      "lon": 12.487018999999998,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "e8b17376-509d-4adc-8cfb-c03e093978ec": {
+      "lat": 41.893578,
+      "lon": 12.487013999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "b9ffde79-f0cc-4502-90e3-ec64be5d33dc": {
+      "lat": 41.893592,
+      "lon": 12.486980999999998,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "0e8df752-7a42-42cd-a9be-ca235aebf510": {
+      "lat": 41.893806,
+      "lon": 12.486419,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "98944eb0-d823-4798-a0fb-51e96df6f998": {
+      "lat": 41.893956,
+      "lon": 12.486268999999998,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "8c2221df-e55f-41b6-b0f3-df6285c12bdb": {
+      "lat": 41.893986,
+      "lon": 12.486113999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "112ac5de-a481-43c6-8310-444e179d690d": {
+      "lat": 41.894372,
+      "lon": 12.485396999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "1dd6fcbb-13b1-4594-9d80-1baa5d7a79fe": {
+      "lat": 41.89441699992159,
+      "lon": 12.485353,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "dc8c5254-8f0c-4366-b208-c53f6487bb83": {
+      "lat": 41.89455,
+      "lon": 12.485125,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "88ebb197-d4cc-43a2-977f-784c0c288dfd": {
+      "lat": 41.895206,
+      "lon": 12.484380999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "a0d4e408-2c8c-4059-afdc-718f26846043": {
+      "lat": 41.895378,
+      "lon": 12.484193999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali"
+    },
+    "0288e1ca-147f-415e-8a83-7933da268262": {
+      "lat": 41.895680999999996,
+      "lon": 12.483906,
+      "label": "Municipio Roma I, Roma"
+    },
+    "fbd02fe0-eb4b-42eb-8115-527fbda9e5e2": {
+      "lat": 41.89615299991537,
+      "lon": 12.483428,
+      "label": "Piazza della Madonna di Loreto, Roma"
+    },
+    "bc708406-e373-4018-875a-20e4a79cf5eb": {
+      "lat": 41.894997,
+      "lon": 12.481069,
+      "label": "Via di San Venanzio, Roma"
+    },
+    "7692a455-5188-4caa-a5c9-1fbdbfa3744d": {
+      "lat": 41.894508,
+      "lon": 12.480947,
+      "label": "Municipio Roma I, Roma"
+    },
+    "db950aff-65f7-4a71-b04d-675bb3bf7d84": {
+      "lat": 41.894344,
+      "lon": 12.481419,
+      "label": "Piazza d'Aracoeli, Roma"
+    },
+    "c28af311-a290-40fd-8b79-a717a1a01224": {
+      "lat": 41.893425,
+      "lon": 12.479608,
+      "label": "Piazza di Campitelli, Roma"
+    },
+    "860ecf63-9c38-4a45-a506-75e9e4d15fe2": {
+      "lat": 41.892625,
+      "lon": 12.480178,
+      "label": "Via del Portico d'Ottavia, Roma"
+    },
+    "cc8a9f1a-9c78-44b9-8f36-e693ae67264b": {
+      "lat": 41.892625,
+      "lon": 12.480167,
+      "label": "Via del Portico d'Ottavia, Roma"
+    },
+    "7660b23f-5d0d-4e8d-bdd8-a6cbfd24374b": {
+      "lat": 41.892606,
+      "lon": 12.480172,
+      "label": "Via del Portico d'Ottavia, Roma"
+    },
+    "1352facc-9e11-4965-a776-19f19ea22e31": {
+      "lat": 41.888369,
+      "lon": 12.481372,
+      "label": "Piazza della Bocca della Verità, Roma"
+    },
+    "3d8a1d8e-65df-4705-b4e6-63c9b7eae698": {
+      "lat": 41.88845,
+      "lon": 12.481346999906393,
+      "label": "Piazza della Bocca della Verità, Roma"
+    },
+    "0d222799-ef5f-4b91-b087-2e9f2fd8adeb": {
+      "lat": 41.888456,
+      "lon": 12.481344,
+      "label": "Piazza della Bocca della Verità, Roma"
+    },
+    "d244dede-482c-4167-95da-9eb452b87722": {
+      "lat": 41.888419,
+      "lon": 12.481456,
+      "label": "Piazza della Bocca della Verità, Roma"
+    },
+    "1e9d7ec3-ace0-467a-8d5a-7a44693c429f": {
+      "lat": 41.876233,
+      "lon": 12.481058,
+      "label": "Piazzale Ostiense, Roma"
+    },
+    "c6b1c8cb-90e2-4841-961b-d49e2c696520": {
+      "lat": 41.859694000000005,
+      "lon": 12.475092,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "3d19ff9e-1e44-4bf2-98f1-997847375e61": {
+      "lat": 41.8595669999123,
+      "lon": 12.474769,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "1826fbea-4ce9-4b0c-9cd5-b89693d6cb4d": {
+      "lat": 41.859425,
+      "lon": 12.475028,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "64c5b5b3-cd0b-4dda-bef5-e316a9f9a3f0": {
+      "lat": 41.858967,
+      "lon": 12.474783,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "73593ed6-e7b5-404b-a100-f3318694731d": {
+      "lat": 41.858978,
+      "lon": 12.474789,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "7166ccd9-e468-4c93-9757-1ea56edaf16b": {
+      "lat": 41.858519,
+      "lon": 12.475056,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "fae24bdb-7a6f-460e-800c-cd18c529f69f": {
+      "lat": 41.858519,
+      "lon": 12.475058,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "0b2cf688-8224-42cf-8bee-23e70d1aac0c": {
+      "lat": 41.858547,
+      "lon": 12.475225,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "e8e92814-9536-4752-bfc5-e4d810dfa5f5": {
+      "lat": 41.858597,
+      "lon": 12.475256,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "1be1b777-66cc-44c4-9285-5bfb0fdbfa32": {
+      "lat": 41.858703,
+      "lon": 12.475256,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "a3324233-7020-4b20-a85d-12843a728b79": {
+      "lat": 41.858714,
+      "lon": 12.475261,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "6717f045-acd6-4900-b1c9-67162f6b737d": {
+      "lat": 41.858814,
+      "lon": 12.475353,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "1c512e4c-391b-452b-b6f8-e8a42edd58f8": {
+      "lat": 41.858803,
+      "lon": 12.475358,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "4f51d6a4-ed18-4d11-a7aa-b99e5132190a": {
+      "lat": 41.858803,
+      "lon": 12.475356,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "928135a2-03fd-4b37-be27-d34aaaeb8d1c": {
+      "lat": 41.858822,
+      "lon": 12.475331,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "f13a0175-f7dd-4ee2-9eb9-3ca5158c9521": {
+      "lat": 41.858853,
+      "lon": 12.475344,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "30105349-a5da-4210-9e53-83c35486b606": {
+      "lat": 41.858853,
+      "lon": 12.475344,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "0b4854ad-a6c6-42fa-93ee-924c80253d8b": {
+      "lat": 41.858678000000005,
+      "lon": 12.475306,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "d73d1771-226e-41d6-877c-38d564b486bf": {
+      "lat": 41.858681000000004,
+      "lon": 12.4754,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "7ea09862-2343-4150-9e2d-2b8078af141a": {
+      "lat": 41.858672,
+      "lon": 12.475458,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "0257a915-1e9b-445a-a9de-15362bd4ee26": {
+      "lat": 41.858608000000004,
+      "lon": 12.475686,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "b6c35d08-435d-4555-804a-61bc8b3a43b4": {
+      "lat": 41.858608000000004,
+      "lon": 12.475683000073245,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "9fb340e2-036a-4b62-9388-3662903c138f": {
+      "lat": 41.858569,
+      "lon": 12.475761,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "b7fef5e0-072a-448c-b59f-91328dc6af1e": {
+      "lat": 41.858569,
+      "lon": 12.475758,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "9aa125ee-7d02-4ee4-89fd-2f781a3b82b5": {
+      "lat": 41.858669,
+      "lon": 12.475994,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "373c3e96-7a3d-488e-9d68-f96ef495b7dd": {
+      "lat": 41.858753,
+      "lon": 12.476033,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "c0a2858d-9f57-4587-a39c-b5a67459f377": {
+      "lat": 41.858811,
+      "lon": 12.476164,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "8866d7e7-a92b-4e36-837b-3c89d5fe7a87": {
+      "lat": 41.858764,
+      "lon": 12.476178,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "76cf063b-4d87-41f9-9711-c27d0d6bd36e": {
+      "lat": 41.858581,
+      "lon": 12.476133,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "075bef89-6f02-40be-ab51-3eb5c3c842c1": {
+      "lat": 41.858556,
+      "lon": 12.476133,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "30d41012-35ce-494d-b625-89f5267b0136": {
+      "lat": 41.858489,
+      "lon": 12.475868999929721,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "9a6ed03b-89ce-4aa1-a33d-0fea37f9cb48": {
+      "lat": 41.858578,
+      "lon": 12.476017,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "881e4b07-8955-4077-9202-b4cfb5079fa2": {
+      "lat": 41.858622000000004,
+      "lon": 12.475797,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "7559a3aa-b078-4c09-b043-3bdd82fb9d7f": {
+      "lat": 41.858906000000005,
+      "lon": 12.476058,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "eb764940-44c3-471b-af1d-a98fc2982abb": {
+      "lat": 41.858906000000005,
+      "lon": 12.476058,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "258d9806-e32a-458a-8a0c-6dfc19d6cc3b": {
+      "lat": 41.858864000000004,
+      "lon": 12.476178,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "9440c354-e7e9-4997-9d08-e6572fce460d": {
+      "lat": 41.859264,
+      "lon": 12.47755,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "254ba720-5982-40f4-8c73-d3924630e814": {
+      "lat": 41.859264,
+      "lon": 12.477660999894079,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "006030fc-72fb-4dae-9454-05e9cfc27f0e": {
+      "lat": 41.859281000077644,
+      "lon": 12.477683000109254,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "7246f3fe-9eb9-4ba7-bce7-4a78384d5cd4": {
+      "lat": 41.859017,
+      "lon": 12.477606,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "d2cb374e-977f-41ed-99e8-3c7b3ca3fc86": {
+      "lat": 41.858683,
+      "lon": 12.47805,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "e9f1ed32-dc15-46c6-9201-edad4d23e7c6": {
+      "lat": 41.858689,
+      "lon": 12.478039,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "0f7f4850-21ad-4459-8fde-c57d0da9f199": {
+      "lat": 41.858689,
+      "lon": 12.478039,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "09075000-b66c-4321-bff6-0f30165e255f": {
+      "lat": 41.858722,
+      "lon": 12.477469,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "3c2c03fc-c3e3-487e-ab38-4c165cee8c02": {
+      "lat": 41.858672,
+      "lon": 12.477156,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "c6f7fdf1-9ad7-41ac-bc2d-339a57379405": {
+      "lat": 41.858939,
+      "lon": 12.477239,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "d1a51c0c-cda5-44f6-b1b0-81f1866bac16": {
+      "lat": 41.858781,
+      "lon": 12.477088999907485,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "4698aced-09fc-4d8a-8802-a408303a669f": {
+      "lat": 41.858667000000004,
+      "lon": 12.477156,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "707aedf4-b2eb-42b9-bf41-c96024b9cd09": {
+      "lat": 41.859556000000005,
+      "lon": 12.477142,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "c58dceda-1857-4a2c-b36f-697b6702928a": {
+      "lat": 41.859653,
+      "lon": 12.4770389999327,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "b3515d82-d9ec-4777-bdc8-71a283480b66": {
+      "lat": 41.859653,
+      "lon": 12.4770389999327,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "1737ff4d-31bb-4d84-9c85-281bd20ffdd2": {
+      "lat": 41.859653,
+      "lon": 12.4770389999327,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "5278900b-8f9a-478a-b463-2574b81cf30a": {
+      "lat": 41.859653,
+      "lon": 12.4770389999327,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "336b4faf-e971-4a53-b61b-a39c73fa3a3a": {
+      "lat": 41.859019,
+      "lon": 12.477406,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "bfc0f858-d564-442a-9e0f-0f51a542aa9d": {
+      "lat": 41.858933,
+      "lon": 12.477411,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "5f803aa4-30ea-41e0-a47a-9b72e99eec38": {
+      "lat": 41.858447,
+      "lon": 12.477161,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "e90d0ac6-ebcb-4fa2-b990-1dead8b269a6": {
+      "lat": 41.858406,
+      "lon": 12.477314,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "855ad009-eaf2-46fe-bb92-9ee6c0270f62": {
+      "lat": 41.858353,
+      "lon": 12.477439,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros"
+    },
+    "4406286f-e045-4d39-aab2-b5a8c80a0efc": {
+      "lat": 43.070347000000005,
+      "lon": 12.617539,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "d03d7f39-2e80-40a1-8443-671a2946c568": {
+      "lat": 43.070347000000005,
+      "lon": 12.617539,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "ca4dccb0-7a57-405c-be74-2aeaa6ba8435": {
+      "lat": 43.071169000000005,
+      "lon": 12.614831000126118,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "a28f4abc-cc00-48c7-b74d-bf30e32b2ed0": {
+      "lat": 43.071189000000004,
+      "lon": 12.614781000119345,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "409fbd70-cb44-430b-9095-0259ab7a6b73": {
+      "lat": 43.071189000000004,
+      "lon": 12.614781000119345,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "6ff83f82-845f-4c9b-ab77-955818e1d5cd": {
+      "lat": 43.071189000000004,
+      "lon": 12.614781000119345,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "983e6807-a0a8-4c92-bb54-62b550eaee9b": {
+      "lat": 43.071158000000004,
+      "lon": 12.614853000080108,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "1724cbc4-232c-4869-9e13-821fc08ea62f": {
+      "lat": 43.071158000000004,
+      "lon": 12.614853000080108,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "0192da58-a7ec-4e26-8fdf-ced5aeb312e0": {
+      "lat": 43.071217000000004,
+      "lon": 12.614692,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "66288acd-995d-4dcc-9c12-b6057cc2bf95": {
+      "lat": 43.071308,
+      "lon": 12.614775,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "3dda7d7f-ff00-4501-8bf4-821404805d4b": {
+      "lat": 43.071261,
+      "lon": 12.614781000119345,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "623cac6b-ef09-4b3b-b423-5739f3b84895": {
+      "lat": 43.071367,
+      "lon": 12.614557999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "302a3394-d7c9-4d30-bf19-01cca146bfb9": {
+      "lat": 43.070931,
+      "lon": 12.615172,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "f1a0ea30-2d70-4db8-97db-f635888697d8": {
+      "lat": 43.070847,
+      "lon": 12.615186,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "de0b87f0-48cc-4beb-a61c-ccdd5e21a6a1": {
+      "lat": 43.070594,
+      "lon": 12.615158,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "d8160779-ed65-4f00-84cf-57f3ce69bf5c": {
+      "lat": 43.070628000000006,
+      "lon": 12.61515,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "4e27e9c3-b5cf-4a3b-838b-ab4f0ad79152": {
+      "lat": 43.070756,
+      "lon": 12.615325,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "821cf1ea-178d-416b-b74d-2b1651979cf1": {
+      "lat": 43.07045,
+      "lon": 12.615542,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "8d65be28-e335-40d6-a349-c13cde93c9d4": {
+      "lat": 43.070447,
+      "lon": 12.615539,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "ca5f0b0c-a6a4-46d1-8996-4a10efca8a54": {
+      "lat": 43.070439,
+      "lon": 12.615542,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "efa63f34-ba00-4f2c-84b9-c59cf37b674d": {
+      "lat": 43.070350000000005,
+      "lon": 12.615617,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "bd74ee63-ceb9-4d0c-ae0c-f228c84d715d": {
+      "lat": 43.07036900000001,
+      "lon": 12.615806,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "06043537-6545-4187-ad63-57e4f073480b": {
+      "lat": 43.070356000000004,
+      "lon": 12.615822,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "489d3130-ab9e-4b12-9a1b-b70dc56a87de": {
+      "lat": 43.07061100000001,
+      "lon": 12.616078,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "342d8e89-9a26-4bc8-812e-2170a0ac4c2e": {
+      "lat": 43.07061100000001,
+      "lon": 12.616078,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "8374a078-c535-4586-ba6e-13357561db91": {
+      "lat": 43.07061100000001,
+      "lon": 12.616078,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "2c6d2d4a-749e-49ae-a4a2-8389735097b8": {
+      "lat": 43.070031,
+      "lon": 12.615831,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "e7e31cf8-6556-4380-8b22-69e052713dcf": {
+      "lat": 43.070042,
+      "lon": 12.615841999999999,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "8ed0f302-8af9-4ab8-9b47-bb3014330956": {
+      "lat": 43.069236000000004,
+      "lon": 12.616558,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "8fb80298-e58d-4cae-9598-ffdf00f37f47": {
+      "lat": 43.069172,
+      "lon": 12.616655999999999,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "ad72e457-521a-4b82-9dbe-a44fcda87c34": {
+      "lat": 43.072892,
+      "lon": 12.609592,
+      "label": "Via San Francesco, Asís"
+    },
+    "e3db8e90-8955-4216-b8ad-c7871c3e2b69": {
+      "lat": 43.073967,
+      "lon": 12.6076,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "ee7335fd-5d8f-405f-a1b2-e7f354e4a5b4": {
+      "lat": 43.074044,
+      "lon": 12.607625,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "6da06811-6f5f-420e-9360-f953bb6d96b0": {
+      "lat": 43.074161000000004,
+      "lon": 12.607064,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "d518cd24-a7a0-4ef9-869a-9da80d9b399a": {
+      "lat": 43.074483,
+      "lon": 12.606014,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "03c26bae-5545-477a-b1f5-244cbf740fe0": {
+      "lat": 43.074497,
+      "lon": 12.606014,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "2ec88a27-b469-483b-aa8b-4fd474794d7f": {
+      "lat": 43.074458,
+      "lon": 12.606156,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "af1e7724-18b3-4724-802d-0c73d785c7f1": {
+      "lat": 43.07447500000001,
+      "lon": 12.606042,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "9d819a82-8f46-402e-9a35-afa9beda496f": {
+      "lat": 43.07447500000001,
+      "lon": 12.606043999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "eaaf830b-8e3e-4f25-b2b4-82ed5ccdc28d": {
+      "lat": 43.074906000000006,
+      "lon": 12.604930999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "6db9eb27-e623-4db6-acdd-364d820374fb": {
+      "lat": 43.075,
+      "lon": 12.605222,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "e90e3512-cabd-4690-b2c0-7b7400c724bd": {
+      "lat": 43.074753,
+      "lon": 12.606322,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "759cf275-03e4-4927-bf07-52a07fd1d8e6": {
+      "lat": 43.074742,
+      "lon": 12.606316999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "00612a91-caa7-4e33-bc35-a7aecf8f51c3": {
+      "lat": 43.074744,
+      "lon": 12.6062,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "3a04d4b4-d16c-4693-a0fa-e8f7128455b1": {
+      "lat": 43.074469,
+      "lon": 12.606385999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "2159c8cf-cecc-4746-a89e-e58f4fd76dd1": {
+      "lat": 43.074486,
+      "lon": 12.606399999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "76a24949-df19-4936-ae7d-c29f0c3bb3e8": {
+      "lat": 43.074244,
+      "lon": 12.606281,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "e08abf12-4935-46cb-a2e0-cfaf18c03614": {
+      "lat": 43.074244,
+      "lon": 12.606266999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "00834277-94ed-40af-a930-504ee4ece868": {
+      "lat": 43.057821999999994,
+      "lon": 12.590903,
+      "label": "Via Alessandro Manzoni, Asís"
+    },
+    "8b85c7fa-4156-46f5-a676-36bf11fa0e9f": {
+      "lat": 43.057483,
+      "lon": 12.579308,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "f2939779-b8fe-4213-b4c3-e926d381467d": {
+      "lat": 43.057475,
+      "lon": 12.579314,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "9d78a0d5-c34c-4a9d-857f-17b2e0dbcf4e": {
+      "lat": 43.057475,
+      "lon": 12.579311000085404,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "68704fba-e18d-4d2f-a637-43f1abca415b": {
+      "lat": 43.057475,
+      "lon": 12.579311000085404,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "f3d2f431-b216-4949-a7ef-db16ace54b71": {
+      "lat": 43.058011,
+      "lon": 12.579736,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "bcb9d52a-abc1-4ddd-9e07-cc8a275b8721": {
+      "lat": 43.058260999999995,
+      "lon": 12.581125,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "d9be4b33-e713-4625-817b-40673711db7a": {
+      "lat": 43.058372,
+      "lon": 12.581442,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "74f14baf-e095-49b5-b56f-0f63a380eec2": {
+      "lat": 43.058372,
+      "lon": 12.581442,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "3be60ed2-f4ab-4302-b8e4-4b316de53a49": {
+      "lat": 43.058246999999994,
+      "lon": 12.581336,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "bfef6367-5afa-45ba-aae6-bc6ba98d1bd8": {
+      "lat": 43.058003,
+      "lon": 12.580843999999999,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "c7544389-c61a-434a-ae3d-589496a31b95": {
+      "lat": 43.070964000000004,
+      "lon": 12.615111000111,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "2846eee7-4b7f-465d-a910-d804a93adab1": {
+      "lat": 43.070989000000004,
+      "lon": 12.615131,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "1e979568-81e5-4385-a48a-1ec6d99b1aa2": {
+      "lat": 43.071158000000004,
+      "lon": 12.614658,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "c78e02c4-80d6-49b8-a7ac-e78fc6033851": {
+      "lat": 43.071194000000006,
+      "lon": 12.614661,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "22b2427b-53f3-4c65-9b25-33752af18eb5": {
+      "lat": 43.073261,
+      "lon": 12.608667,
+      "label": "Vicolo Sant'Andrea, Asís"
+    },
+    "24c30d24-ea91-4359-a199-72f429624c4d": {
+      "lat": 43.073278,
+      "lon": 12.608583,
+      "label": "Via San Francesco, Asís"
+    },
+    "bfca71f4-8aee-4403-ac30-919b04089e1d": {
+      "lat": 43.073308000000004,
+      "lon": 12.608516999999999,
+      "label": "Via San Francesco, Asís"
+    },
+    "3f181239-b658-4088-a5df-b6b95d2a0b74": {
+      "lat": 43.074128,
+      "lon": 12.607075,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "8a160618-4e3a-4c87-88a0-9aeb337ff2f0": {
+      "lat": 43.074367,
+      "lon": 12.606596999999999,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "c38f0fbb-56ed-44cb-9583-b6e3cc5dcc44": {
+      "lat": 43.074394000000005,
+      "lon": 12.606608,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "b286bd21-0523-48fc-b7a2-4d6f7f3792d2": {
+      "lat": 43.074364,
+      "lon": 12.606553,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "5824c566-1a45-4155-becc-b8a2e5ce0ac6": {
+      "lat": 43.074239000000006,
+      "lon": 12.606294,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "bfec7409-f34d-4ef7-9555-a2e22f854c1d": {
+      "lat": 43.073772000000005,
+      "lon": 12.606792,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "1691e0dd-64ec-48e5-823f-a6443740c55d": {
+      "lat": 43.073783000000006,
+      "lon": 12.606831,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "ff39a64f-468a-4ecf-a152-28e7ed34d8dc": {
+      "lat": 43.073289,
+      "lon": 12.607206,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "fcb642f6-cc9d-42d0-bb50-3a3af6eac9fa": {
+      "lat": 43.073139000000005,
+      "lon": 12.607436,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "a70ba732-015d-4224-98d4-06309debee69": {
+      "lat": 43.07253600000001,
+      "lon": 12.609008,
+      "label": "Vicolo Illuminati, Asís"
+    },
+    "7c746520-36da-400c-a898-8bd735e82626": {
+      "lat": 43.072303000000005,
+      "lon": 12.609797000087974,
+      "label": "Via Fontebella, Asís"
+    },
+    "20e3748a-2a46-4019-87f9-63414785bc8d": {
+      "lat": 43.072319,
+      "lon": 12.609706,
+      "label": "Via Fontebella, Asís"
+    },
+    "34c6ff2e-9f4e-41c8-8c5f-a19909823ed3": {
+      "lat": 43.071442000000005,
+      "lon": 12.612169,
+      "poiId": "santuario-spogliazione",
+      "label": "Santuario de la Spogliazione"
+    },
+    "8d6b5287-0ebf-4254-a55d-9c917be128a1": {
+      "lat": 43.071456000000005,
+      "lon": 12.613108,
+      "poiId": "piazza-comune-minerva",
+      "label": "Piazza del Comune y templo de Minerva"
+    },
+    "a1e473ca-741b-4826-9a48-973f8b80db13": {
+      "lat": 43.070686,
+      "lon": 12.615572,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "66d79b05-ab2b-493b-bdf6-e5c3f7b66184": {
+      "lat": 43.069775,
+      "lon": 12.613583,
+      "poiId": "santuario-spogliazione",
+      "label": "Cerca de Santuario de la Spogliazione"
+    },
+    "0c15f31a-af73-4929-b9a7-64017eb89b8b": {
+      "lat": 43.069775,
+      "lon": 12.613574999999999,
+      "poiId": "santuario-spogliazione",
+      "label": "Cerca de Santuario de la Spogliazione"
+    },
+    "fa0d2046-38ac-48c9-b55a-63c100f415c7": {
+      "lat": 43.070478,
+      "lon": 12.611324999999999,
+      "poiId": "santuario-spogliazione",
+      "label": "Santuario de la Spogliazione"
+    },
+    "d839a1df-c55f-4fa7-8d47-15fa25315708": {
+      "lat": 43.069606,
+      "lon": 12.610953,
+      "poiId": "santuario-spogliazione",
+      "label": "Cerca de Santuario de la Spogliazione"
+    },
+    "45da0066-4ccb-4235-b16d-cb16037a2ca9": {
+      "lat": 42.79210299991848,
+      "lon": 12.420878,
+      "label": "Strada Statale 3 bis Tiberina, Todi"
+    },
+    "578afa09-289d-4d07-9313-5455a1d99a5d": {
+      "lat": 43.056847,
+      "lon": 12.577575,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula"
+    },
+    "dc6e1464-0f10-4034-81a2-30d2ba1f479b": {
+      "lat": 43.066836,
+      "lon": 12.619247,
+      "label": "Via Santureggio, Asís"
+    },
+    "e53988ab-3903-494e-8607-050265e29b08": {
+      "lat": 43.066911000000005,
+      "lon": 12.619439,
+      "label": "Asís"
+    },
+    "d711b8df-a2c5-41d2-85a0-93cba0790da4": {
+      "lat": 43.066906,
+      "lon": 12.619439,
+      "label": "Asís"
+    },
+    "c74df81c-da3e-4d57-ad30-d3615800b8e6": {
+      "lat": 43.067122000000005,
+      "lon": 12.619244,
+      "label": "Via della Selva, Asís"
+    },
+    "31b7c933-8656-4d16-99f8-d5261126362e": {
+      "lat": 43.067817000000005,
+      "lon": 12.618500000000001,
+      "label": "Via Borgo Aretino, Asís"
+    },
+    "75870a29-7344-496b-9d4a-a61b92d5f7f7": {
+      "lat": 43.067886,
+      "lon": 12.618336000000001,
+      "label": "Via Borgo Aretino, Asís"
+    },
+    "840f546f-43c3-49b5-9696-4b7c16f016b8": {
+      "lat": 43.067925,
+      "lon": 12.618325,
+      "label": "Via Borgo Aretino, Asís"
+    },
+    "84ded420-a617-4c9c-be1c-ae3002323762": {
+      "lat": 43.068897,
+      "lon": 12.617061,
+      "poiId": "santa-clara-asis",
+      "label": "Cerca de Basílica de Santa Clara"
+    },
+    "9b8055f2-654a-4411-990c-b5c6388f5d20": {
+      "lat": 43.068969,
+      "lon": 12.616942,
+      "poiId": "santa-clara-asis",
+      "label": "Cerca de Basílica de Santa Clara"
+    },
+    "a57cdc53-5463-4630-8291-edf19b40a372": {
+      "lat": 43.069411,
+      "lon": 12.616875,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "5894df81-d186-4aad-8912-99ba80274eb2": {
+      "lat": 43.069411,
+      "lon": 12.616872,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "7b4676ff-de49-43b1-beea-f48c1e638fc7": {
+      "lat": 43.069786,
+      "lon": 12.616469,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "0ab55b44-9ced-4205-a3a4-f7beed08a5dd": {
+      "lat": 43.069972,
+      "lon": 12.616556,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "2c0a8dea-85a9-4d2b-bfa7-ca1281af45b4": {
+      "lat": 43.069858,
+      "lon": 12.615344,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "ed81142a-4d92-4583-be09-5a6563347d0d": {
+      "lat": 43.069828,
+      "lon": 12.615222,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "b6f34507-6e85-49f7-b80a-6bbd56948565": {
+      "lat": 43.069722000000006,
+      "lon": 12.614453,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "c108d2d2-e551-4488-aa24-6e03bf1c19f4": {
+      "lat": 43.069703000000004,
+      "lon": 12.614405999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "de0b9ba8-03f5-4e3b-be10-4019ee1744a6": {
+      "lat": 43.069706000000004,
+      "lon": 12.614457999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "dfbf541c-6a92-4ca8-b913-1e39b5b5d913": {
+      "lat": 43.069706000000004,
+      "lon": 12.614457999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "488630ae-b634-4161-8239-07a1b3329896": {
+      "lat": 43.069711000000005,
+      "lon": 12.614453,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "b8cdcbdb-4d34-4e87-b8aa-48fe9cfab300": {
+      "lat": 43.069711000000005,
+      "lon": 12.614457999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "08e954c5-f25c-4426-87a0-7d863e09e502": {
+      "lat": 43.069711000000005,
+      "lon": 12.614457999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "a4af7839-a23f-4600-a745-ed185a32554d": {
+      "lat": 43.069711000000005,
+      "lon": 12.614457999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "2fb6a62a-3b73-42cd-952c-8579772a0862": {
+      "lat": 43.069717000000004,
+      "lon": 12.614328,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "550e80ce-a549-4535-9393-2ddc2a3c2bc6": {
+      "lat": 43.069692,
+      "lon": 12.614442,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "a5cb443c-122a-411f-ba98-35813f18cbee": {
+      "lat": 43.069633,
+      "lon": 12.614469,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "f8dadef3-6abf-4533-9fa8-0f561529057a": {
+      "lat": 43.069611,
+      "lon": 12.614472,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "e93ff91c-2905-4a6d-bb35-cb303e83bf5c": {
+      "lat": 43.069172,
+      "lon": 12.614436,
+      "poiId": "santa-clara-asis",
+      "label": "Cerca de Basílica de Santa Clara"
+    },
+    "6f8cba53-6bee-4720-8772-ca865e04343e": {
+      "lat": 43.069692,
+      "lon": 12.614478,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "1097bbd7-112a-4838-8d57-dc2a2d47b31f": {
+      "lat": 43.06965,
+      "lon": 12.614592,
+      "poiId": "catedral-san-rufino",
+      "label": "Cerca de Catedral de San Rufino"
+    },
+    "8cdd0658-39d1-4b7b-aafd-588c6cafd930": {
+      "lat": 43.07105000000001,
+      "lon": 12.615089000139063,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "26f15564-2081-41cf-a686-51e5c77983f8": {
+      "lat": 43.071158000000004,
+      "lon": 12.615368999897214,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "e66d2306-395e-440b-a4bf-8f2b859a6a63": {
+      "lat": 43.071092,
+      "lon": 12.615575,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "14d6622d-6c30-4ed8-adb8-c7c19ed7d3fd": {
+      "lat": 43.070944000000004,
+      "lon": 12.617164,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "4bf20a23-6a17-47a7-92af-dc6852e37387": {
+      "lat": 43.070825000000006,
+      "lon": 12.617317,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "df976f85-646d-4d82-834d-1f329be216b8": {
+      "lat": 43.070575000000005,
+      "lon": 12.617589,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "b522ef77-34db-4608-81d8-0424a1e68429": {
+      "lat": 43.070728,
+      "lon": 12.617428,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "8b8d82a8-95ed-4988-8bd1-5a0de4e7f632": {
+      "lat": 43.070728,
+      "lon": 12.617428,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "9ee813a9-c330-4a81-85d7-e1e3f9dd2a13": {
+      "lat": 43.070581000000004,
+      "lon": 12.617586000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "01ab9e6e-8085-45a8-8ab8-fe677dc81e87": {
+      "lat": 43.070581000000004,
+      "lon": 12.617586000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "efb94735-de14-4c67-8847-15857a4a3357": {
+      "lat": 43.070581000000004,
+      "lon": 12.617586000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "2e767776-6e6f-40a2-a4da-ff225ff5049f": {
+      "lat": 43.070533000000005,
+      "lon": 12.617608,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "395a5a7c-f296-41cf-bd14-f804590a42f5": {
+      "lat": 43.070581000000004,
+      "lon": 12.617586000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "aababf40-1b0a-4305-84c2-acd656b49af3": {
+      "lat": 43.070581000000004,
+      "lon": 12.617586000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "f226f1c2-01d3-4631-a488-6f5f3a652b2f": {
+      "lat": 43.070581000000004,
+      "lon": 12.617586000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "632ed27b-681b-4798-9ab9-ce21fad1629e": {
+      "lat": 43.070694,
+      "lon": 12.617433,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "24ca8c52-a847-471e-850d-0fcde4243737": {
+      "lat": 43.070694,
+      "lon": 12.617433,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "1bfa2292-454d-4cee-808f-84b05c4c6638": {
+      "lat": 43.070694,
+      "lon": 12.617433,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "30a5e319-df4c-413d-a646-464c09448993": {
+      "lat": 43.070572000000006,
+      "lon": 12.617592,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "816de801-58b6-4aac-a3a7-6e23abf57a33": {
+      "lat": 43.070678,
+      "lon": 12.617453000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "71d90e9e-d586-4dac-b704-3affa3c11297": {
+      "lat": 43.070678,
+      "lon": 12.617453000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "f280fe00-6c30-4a09-b70e-ded24026805c": {
+      "lat": 43.070786000000005,
+      "lon": 12.617394,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "1138919a-689d-4fc1-bec4-9317925e75e5": {
+      "lat": 43.070647,
+      "lon": 12.617494,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "53ce6f1c-5059-4322-9d2e-8832aace7491": {
+      "lat": 43.070647,
+      "lon": 12.617494,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "0e25db5b-36ed-4611-91e3-b6b3f6be9015": {
+      "lat": 43.070764000000004,
+      "lon": 12.617411,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "bedef677-4a7c-4fb7-998d-65cfbc81ec56": {
+      "lat": 43.070764000000004,
+      "lon": 12.617411,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "76e16901-0d9a-4729-9b9a-821e1922505a": {
+      "lat": 43.070678,
+      "lon": 12.617453000000001,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "e95cd8c9-70bb-485c-af04-112763c052b3": {
+      "lat": 43.0452,
+      "lon": 12.612266999895866,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "3be8e54f-a64f-4148-86ca-4605a5096899": {
+      "lat": 43.04535,
+      "lon": 12.612143999999999,
+      "label": "Via della Regola di Francesco, Asís"
+    },
+    "6c6500e7-316c-4fbb-b0bc-571c4b62b53b": {
+      "lat": 43.04543300008769,
+      "lon": 12.61200299988462,
+      "label": "Via della Regola di Francesco, Asís"
+    },
+    "bfd39971-27dc-4e34-86aa-1adeff01e51a": {
+      "lat": 43.045431,
+      "lon": 12.612136,
+      "label": "Via della Regola di Francesco, Asís"
+    },
+    "f8d9c5be-8f5f-49e9-aa17-84dfaf9bab2d": {
+      "lat": 43.045308,
+      "lon": 12.612183,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "81808b38-9dac-4c6d-a1e1-7272c048a9ee": {
+      "lat": 43.04526899988674,
+      "lon": 12.612197000066812,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "7484af92-f463-408a-893b-df1cfb6f00c9": {
+      "lat": 43.04523300010413,
+      "lon": 12.6122,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "957514bf-f3e0-44eb-b1ac-c50c970a0c30": {
+      "lat": 43.04523300010413,
+      "lon": 12.6122,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "b2f3ab87-3fbe-4440-9301-9113c4c2dd77": {
+      "lat": 43.04523300010413,
+      "lon": 12.6122,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "e24e6558-0a07-459f-98c2-27e3af2d7671": {
+      "lat": 43.04523300010413,
+      "lon": 12.6122,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "62d5c061-8137-49de-9066-5ad9fbc12a44": {
+      "lat": 43.045260999999996,
+      "lon": 12.612206,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "5d56c6b7-183c-496c-af87-b018e0fe52ca": {
+      "lat": 43.0453,
+      "lon": 12.612186,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "15139212-76e6-4aad-b1d5-7041ad4b14f7": {
+      "lat": 43.0453,
+      "lon": 12.612180999924362,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "2c839814-8bc0-46d8-af0c-bed8d2037be3": {
+      "lat": 43.0453,
+      "lon": 12.612180999924362,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "2526d7b3-1432-40a5-9145-c4f36c3a076a": {
+      "lat": 43.045635999999995,
+      "lon": 12.612010999999999,
+      "label": "Via della Regola di Francesco, Asís"
+    },
+    "e5a3623a-6591-405f-a67b-8f505bf4088f": {
+      "lat": 43.045556,
+      "lon": 12.611919,
+      "label": "Via della Regola di Francesco, Asís"
+    },
+    "038c5c19-2fae-4910-b5e3-40183fe03405": {
+      "lat": 43.04553299990193,
+      "lon": 12.609188999999999,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "0d68912e-c014-4dfb-ac2c-244ac4dd2346": {
+      "lat": 43.042531,
+      "lon": 12.612514,
+      "label": "Via Frate Egidio, Asís"
+    },
+    "79a082af-31ab-4bf6-a339-187efe745dc6": {
+      "lat": 43.041844,
+      "lon": 12.613297,
+      "label": "Via Frate Egidio, Asís"
+    },
+    "dc1d893f-54c7-4a0e-802d-9f41dca3478a": {
+      "lat": 43.040025,
+      "lon": 12.615366999999999,
+      "label": "Via Santa Maria della Spina, Asís"
+    },
+    "951198e3-ba62-41d9-be82-fe0d4fb56823": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "fc3c3220-a01c-4cc0-b14b-60d7809c4202": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "df2f35a7-3915-4ad4-957b-629049e75c7d": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "381ff75e-17d1-4d1c-8309-5ee0d18c87ac": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "abe5860e-d3dd-4ff9-a644-d1032c550df9": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "73176cae-0a5e-4936-ad8b-94a43b80a37a": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "59b0b598-65a7-4060-b8bb-381a157da21e": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "cc39108b-ae30-40bc-b934-9fd39d61685d": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís"
+    },
+    "d79e2ef6-d870-43d6-806e-8a98ff8e039a": {
+      "lat": 43.042553,
+      "lon": 12.615644,
+      "label": "Asís"
+    },
+    "8021fd81-e60e-4adc-905b-600fcfc5d074": {
+      "lat": 43.04553299990193,
+      "lon": 12.6113,
+      "label": "Via del Sacro Tugurio, Asís"
+    },
+    "87683c6d-06e0-4965-a92b-ddaa70957ffb": {
+      "lat": 43.071042000000006,
+      "lon": 12.615193999999999,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "2c304309-f37d-48c8-8ba9-d086afe2941b": {
+      "lat": 43.071011000000006,
+      "lon": 12.615256,
+      "poiId": "catedral-san-rufino",
+      "label": "Catedral de San Rufino"
+    },
+    "f6fc900d-7cb1-49dc-a780-b03bfebc9310": {
+      "lat": 43.07103600000001,
+      "lon": 12.615494,
+      "poiId": "santa-clara-asis",
+      "label": "Basílica de Santa Clara"
+    },
+    "0ebc35d9-4f5f-4d9e-89ad-ec274d5ec3bf": {
+      "lat": 43.072017,
+      "lon": 12.611411,
+      "poiId": "piazza-comune-minerva",
+      "label": "Piazza del Comune y templo de Minerva"
+    },
+    "d0be8a76-6797-4444-a0c7-f36f19c75406": {
+      "lat": 43.073083000000004,
+      "lon": 12.606675,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "ed985406-4eb8-4e50-b10f-11489a31d687": {
+      "lat": 43.073086,
+      "lon": 12.606664,
+      "poiId": "basilica-san-francisco",
+      "label": "Basílica de San Francisco"
+    },
+    "0fdf9853-1fe3-44df-832e-1061ae1d0265": {
+      "lat": 41.886161,
+      "lon": 12.504156,
+      "poiId": "baptisterio-lateranense",
+      "label": "Baptisterio Lateranense",
+      "inferred": true
+    },
+    "23bc7c1b-8e36-46e5-bbfb-50ad61be46db": {
+      "lat": 41.885672,
+      "lon": 12.505464,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán",
+      "inferred": true
+    },
+    "c399ef11-49ca-4fb9-b9fd-1bd6919d2069": {
+      "lat": 41.885661,
+      "lon": 12.505414,
+      "poiId": "san-juan-letran",
+      "label": "Basílica de San Juan de Letrán",
+      "inferred": true
+    },
+    "38ac46f0-2275-482b-8cc5-0cf6c58bf23f": {
+      "lat": 41.902119,
+      "lon": 12.454388999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "898e3d1d-235b-4ab7-836b-4426a21c5973": {
+      "lat": 41.902314,
+      "lon": 12.455461,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "14737945-f7d0-4daf-80a0-2df1703ee50a": {
+      "lat": 41.902983,
+      "lon": 12.457256,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "3e0fbf79-e1b4-4408-a6e3-e08358d27212": {
+      "lat": 41.9061,
+      "lon": 12.458177999999998,
+      "label": "Piazza del Risorgimento, Roma",
+      "inferred": true
+    },
+    "97c189e0-d9de-4b1b-96e6-a54d669605dc": {
+      "lat": 41.9021,
+      "lon": 12.453833,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "3b3087c6-ffc1-4068-8f26-db64e784ed1e": {
+      "lat": 41.902108,
+      "lon": 12.453838999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "36abf5d3-45de-4b56-ad0f-3d5af19bb01d": {
+      "lat": 41.902108,
+      "lon": 12.453838999999999,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "388772c2-f239-40da-ac4e-28a5f9e7fcf5": {
+      "lat": 41.902058,
+      "lon": 12.453888999999998,
+      "poiId": "vaticano-san-pedro",
+      "label": "Vaticano y Basílica de San Pedro",
+      "inferred": true
+    },
+    "4721f271-2f40-45b2-9a1e-9e6b44219a3b": {
+      "lat": 41.897403,
+      "lon": 12.498781,
+      "poiId": "santa-maria-mayor",
+      "label": "Basílica de Santa María la Mayor",
+      "inferred": true
+    },
+    "c3e4e658-450d-4e43-9728-c69bf5100089": {
+      "lat": 41.895378,
+      "lon": 12.484193999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali",
+      "inferred": true
+    },
+    "d2b85544-51fc-445a-9214-43c2725d9e5d": {
+      "lat": 41.858622000000004,
+      "lon": 12.475797,
+      "poiId": "san-pablo-extramuros",
+      "label": "Basílica de San Pablo Extramuros",
+      "inferred": true
+    },
+    "48a35eb1-bc35-4781-a628-f349b7444149": {
+      "lat": 41.890872,
+      "lon": 12.491586,
+      "poiId": "coliseo",
+      "label": "Coliseo",
+      "inferred": true
+    },
+    "85fb0931-6b92-4d07-8bd3-41229f9766dc": {
+      "lat": 41.890525,
+      "lon": 12.490986,
+      "poiId": "coliseo",
+      "label": "Coliseo",
+      "inferred": true
+    },
+    "bf35be42-6861-4f29-a34c-42ec4192f208": {
+      "lat": 41.895206,
+      "lon": 12.484380999999999,
+      "poiId": "foros-imperiales",
+      "label": "Via dei Fori Imperiali",
+      "inferred": true
+    },
+    "5259bef9-ed97-4459-bb90-cdad60861f5b": {
+      "lat": 43.058246999999994,
+      "lon": 12.581336,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula",
+      "inferred": true
+    },
+    "e3c17a02-96cf-4a65-bd06-bc4451acc3ee": {
+      "lat": 43.058246999999994,
+      "lon": 12.581336,
+      "poiId": "santa-maria-angeles",
+      "label": "Santa Maria degli Angeli y la Porciúncula",
+      "inferred": true
+    },
+    "9787d9d0-f757-4cc9-a840-da6edf3d92a9": {
+      "lat": 43.04553299990193,
+      "lon": 12.609188999999999,
+      "label": "Via del Sacro Tugurio, Asís",
+      "inferred": true
+    },
+    "fcf37eee-3b06-493a-b3cb-99ada7421a06": {
+      "lat": 43.04553299990193,
+      "lon": 12.609188999999999,
+      "label": "Via del Sacro Tugurio, Asís",
+      "inferred": true
+    },
+    "aca47912-bad3-45fb-94cf-f2a87964bebf": {
+      "lat": 43.041461,
+      "lon": 12.615506,
+      "label": "Strada Statale 75 Centrale Umbra, Asís",
+      "inferred": true
+    }
+  }
+}

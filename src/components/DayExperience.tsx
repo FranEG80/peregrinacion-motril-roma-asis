@@ -1,4 +1,4 @@
-import { Check, ChevronLeft, ChevronRight, Download, Filter, Play, X } from 'lucide-preact';
+import { Check, ChevronLeft, ChevronRight, Download, Filter, MapPin, Play, X } from 'lucide-preact';
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { GalleryDay, GalleryMedia } from '../data/gallery';
 import ZipDownloadButton from './ZipDownloadButton';
@@ -238,6 +238,9 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
                 <p class="eyebrow">{active.mediaType === 'video' ? 'Vídeo' : 'Imagen'} {currentIndex + 1} de {visibleMedia.length}</p>
                 <h2 id="experience-dialog-title">{active.title}</h2>
                 <p class="lightbox-caption">{active.caption}</p>
+                {active.locationLabel && (
+                  <p class="lightbox-location"><MapPin size={14} strokeWidth={1.8} aria-hidden="true" />{active.locationLabel}</p>
+                )}
                 <div class="lightbox-tags">
                   {active.keywords.map((tag) => <button key={tag} type="button" onClick={() => { setActiveTag(tag); closeDialog(); }}>{tag}</button>)}
                 </div>

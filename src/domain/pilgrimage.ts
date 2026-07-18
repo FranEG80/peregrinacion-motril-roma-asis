@@ -27,6 +27,11 @@ export const placeSchema = z.object({
   sequence: z.number().int().positive(),
   approximateTime: z.string().optional(),
   name: z.string().min(1),
+  coordinates: z.object({
+    lat: z.number().min(-90).max(90),
+    lon: z.number().min(-180).max(180),
+    radiusM: z.number().positive().optional(),
+  }).optional(),
   summary: z.string().min(20),
   description: z.string().min(80),
   certainty: z.enum(['confirmed', 'probable']).default('confirmed'),
