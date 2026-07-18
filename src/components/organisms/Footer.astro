@@ -1,0 +1,44 @@
+---
+interface Props { variant?: 'story' | 'compact'; }
+const { variant = 'compact' } = Astro.props;
+---
+
+<footer class="relative overflow-hidden border-t border-line bg-cream text-charcoal">
+  <div class="pointer-events-none absolute inset-0 bg-[url('/images/textures/paper-fiber.webp')] bg-[length:32rem] opacity-20"></div>
+
+  {variant === 'story' ? (
+    <>
+      <div class="container relative grid items-end gap-[clamp(2.5rem,7vw,6rem)] py-[clamp(3rem,5vw,4.5rem)] md:grid-cols-[0.78fr_1.22fr]">
+        <div>
+          <p class="mb-3 text-[0.68rem] font-medium tracking-[0.17em] text-gold uppercase">Final del cuaderno</p>
+          <p class="m-0 max-w-[14ch] font-serif text-title-sm leading-[1.08] text-balance">El camino termina. El recuerdo queda.</p>
+          <p class="mt-4 max-w-[34rem] text-sm leading-6 text-muted">Un álbum para volver a los lugares, las conversaciones y todo lo vivido juntos.</p>
+        </div>
+
+        <div class="border-t border-line pt-6">
+          <img class="mb-4 w-full max-w-[38rem] opacity-45 mix-blend-multiply" src="/images/marginalia/route.png" width="760" height="265" alt="" loading="lazy" />
+          <div class="flex items-center justify-between gap-4 text-[0.68rem] tracking-[0.14em] text-muted uppercase">
+            <span>Roma</span>
+            <span class="h-px flex-1 bg-line"></span>
+            <span>Asís</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative border-t border-line">
+        <div class="container flex min-h-16 flex-wrap items-center justify-between gap-3 py-3 text-sm text-muted">
+          <span>7—11 de julio de 2026</span>
+          <a class="inline-flex min-h-11 items-center border-b border-gold text-[0.8rem] font-medium text-charcoal no-underline" href="#main-content">Volver al comienzo ↑</a>
+        </div>
+      </div>
+    </>
+  ) : (
+    <div class="container relative flex min-h-24 flex-wrap items-center justify-between gap-x-8 gap-y-3 py-5">
+      <p class="m-0 font-serif text-[clamp(1.05rem,1rem+0.35vw,1.3rem)]">El camino termina. El recuerdo queda.</p>
+      <div class="flex items-center gap-5">
+        <small class="text-[0.68rem] tracking-[0.12em] text-muted uppercase">Roma · Asís · julio de 2026</small>
+        <a class="inline-flex min-h-11 items-center border-b border-gold text-[0.78rem] font-medium text-charcoal no-underline" href="/album">Los cinco días ↑</a>
+      </div>
+    </div>
+  )}
+</footer>

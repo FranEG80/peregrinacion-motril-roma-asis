@@ -16,10 +16,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
     && await verifySessionToken(context.cookies.get(SESSION_COOKIE)?.value, config.sessionSecret);
   const decision = decideGate(context.url.pathname, config, valid);
 
-  if (decision === 'reject-api') {
-    return protectPeople(Response.json({ error: 'Sesión no válida.' }, { status: 401 }), true);
-  }
-
   if (decision === 'redirect-login') {
     const redirectTo = encodeURIComponent(`${context.url.pathname}${context.url.search}`);
     return protectPeople(context.redirect(`/acceso?returnTo=${redirectTo}`, 303), true);

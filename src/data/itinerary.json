@@ -4,8 +4,9 @@
   "dates": "7—11 julio · Roma y Asís",
   "hero": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=2200&q=90&fm=webp",
   "publicIntroduction": [
-    "Un viaje compartido desde Motril hasta Roma y Asís, siguiendo las huellas de los apóstoles, los mártires y la familia franciscana.",
-    "Este álbum ordena los recuerdos tal como sucedieron: cinco días intensos, muchas iglesias, calles recorridas juntos y una fe que también se hizo camino."
+    "Un viaje compartido desde Motril hasta Roma y Asís, siguiendo las huellas de los apóstoles, las cuatro grandes Basílicas, los mártires y la familia franciscana.",
+    "Este álbum ordena los recuerdos tal como sucedieron: cinco días intensos, muchas iglesias, calles recorridas juntos y una fe que también se hizo camino.",
+    "Las fotografías y los videos de cada jornada se acompañan de breves explicaciones y ubicaciones que se han obtenido con Inteligencia Artificial, si ves algún fallo no dudes en decírmelo."
   ],
   "privateIntroduction": "Cinco jornadas entre Roma y Asís. El recorrido conserva el orden real del viaje y añade una explicación breve a cada lugar; cuando una identificación no es completamente segura queda indicada como probable.",
   "days": [
@@ -24,7 +25,7 @@
           "slug": "llegada-roma",
           "name": "Llegada a Roma",
           "summary": "El comienzo del camino y el primer encuentro del grupo con la ciudad eterna.",
-          "description": "La llegada marca el paso del viaje esperado al viaje vivido. Roma se presenta como una ciudad de capas: antigua, cristiana, barroca y cotidiana, y sirve de escenario para los siguientes días de peregrinación.",
+          "description": "La llegada marca el paso del viaje esperado al viaje vivido. Roma se presenta como una ciudad de capas: antigua, cristiana, barroca y cotidiana, y sirve de escenario para los siguientes días de peregrinación. Para el grupo, el desembarco en Civitavecchia y el primer trayecto por carretera fueron el umbral de una historia compartida que apenas comenzaba.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -34,7 +35,7 @@
           "name": "Basílica de San Juan de Letrán",
           "coordinates": { "lat": 41.8859, "lon": 12.5055, "radiusM": 220 },
           "summary": "La catedral de Roma y una de las cuatro grandes basílicas papales de la ciudad.",
-          "description": "San Juan de Letrán es la catedral del obispo de Roma, el papa. Su origen constantiniano, la gran nave con los apóstoles y su condición de sede episcopal la convierten en un punto esencial para comenzar una peregrinación romana.",
+          "description": "San Juan de Letrán es la catedral del obispo de Roma, el papa. Su origen constantiniano, la gran nave con los apóstoles y su condición de sede episcopal la convierten en un punto esencial para comenzar una peregrinación romana. El grupo pudo recorrer con calma sus capillas, monumentos papales y el gran techo dorado, descubriendo en esta primera visita la escala espiritual y artística de la ciudad.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -44,7 +45,7 @@
           "name": "Baptisterio Lateranense",
           "coordinates": { "lat": 41.8861, "lon": 12.5033, "radiusM": 140 },
           "summary": "Un antiguo baptisterio octogonal junto a San Juan de Letrán, modelo para toda la cristiandad.",
-          "description": "El Baptisterio de San Juan, de raíces paleocristianas, conserva su planta octogonal y recuerda la importancia del bautismo en la Iglesia antigua. Está separado de la basílica, a pocos pasos del conjunto lateranense.",
+          "description": "El Baptisterio de San Juan, de raíces paleocristianas, conserva su planta octogonal y recuerda la importancia del bautismo en la Iglesia antigua. Está separado de la basílica, a pocos pasos del conjunto lateranense. La cercanía permitió al grupo enlazar ambos espacios en una misma visita y detenerse ante la fuente, las capillas y la cúpula que recogen siglos de celebración cristiana.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -54,7 +55,7 @@
           "name": "Basílica de San Clemente",
           "coordinates": { "lat": 41.8892, "lon": 12.4975, "radiusM": 140 },
           "summary": "Una iglesia construida sobre otras épocas, donde la historia de Roma se puede recorrer hacia abajo.",
-          "description": "San Clemente superpone una basílica medieval, una iglesia del siglo IV y estructuras romanas anteriores. Sus niveles subterráneos hacen visible cómo la ciudad cristiana creció sobre la Roma imperial sin borrar del todo su memoria.",
+          "description": "San Clemente superpone una basílica medieval, una iglesia del siglo IV y estructuras romanas anteriores. Sus niveles subterráneos hacen visible cómo la ciudad cristiana creció sobre la Roma imperial sin borrar del todo su memoria. Para la peregrinación fue una parada breve pero reveladora: el patio, las capillas y los mosaicos anticiparon la profundidad histórica que reaparecería durante toda la estancia.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -64,7 +65,7 @@
           "name": "Piazza Navona",
           "coordinates": { "lat": 41.8992, "lon": 12.4731, "radiusM": 260 },
           "summary": "La plaza barroca que conserva en su forma la antigua pista del estadio de Domiciano.",
-          "description": "La plaza ocupa el antiguo estadio de Domiciano y mantiene su trazado alargado. Las fuentes, especialmente la de los Cuatro Ríos de Bernini, y la fachada de Sant'Agnese in Agone forman uno de los grandes escenarios urbanos de Roma.",
+          "description": "La plaza ocupa el antiguo estadio de Domiciano y mantiene su trazado alargado. Las fuentes, especialmente la de los Cuatro Ríos de Bernini, y la fachada de Sant'Agnese in Agone forman uno de los grandes escenarios urbanos de Roma. El grupo la recorrió entre el movimiento cotidiano de la ciudad, reuniéndose ante sus esculturas y descubriendo cómo la Roma antigua y la barroca comparten un mismo espacio.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -74,7 +75,7 @@
           "name": "Panteón de Agripa",
           "coordinates": { "lat": 41.8986, "lon": 12.4769, "radiusM": 150 },
           "summary": "La fachada y el pórtico del gran templo romano, contemplados desde la Piazza della Rotonda.",
-          "description": "El Panteón es uno de los edificios romanos mejor conservados y desde el siglo VII funciona como iglesia. Aunque la visita fue exterior, su pórtico monumental y la enorme cúpula que se adivina detrás explican buena parte de su fuerza arquitectónica.",
+          "description": "El Panteón es uno de los edificios romanos mejor conservados y desde el siglo VII funciona como iglesia. Aunque la visita fue exterior, su pórtico monumental y la enorme cúpula que se adivina detrás explican buena parte de su fuerza arquitectónica. La pausa del grupo en la plaza permitió observar la escala de las columnas, compartir impresiones y guardar una de las imágenes más reconocibles de la jornada.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -84,7 +85,7 @@
           "name": "Piazza di Montecitorio",
           "coordinates": { "lat": 41.9009, "lon": 12.478, "radiusM": 150 },
           "summary": "Probable primera plaza del paseo, junto al Parlamento italiano y un antiguo obelisco solar.",
-          "description": "Muy cerca del Panteón y de Piazza Colonna, Montecitorio está presidida por el palacio que alberga la Cámara de Diputados. En el centro se levanta un obelisco egipcio que Augusto utilizó como parte de un gran reloj solar.",
+          "description": "Muy cerca del Panteón y de Piazza Colonna, Montecitorio está presidida por el palacio que alberga la Cámara de Diputados. En el centro se levanta un obelisco egipcio que Augusto utilizó como parte de un gran reloj solar. La peregrinación atravesó este escenario político como parte de su paseo, enlazando en pocos minutos la memoria imperial con la vida institucional de la Roma contemporánea.",
           "certainty": "probable",
           "editorialNote": "Identificación probable por la ruta entre el Panteón, Piazza Colonna y la galería comercial.",
           "hasPhotos": true
@@ -95,7 +96,7 @@
           "name": "Piazza Colonna",
           "coordinates": { "lat": 41.9009, "lon": 12.4801, "radiusM": 150 },
           "summary": "La plaza de la columna de Marco Aurelio, coronada en realidad por una estatua de san Pablo.",
-          "description": "La plaza toma su nombre de la columna de Marco Aurelio, cubierta por un relieve en espiral. La estatua que la corona es san Pablo, colocada en el siglo XVI; este detalle encaja con el recuerdo de una figura apostólica sobre la columna.",
+          "description": "La plaza toma su nombre de la columna de Marco Aurelio, cubierta por un relieve en espiral. La estatua que la corona es san Pablo, colocada en el siglo XVI; este detalle encaja con el recuerdo de una figura apostólica sobre la columna. El grupo se detuvo a leer sus escenas desde la distancia y a reconocer cómo Roma transforma un monumento imperial en parte de un relato cristiano posterior.",
           "certainty": "probable",
           "editorialNote": "La pista de la galería cercana hace esta identificación muy probable. La estatua es san Pablo, no san Pedro.",
           "hasPhotos": true
@@ -106,7 +107,7 @@
           "name": "Galleria Alberto Sordi",
           "coordinates": { "lat": 41.9012, "lon": 12.4802, "radiusM": 130 },
           "summary": "La elegante galería comercial de estilo modernista situada en la propia Piazza Colonna.",
-          "description": "La antigua Galleria Colonna abrió en 1922 y conecta varios accesos del centro de Roma bajo vidrieras y una cuidada arquitectura interior. Su ubicación, a un paseo de Trevi, coincide con el itinerario recordado.",
+          "description": "La antigua Galleria Colonna abrió en 1922 y conecta varios accesos del centro de Roma bajo vidrieras y una cuidada arquitectura interior. Su ubicación, a un paseo de Trevi, coincide con el itinerario recordado. Cruzarla ofreció al grupo un breve cambio de ritmo y de luz entre plazas monumentales, además de una mirada a la elegancia urbana de la Roma del siglo XX.",
           "certainty": "probable",
           "editorialNote": "Identificación muy probable por su cercanía inmediata a Piazza Colonna y a la Fontana di Trevi.",
           "hasPhotos": true
@@ -117,7 +118,7 @@
           "name": "Fontana di Trevi",
           "coordinates": { "lat": 41.9009, "lon": 12.4833, "radiusM": 180 },
           "summary": "Agua, piedra y movimiento para cerrar la primera jornada en uno de los iconos de Roma.",
-          "description": "La gran fuente barroca ocupa casi por completo su pequeña plaza. Diseñada como una fachada monumental para el final del acueducto del Aqua Virgo, reúne esculturas, roca y agua en una escena de enorme teatralidad.",
+          "description": "La gran fuente barroca ocupa casi por completo su pequeña plaza. Diseñada como una fachada monumental para el final del acueducto del Aqua Virgo, reúne esculturas, roca y agua en una escena de enorme teatralidad. Entre el rumor de la fuente y la multitud, el grupo encontró sitio para contemplarla, fotografiar sus detalles y cerrar con una imagen festiva el paseo por el centro.",
           "certainty": "confirmed",
           "hasPhotos": true
         }
@@ -139,7 +140,7 @@
           "name": "Vaticano y Basílica de San Pedro",
           "coordinates": { "lat": 41.9022, "lon": 12.4539, "radiusM": 420 },
           "summary": "La plaza, la columnata de Bernini y la basílica levantada sobre la memoria del apóstol Pedro.",
-          "description": "La plaza acoge al peregrino entre los brazos de la columnata de Bernini. Dentro de la basílica, la tumba de san Pedro, la cúpula de Miguel Ángel, la Piedad y el baldaquino señalan el centro espiritual y artístico del Vaticano.",
+          "description": "La plaza acoge al peregrino entre los brazos de la columnata de Bernini. Dentro de la basílica, la tumba de san Pedro, la cúpula de Miguel Ángel, la Piedad y el baldaquino señalan el centro espiritual y artístico del Vaticano. Para el grupo, cruzar la Puerta Santa y celebrar cerca de la memoria del apóstol convirtió la visita en uno de los momentos centrales de toda la peregrinación.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -149,7 +150,7 @@
           "name": "Grutas Vaticanas y tumbas papales",
           "coordinates": { "lat": 41.9022, "lon": 12.4539, "radiusM": 180 },
           "summary": "El espacio bajo la basílica donde se conservan sepulturas de numerosos pontífices.",
-          "description": "Las Grutas Vaticanas ocupan el nivel situado entre la actual basílica y la antigua construcción constantiniana. Allí se encuentran capillas y tumbas papales, cerca del lugar venerado como sepultura de san Pedro.",
+          "description": "Las Grutas Vaticanas ocupan el nivel situado entre la actual basílica y la antigua construcción constantiniana. Allí se encuentran capillas y tumbas papales, cerca del lugar venerado como sepultura de san Pedro. El recorrido del grupo fue silencioso y recogido, una forma de acercarse a la continuidad histórica de la Iglesia después de la grandeza luminosa de la basílica superior.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -159,7 +160,7 @@
           "name": "Museos Vaticanos",
           "coordinates": { "lat": 41.9065, "lon": 12.4536, "radiusM": 350 },
           "summary": "Colecciones de arte y arqueología reunidas por los papas a lo largo de varios siglos.",
-          "description": "Los Museos Vaticanos enlazan patios, galerías y antiguas estancias pontificias. El recorrido reúne escultura clásica, tapices, mapas, las Estancias de Rafael y la Capilla Sixtina, formando un verdadero museo de museos.",
+          "description": "Los Museos Vaticanos enlazan patios, galerías y antiguas estancias pontificias. El recorrido reúne escultura clásica, tapices, mapas, las Estancias de Rafael y la Capilla Sixtina, formando un verdadero museo de museos. El grupo avanzó entre obras y salas muy diversas, compartiendo hallazgos y afrontando una visita intensa cuya abundancia queda reflejada en las fotografías de la jornada.",
           "certainty": "confirmed",
           "hasPhotos": true
         }
@@ -181,7 +182,7 @@
           "name": "Basílica de Santa María la Mayor",
           "coordinates": { "lat": 41.8976, "lon": 12.4989, "radiusM": 190 },
           "summary": "La gran basílica mariana de Roma, vinculada a la reliquia de la Santa Cuna.",
-          "description": "Santa María la Mayor conserva mosaicos paleocristianos y un interior de extraordinaria continuidad histórica. En la confessio se venera el relicario de la Santa Cuna, asociado por la tradición con el pesebre de Belén.",
+          "description": "Santa María la Mayor conserva mosaicos paleocristianos y un interior de extraordinaria continuidad histórica. En la confessio se venera el relicario de la Santa Cuna, asociado por la tradición con el pesebre de Belén. La celebración del grupo y el tiempo dedicado a sus capillas, mosaicos y memorias pontificias dieron a la mañana un comienzo sereno, unido de manera especial a la devoción mariana.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -191,7 +192,7 @@
           "name": "Santuario de Nuestra Señora del Perpetuo Socorro",
           "coordinates": { "lat": 41.8955, "lon": 12.5017, "radiusM": 120 },
           "summary": "La iglesia de San Alfonso en el Esquilino, custodia del icono del Perpetuo Socorro.",
-          "description": "La iglesia de Sant'Alfonso all'Esquilino está atendida por los redentoristas y guarda el icono original de Nuestra Señora del Perpetuo Socorro. Es un importante lugar de devoción mariana cercano a Santa María la Mayor.",
+          "description": "La iglesia de Sant'Alfonso all'Esquilino está atendida por los redentoristas y guarda el icono original de Nuestra Señora del Perpetuo Socorro. Es un importante lugar de devoción mariana cercano a Santa María la Mayor. Para el grupo fue una visita cercana e íntima, centrada en la contemplación del icono y enlazada naturalmente con el tono mariano de la primera parte del día.",
           "certainty": "probable",
           "editorialNote": "Es la identificación que mejor encaja con el recuerdo de la parroquia o santuario del Perpetuo Socorro.",
           "hasPhotos": true
@@ -202,7 +203,7 @@
           "name": "Basílica de Santa Práxedes",
           "coordinates": { "lat": 41.8963, "lon": 12.4997, "radiusM": 120 },
           "summary": "Mosaicos medievales, memoria de los mártires y la tradición de la columna de la Flagelación.",
-          "description": "Santa Práxedes conserva espléndidos mosaicos del siglo IX y reliquias trasladadas desde antiguas catacumbas. Una capilla custodia un fragmento venerado por tradición como parte de la columna de la Flagelación de Cristo.",
+          "description": "Santa Práxedes conserva espléndidos mosaicos del siglo IX y reliquias trasladadas desde antiguas catacumbas. Una capilla custodia un fragmento venerado por tradición como parte de la columna de la Flagelación de Cristo. La escala recogida del templo permitió al grupo detenerse ante los mosaicos y las capillas, descubriendo una joya menos evidente a pocos pasos de las grandes basílicas.",
           "certainty": "confirmed",
           "editorialNote": "El nombre recordado como «Pradese» corresponde a Santa Prassede, Santa Práxedes en español; no consta una relación especial con santa Agripina.",
           "hasPhotos": true
@@ -213,7 +214,7 @@
           "name": "Basílica de San Pietro in Vincoli",
           "coordinates": { "lat": 41.8934, "lon": 12.4931, "radiusM": 150 },
           "summary": "La iglesia de las cadenas de san Pedro y del célebre Moisés de Miguel Ángel.",
-          "description": "La basílica venera las cadenas asociadas a los encarcelamientos del apóstol Pedro. En uno de sus laterales se encuentra el monumento funerario de Julio II, presidido por el poderoso Moisés esculpido por Miguel Ángel.",
+          "description": "La basílica venera las cadenas asociadas a los encarcelamientos del apóstol Pedro. En uno de sus laterales se encuentra el monumento funerario de Julio II, presidido por el poderoso Moisés esculpido por Miguel Ángel. El grupo compartió el asombro ante dos relatos muy distintos —la memoria apostólica y una obra maestra del Renacimiento— reunidos en el mismo interior.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -223,7 +224,7 @@
           "name": "Coliseo",
           "coordinates": { "lat": 41.8902, "lon": 12.4922, "radiusM": 220 },
           "summary": "El exterior del anfiteatro Flavio y el paisaje monumental que lo rodea.",
-          "description": "El Coliseo fue el mayor anfiteatro de la Roma imperial. Incluso visto desde fuera, su sucesión de arcos y la escala del edificio permiten comprender la ambición técnica y política de los emperadores flavios.",
+          "description": "El Coliseo fue el mayor anfiteatro de la Roma imperial. Incluso visto desde fuera, su sucesión de arcos y la escala del edificio permiten comprender la ambición técnica y política de los emperadores flavios. La llegada a pie y la vista junto al Arco de Constantino ofrecieron al grupo uno de los grandes cambios de escenario del viaje, del interior de las basílicas al corazón monumental de la Antigüedad.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -233,7 +234,7 @@
           "name": "Via dei Fori Imperiali",
           "coordinates": { "lat": 41.8925, "lon": 12.487, "radiusM": 400 },
           "summary": "Ruinas, columnas y estatuas de emperadores a lo largo del gran paseo arqueológico.",
-          "description": "La avenida une el Coliseo con Piazza Venezia y permite contemplar los foros de César, Augusto, Nerva y Trajano. Las estatuas de bronce instaladas junto a cada foro ayudan a reconocer a los emperadores vinculados con estos conjuntos.",
+          "description": "La avenida une el Coliseo con Piazza Venezia y permite contemplar los foros de César, Augusto, Nerva y Trajano. Las estatuas de bronce instaladas junto a cada foro ayudan a reconocer a los emperadores vinculados con estos conjuntos. El paseo del grupo fue una lectura panorámica de la Roma imperial, prolongada hasta el Vittoriano y enriquecida por las distintas perspectivas que abre el recorrido.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -243,7 +244,7 @@
           "name": "Basílica de San Pablo Extramuros",
           "coordinates": { "lat": 41.8588, "lon": 12.4768, "radiusM": 250 },
           "summary": "La gran basílica levantada fuera de las murallas sobre la memoria del apóstol de los gentiles.",
-          "description": "San Pablo Extramuros se alza junto a la vía Ostiense, donde la tradición sitúa la tumba del apóstol. Su amplio atrio, los medallones de los papas y el espacio solemne de la nave cierran la jornada con una fuerte dimensión apostólica.",
+          "description": "San Pablo Extramuros se alza junto a la vía Ostiense, donde la tradición sitúa la tumba del apóstol. Su amplio atrio, los medallones de los papas y el espacio solemne de la nave cierran la jornada con una fuerte dimensión apostólica. El grupo recorrió el pórtico y el interior con más calma, encontrando aquí un final luminoso y recogido para un día de contrastes.",
           "certainty": "confirmed",
           "hasPhotos": true
         }
@@ -265,7 +266,7 @@
           "name": "Basílica de Santa Clara",
           "coordinates": { "lat": 43.0707, "lon": 12.6164, "radiusM": 180 },
           "summary": "La basílica de piedra rosada que guarda la tumba de santa Clara y el crucifijo de San Damián.",
-          "description": "Construida poco después de la muerte de Clara, la basílica conserva su cuerpo en la cripta y el crucifijo ante el que, según la tradición, Cristo habló a Francisco en San Damián. Su fachada domina el valle de Umbría.",
+          "description": "Construida poco después de la muerte de Clara, la basílica conserva su cuerpo en la cripta y el crucifijo ante el que, según la tradición, Cristo habló a Francisco en San Damián. Su fachada domina el valle de Umbría. La celebración y el tiempo de oración del grupo, después de subir por las calles de Asís, hicieron de esta primera gran parada un encuentro cercano con la espiritualidad franciscana.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -275,7 +276,7 @@
           "name": "Catedral de San Rufino",
           "coordinates": { "lat": 43.0713, "lon": 12.6144, "radiusM": 150 },
           "summary": "La catedral románica de Asís, vinculada al bautismo de Francisco y Clara.",
-          "description": "San Rufino es la catedral de Asís y uno de los mejores ejemplos del románico umbro. Su pila bautismal enlaza la historia del templo con Francisco, Clara y otros santos nacidos en la ciudad.",
+          "description": "San Rufino es la catedral de Asís y uno de los mejores ejemplos del románico umbro. Su pila bautismal enlaza la historia del templo con Francisco, Clara y otros santos nacidos en la ciudad. El grupo contempló la fachada de piedra y recorrió sus capillas, reconociendo en un espacio relativamente sobrio las raíces comunes de varias figuras que marcaron la historia de Asís.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -285,7 +286,7 @@
           "name": "Basílica de San Francisco",
           "coordinates": { "lat": 43.0742, "lon": 12.6053, "radiusM": 260 },
           "summary": "Las basílicas inferior y superior, sus grandes ciclos de frescos y la tumba de san Francisco.",
-          "description": "El conjunto se construyó para custodiar el cuerpo de san Francisco y narrar visualmente su mensaje. La basílica inferior conduce a la cripta; la superior se abre a los célebres frescos medievales atribuidos a Giotto y su taller.",
+          "description": "El conjunto se construyó para custodiar el cuerpo de san Francisco y narrar visualmente su mensaje. La basílica inferior conduce a la cripta; la superior se abre a los célebres frescos medievales atribuidos a Giotto y su taller. La llegada por las plazas, el recorrido interior y las vistas sobre el valle dieron al grupo tiempo para experimentar la basílica como santuario, obra de arte y paisaje.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -295,7 +296,7 @@
           "name": "Piazza del Comune y templo de Minerva",
           "coordinates": { "lat": 43.0719, "lon": 12.6131, "radiusM": 170 },
           "summary": "El centro civil de Asís, presidido por un templo romano convertido en iglesia.",
-          "description": "La plaza reúne el antiguo templo de Minerva, hoy iglesia de Santa Maria sopra Minerva, y los principales edificios cívicos medievales. Su fachada romana de columnas corintias sobrevivió integrada en la vida posterior de la ciudad.",
+          "description": "La plaza reúne el antiguo templo de Minerva, hoy iglesia de Santa Maria sopra Minerva, y los principales edificios cívicos medievales. Su fachada romana de columnas corintias sobrevivió integrada en la vida posterior de la ciudad. El grupo pasó por ella varias veces, utilizándola como lugar de encuentro y descubriendo cómo el centro cotidiano de Asís conserva a la vista sus épocas romana, medieval y barroca.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -305,7 +306,7 @@
           "name": "Torre del Popolo",
           "coordinates": { "lat": 43.0719, "lon": 12.6132, "radiusM": 100 },
           "summary": "La gran torre medieval que marca el perfil de Piazza del Comune.",
-          "description": "La Torre del Popolo forma parte del conjunto del Palazzo del Capitano del Popolo. Su volumen vertical contrasta con la fachada clásica del vecino templo de Minerva y ayuda a leer las distintas épocas reunidas en la plaza.",
+          "description": "La Torre del Popolo forma parte del conjunto del Palazzo del Capitano del Popolo. Su volumen vertical contrasta con la fachada clásica del vecino templo de Minerva y ayuda a leer las distintas épocas reunidas en la plaza. Aunque no tuvo un bloque fotográfico propio, acompañó al grupo como una referencia visible durante los pasos y descansos en el corazón de Asís.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -315,7 +316,7 @@
           "name": "Santuario de la Spogliazione",
           "coordinates": { "lat": 43.0709, "lon": 12.6124, "radiusM": 120 },
           "summary": "Santa Maria Maggiore de Asís, lugar de la renuncia de san Francisco y sepultura de san Carlo Acutis.",
-          "description": "El santuario recuerda el gesto con el que Francisco renunció a sus bienes ante el obispo. En este mismo conjunto, dentro de la iglesia de Santa Maria Maggiore, se encuentra la sepultura de san Carlo Acutis.",
+          "description": "El santuario recuerda el gesto con el que Francisco renunció a sus bienes ante el obispo. En este mismo conjunto, dentro de la iglesia de Santa Maria Maggiore, se encuentra la sepultura de san Carlo Acutis. La visita permitió al grupo unir dos testimonios muy distantes en el tiempo y acercarse, en un mismo lugar, a la radicalidad de Francisco y a la fe joven de Carlo.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -324,7 +325,7 @@
           "slug": "calles-asis",
           "name": "Las calles de Asís",
           "summary": "Piedra rosada, cuestas, arcos y vistas sobre el valle entre una visita y otra.",
-          "description": "Caminar Asís forma parte esencial de la experiencia: sus calles medievales enlazan santuarios y plazas sin separar el monumento de la vida cotidiana. La piedra del monte Subasio da unidad y una luz muy particular a todo el casco histórico.",
+          "description": "Caminar Asís forma parte esencial de la experiencia: sus calles medievales enlazan santuarios y plazas sin separar el monumento de la vida cotidiana. La piedra del monte Subasio da unidad y una luz muy particular a todo el casco histórico. Entre cuestas, arcos y miradores, el grupo compartió pausas y conversaciones que también forman parte del recuerdo, más allá de cada visita programada.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -334,7 +335,7 @@
           "name": "Santa Maria degli Angeli y la Porciúncula",
           "coordinates": { "lat": 43.0569, "lon": 12.5794, "radiusM": 240 },
           "summary": "La gran basílica del llano que protege la pequeña capilla de la Porciúncula.",
-          "description": "La basílica se encuentra en la localidad de Santa Maria degli Angeli, a los pies de Asís. Dentro conserva la Porciúncula, pequeña iglesia restaurada por Francisco y uno de los lugares donde nació la fraternidad franciscana.",
+          "description": "La basílica se encuentra en la localidad de Santa Maria degli Angeli, a los pies de Asís. Dentro conserva la Porciúncula, pequeña iglesia restaurada por Francisco y uno de los lugares donde nació la fraternidad franciscana. El grupo cerró aquí el recorrido principal de la jornada, pasando de la inmensidad del templo a la sencillez de la pequeña capilla que guarda el origen de la comunidad.",
           "certainty": "confirmed",
           "editorialNote": "La Porciúncula está aquí, no dentro de la basílica de San Francisco.",
           "hasPhotos": true
@@ -345,7 +346,7 @@
           "name": "Catacumbas de San Calixto",
           "coordinates": { "lat": 41.8587, "lon": 12.5105, "radiusM": 450 },
           "summary": "El gran cementerio cristiano de la vía Apia, visitado por la tarde y sin fotografías.",
-          "description": "Las catacumbas fueron uno de los principales lugares de enterramiento de la Iglesia de Roma y albergaron sepulturas de papas y mártires. La ausencia de imágenes conserva también el carácter subterráneo, silencioso y difícil de fotografiar de la visita.",
+          "description": "Las catacumbas fueron uno de los principales lugares de enterramiento de la Iglesia de Roma y albergaron sepulturas de papas y mártires. La ausencia de imágenes conserva también el carácter subterráneo, silencioso y difícil de fotografiar de la visita. Para el grupo, bajar a sus galerías fue una experiencia de memoria y recogimiento que permanece en el itinerario precisamente aunque no tenga una crónica visual.",
           "certainty": "confirmed",
           "hasPhotos": false
         }
@@ -367,7 +368,7 @@
           "name": "Santuario de Rivotorto",
           "coordinates": { "lat": 43.0445, "lon": 12.6224, "radiusM": 220 },
           "summary": "El santuario que guarda el Sacro Tugurio, memoria de Francisco y sus primeros compañeros.",
-          "description": "En el interior se conserva una reconstrucción del humilde refugio donde Francisco y los primeros frailes vivieron, rezaron y organizaron la fraternidad. El lugar está dedicado a la Virgen, pero la casita no se considera la casa de María.",
+          "description": "En el interior se conserva una reconstrucción del humilde refugio donde Francisco y los primeros frailes vivieron, rezaron y organizaron la fraternidad. El lugar está dedicado a la Virgen, pero la casita no se considera la casa de María. La eucaristía de la mañana permitió al grupo comenzar el último día en un ambiente sencillo, vinculado a los primeros pasos de la vida comunitaria franciscana.",
           "certainty": "confirmed",
           "editorialNote": "La «casita de piedra» es el Sacro Tugurio franciscano; no es una vivienda atribuida a la Virgen María.",
           "hasPhotos": true
@@ -377,7 +378,7 @@
           "slug": "ultimo-paseo-asis",
           "name": "Último paseo por Asís",
           "summary": "Un tiempo más tranquilo para volver a las calles y despedirse de la ciudad.",
-          "description": "El paseo final permite mirar Asís sin la prisa del itinerario del día anterior: reconocer sus cuestas, detenerse en las plazas y guardar las últimas imágenes antes del regreso.",
+          "description": "El paseo final permite mirar Asís sin la prisa del itinerario del día anterior: reconocer sus cuestas, detenerse en las plazas y guardar las últimas imágenes antes del regreso. El tiempo libre dejó al grupo volver a lugares ya conocidos, hacer pequeñas compras y despedirse de la ciudad con una mirada más personal y pausada.",
           "certainty": "confirmed",
           "hasPhotos": true
         },
@@ -386,7 +387,7 @@
           "slug": "regreso-espana",
           "name": "Vuelta a España",
           "summary": "El final del desplazamiento y el comienzo de conservar y compartir lo vivido.",
-          "description": "El regreso cierra el recorrido geográfico, pero da comienzo al trabajo de la memoria: ordenar las fotografías, contar el viaje a quienes esperaban y reconocer qué permanece después de estos cinco días.",
+          "description": "El regreso cierra el recorrido geográfico, pero da comienzo al trabajo de la memoria: ordenar las fotografías, contar el viaje a quienes esperaban y reconocer qué permanece después de estos cinco días. Aunque este tramo no tenga imágenes propias, forma parte del relato como espacio para descansar, conversar y empezar a comprender juntos lo vivido.",
           "certainty": "confirmed",
           "hasPhotos": true
         }

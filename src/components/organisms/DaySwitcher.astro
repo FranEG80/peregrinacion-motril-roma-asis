@@ -1,0 +1,20 @@
+---
+import type { PilgrimageDay } from '../../domain/pilgrimage';
+interface Props { days: PilgrimageDay[]; activeId: string; }
+const { days, activeId } = Astro.props;
+---
+
+<nav class="sticky top-16 z-20 border-b border-line bg-cream/95 shadow-[0_8px_24px_rgb(52_42_29_/_0.05)] backdrop-blur-xl" aria-label="Cambiar de jornada">
+  <div class="container grid grid-cols-[repeat(5,minmax(8.75rem,1fr))] overflow-x-auto px-0 [scrollbar-width:thin]">
+    {days.map((day) => (
+      <a
+        class="relative min-w-0 border-r border-line px-3 py-3 text-muted no-underline transition-colors first:border-l hover:bg-paper hover:text-charcoal aria-[current=step]:text-charcoal aria-[current=step]:before:absolute aria-[current=step]:before:inset-x-0 aria-[current=step]:before:top-0 aria-[current=step]:before:h-0.5 aria-[current=step]:before:bg-gold"
+        href={`/album/dia/${day.slug}`}
+        aria-current={day.id === activeId ? 'step' : undefined}
+      >
+        <span class="block text-[0.55rem] font-extrabold tracking-[0.13em] text-gold uppercase">Día {day.number}</span>
+        <strong class="block overflow-hidden text-ellipsis whitespace-nowrap font-serif text-sm font-semibold">{day.title}</strong>
+      </a>
+    ))}
+  </div>
+</nav>

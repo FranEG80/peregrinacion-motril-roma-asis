@@ -1,0 +1,48 @@
+---
+import { ArrowRight } from 'lucide-preact';
+interface Props {
+  title: string;
+  subtitle: string;
+  dates: string;
+  image: string;
+  isPrivate: boolean;
+}
+const { title, subtitle, dates, image, isPrivate } = Astro.props;
+---
+
+<section id="home-hero" class="relative grid min-h-[92svh] overflow-clip bg-charcoal text-cream">
+  <img
+    class="absolute inset-0 size-full object-cover object-center"
+    src={image}
+    width="1600"
+    height="1067"
+    alt=""
+    fetchpriority="high"
+    data-hero-cover
+  />
+  <div class="absolute inset-0 bg-[linear-gradient(90deg,rgb(24_22_19_/_0.88)_0%,rgb(24_22_19_/_0.62)_43%,rgb(24_22_19_/_0.12)_78%),linear-gradient(0deg,rgb(24_22_19_/_0.75)_0%,transparent_55%)]"></div>
+  <div class="absolute inset-0 bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:34rem] opacity-[0.055] mix-blend-screen"></div>
+
+  <div class="container relative z-10 grid content-end py-[clamp(5rem,12vh,9rem)]">
+    <div class="max-w-[48rem]">
+      <p class="mb-7 text-[0.65rem] font-medium tracking-[0.19em] text-cream/75 uppercase" data-hero-reveal>Cuaderno de peregrinación</p>
+      <p class="mb-3 text-[0.72rem] font-extrabold tracking-[0.19em] text-gold-bright uppercase" data-hero-reveal>{dates}</p>
+      <h1 class="max-w-[11ch] font-serif text-display-2xl leading-[0.92] font-medium tracking-[-0.055em] text-balance text-cream [text-shadow:0_4px_28px_rgb(0_0_0_/_0.28)]" data-hero-reveal>{title}</h1>
+      <p class="mt-6 max-w-[35ch] font-serif text-[clamp(1.2rem,2.4vw,1.65rem)] leading-[1.35] text-cream/90" data-hero-reveal>{subtitle}</p>
+      {isPrivate ? (
+        <button class="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-hairline border border-cream/55 bg-charcoal/15 px-5 py-3 text-[0.84rem] font-medium tracking-[0.015em] text-cream! no-underline backdrop-blur-sm transition-[transform,background-color,color] duration-200 ease-editorial hover:-translate-y-px hover:bg-cream hover:text-charcoal! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-bright motion-reduce:transform-none motion-reduce:transition-none" type="button" data-open-access data-hero-reveal>
+          Entrar en el álbum <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
+        </button>
+      ) : (
+        <a class="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-hairline border border-cream/55 bg-charcoal/15 px-5 py-3 text-[0.84rem] font-medium tracking-[0.015em] text-cream! no-underline backdrop-blur-sm transition-[transform,background-color,color] duration-200 ease-editorial hover:-translate-y-px hover:bg-cream hover:text-charcoal! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-bright motion-reduce:transform-none motion-reduce:transition-none" href="/album" data-hero-reveal>
+          Entrar en el álbum <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
+        </a>
+      )}
+    </div>
+  </div>
+
+  <div class="absolute right-[var(--spacing-gutter)] bottom-6 z-10 hidden items-center gap-3 text-[0.6rem] font-bold tracking-[0.14em] text-cream/60 uppercase sm:flex">
+    <span class="h-px w-12 bg-gold-bright/70"></span>
+    Roma — Asís · cinco jornadas
+  </div>
+</section>

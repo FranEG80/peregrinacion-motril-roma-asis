@@ -1,0 +1,19 @@
+---
+import { X } from 'lucide-preact';
+import AccessForm from '../molecules/AccessForm.astro';
+---
+
+<dialog id="access-dialog" class="w-[min(430px,calc(100%-1.25rem))] overflow-auto" aria-labelledby="access-title" closedby="any">
+  <div class="relative overflow-hidden p-7 sm:p-9">
+    <img class="pointer-events-none absolute -right-10 -bottom-20 w-48 opacity-[0.08] mix-blend-multiply" src="/images/marginalia/column.png" width="178" height="760" alt="" />
+    <form method="dialog" class="absolute top-3 right-3 z-10">
+      <button class="grid size-11 place-items-center rounded-full border-0 bg-paper/85 text-charcoal transition-colors hover:bg-gold/10" type="submit" aria-label="Cerrar acceso">
+        <X size={19} strokeWidth={1.7} aria-hidden="true" />
+      </button>
+    </form>
+    <p class="mb-3 text-[0.7rem] font-extrabold tracking-[0.18em] text-gold uppercase">Contenido privado</p>
+    <h2 id="access-title" class="max-w-[12ch] pr-10 font-serif text-title-sm leading-[1.04] font-medium tracking-[-0.03em] text-charcoal">Entrar en el álbum</h2>
+    <p class="mt-3 max-w-[40ch] text-sm leading-6 text-muted">Usa la contraseña compartida con los peregrinos y sus familias.</p>
+    <AccessForm enhanced />
+  </div>
+</dialog>

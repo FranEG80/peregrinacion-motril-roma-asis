@@ -1,0 +1,9 @@
+---
+interface Props { label: string; value: string; class?: string; }
+const { label, value, class: className = '' } = Astro.props;
+---
+
+<div class:list={['border-l border-line pl-4 first:border-l-0 first:pl-0', className]}>
+  <dt class="text-[0.62rem] font-extrabold tracking-[0.16em] text-gold uppercase">{label}</dt>
+  <dd class="mt-1 font-serif text-xl text-charcoal">{value}</dd>
+</div>

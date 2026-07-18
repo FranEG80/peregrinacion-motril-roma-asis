@@ -1,0 +1,41 @@
+---
+import PhotoPlate from '../molecules/PhotoPlate.astro';
+import StatPair from '../atoms/StatPair.astro';
+interface Props {
+  title: string;
+  description: string;
+  covers: string[];
+}
+const { title, description, covers } = Astro.props;
+---
+
+<section id="album-hero" class="relative overflow-clip border-b border-line bg-cream py-section-sm">
+  <div class="absolute inset-0 bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:32rem] opacity-[0.045]"></div>
+  <img class="pointer-events-none absolute -right-12 -bottom-20 w-56 opacity-[0.07] mix-blend-multiply" src="/images/marginalia/apostles.png" width="760" height="597" alt="" loading="lazy" />
+  <div class="container relative z-10 grid items-center gap-[clamp(3rem,8vw,7rem)] lg:grid-cols-[0.88fr_1.12fr]">
+    <div>
+      <p class="mb-4 text-[0.7rem] font-extrabold tracking-[0.18em] text-gold uppercase">7—11 de julio · 2026</p>
+      <h1 class="max-w-[12ch] font-serif text-display-xl leading-[0.94] font-medium tracking-[-0.052em] text-charcoal">{title}</h1>
+      <p class="mt-6 max-w-[52ch] text-[0.98rem] leading-7 text-muted">{description}</p>
+      <dl class="mt-8 grid grid-cols-2 border-y border-line py-4">
+        <StatPair label="Jornadas" value="05" />
+        <StatPair label="Ruta" value="Roma → Asís" />
+      </dl>
+      <div class="mt-7 rounded-plate border border-line bg-paper/80 p-4 shadow-lift sm:p-5">
+        <slot />
+      </div>
+    </div>
+
+    <div class="relative min-h-[clamp(27rem,58vw,42rem)]" role="group" aria-label="Recuerdos destacados de las cinco jornadas">
+      {covers[0] && (
+        <PhotoPlate class="absolute top-[4%] left-[2%] h-[67%] w-[70%] -rotate-[1.4deg]" src={covers[0]} alt="" priority />
+      )}
+      {covers[1] && (
+        <PhotoPlate class="absolute top-[18%] right-[1%] h-[55%] w-[47%] rotate-[2deg]" variant="secondary" src={covers[1]} alt="" />
+      )}
+      {covers[2] && (
+        <PhotoPlate class="absolute right-[12%] bottom-[1%] z-10 h-[38%] w-[48%] -rotate-[1deg]" variant="secondary" src={covers[2]} alt="" />
+      )}
+    </div>
+  </div>
+</section>

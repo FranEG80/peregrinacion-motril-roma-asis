@@ -1,0 +1,12 @@
+---
+interface Props { number: number; date: string; city: string; class?: string; }
+const { number, date, city, class: className = '' } = Astro.props;
+---
+
+<p class:list={['flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.65rem] font-extrabold tracking-[0.15em] text-gold uppercase', className]}>
+  <span>Día {String(number).padStart(2, '0')}</span>
+  <span aria-hidden="true" class="text-line">·</span>
+  <span>{date}</span>
+  <span aria-hidden="true" class="text-line">·</span>
+  <span>{city}</span>
+</p>

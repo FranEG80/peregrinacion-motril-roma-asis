@@ -1,0 +1,13 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro';
+interface Props { eyebrow: string; title: string; description?: string; id?: string; align?: 'left' | 'split'; }
+const { eyebrow, title, description, id, align = 'left' } = Astro.props;
+---
+
+<header class:list={['grid gap-4', align === 'split' && 'md:grid-cols-2 md:items-end md:gap-12']}>
+  <div>
+    <p class="m-0 mb-3 text-[0.7rem] font-extrabold tracking-[0.18em] text-gold uppercase">{eyebrow}</p>
+    <SectionTitle id={id}>{title}</SectionTitle>
+  </div>
+  {description && <p class:list={['m-0 max-w-[54ch] text-sm leading-7 text-muted', align === 'split' && 'md:justify-self-end']}>{description}</p>}
+</header>

@@ -1,0 +1,47 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  width?: number;
+  height?: number;
+  variant?: 'primary' | 'secondary' | 'sketch';
+  priority?: boolean;
+  class?: string;
+  transitionName?: string;
+}
+const {
+  src,
+  alt,
+  caption,
+  width = 1600,
+  height = 1067,
+  variant = 'primary',
+  priority = false,
+  class: className = '',
+  transitionName,
+} = Astro.props;
+const variants = {
+  primary: 'rotate-0 p-2.5 sm:p-3',
+  secondary: 'rotate-[1.5deg] p-2 transition-transform duration-300 hover:rotate-0 motion-reduce:transition-none',
+  sketch: 'p-3 mix-blend-multiply',
+};
+---
+
+<figure
+  class:list={['m-0 rounded-plate border border-line bg-cream shadow-plate', variants[variant], className]}
+  data-view-transition={transitionName ? 'page-cover' : undefined}
+  style={transitionName ? `--view-transition-name: ${transitionName}` : undefined}
+>
+  <img
+    class:list={['h-full w-full object-cover', variant === 'sketch' && 'mix-blend-multiply']}
+    src={src}
+    width={width}
+    height={height}
+    alt={alt}
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : undefined}
+    decoding="async"
+  />
+  {caption && <figcaption class="px-1 pt-2 text-right text-[0.6rem] font-bold tracking-[0.1em] text-muted uppercase">{caption}</figcaption>}
+</figure>

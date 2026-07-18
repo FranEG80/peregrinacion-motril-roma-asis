@@ -1,0 +1,14 @@
+---
+interface Props { id?: string; as?: 'h1' | 'h2' | 'h3'; size?: 'display' | 'title' | 'small'; class?: string; }
+const { id, as: Tag = 'h2', size = 'title', class: className = '' }: Props = Astro.props;
+const sizes = {
+  display: 'text-display-xl tracking-[-0.045em]',
+  title: 'text-title tracking-[-0.035em]',
+  small: 'text-title-sm tracking-[-0.025em]',
+};
+const sizeClass = sizes[(size || 'title') as keyof typeof sizes];
+---
+
+<Tag id={id} class:list={['font-serif font-medium leading-[1.02] text-balance text-charcoal', sizeClass, className]}>
+  <slot />
+</Tag>

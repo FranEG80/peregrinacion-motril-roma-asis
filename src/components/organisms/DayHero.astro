@@ -1,0 +1,33 @@
+---
+interface Props {
+  number: number;
+  date: string;
+  city: string;
+  title: string;
+  summary: string;
+  cover: string;
+  dayId: string;
+}
+const { number, date, city, title, summary, cover, dayId } = Astro.props;
+---
+
+<section id="day-hero" class="relative grid min-h-[68svh] items-end overflow-hidden bg-charcoal text-cream">
+  <img
+    class="absolute inset-0 size-full object-cover"
+    src={cover}
+    width="1600"
+    height="1067"
+    alt=""
+    fetchpriority="high"
+    data-day-cover
+    data-view-transition="page-cover"
+    style={`--view-transition-name: day-cover-${dayId}`}
+  />
+  <div class="absolute inset-0 bg-[linear-gradient(0deg,var(--color-paper)_0%,rgb(36_34_30_/_0.92)_7%,rgb(36_34_30_/_0.58)_48%,rgb(36_34_30_/_0.14)_100%),linear-gradient(90deg,rgb(24_22_19_/_0.6),transparent_72%)]"></div>
+  <div class="container relative z-10 pb-[clamp(5rem,10vw,8rem)] pt-24">
+    <a class="mb-6 inline-flex min-h-11 items-center text-[0.8rem] font-medium text-cream/80 underline decoration-gold-bright/70 underline-offset-4 hover:text-white" href="/album">← Volver al itinerario</a>
+    <p class="mb-3 text-[0.7rem] font-extrabold tracking-[0.17em] text-gold-bright uppercase">Día {number} · {date} · {city}</p>
+    <h1 class="max-w-[15ch] font-serif text-display-xl leading-[0.95] font-medium tracking-[-0.05em] text-cream" data-view-transition="page-title" style={`--view-transition-name: day-title-${dayId}`}>{title}</h1>
+    <p class="mt-5 max-w-[65ch] text-[0.95rem] leading-7 text-cream/85">{summary}</p>
+  </div>
+</section>

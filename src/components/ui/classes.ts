@@ -1,0 +1,9 @@
+export const buttonClasses = {
+  primary: 'inline-flex min-h-12 items-center justify-center gap-2 rounded-hairline border border-gold bg-transparent px-5 py-3 text-[0.82rem] font-medium tracking-[0.015em] text-charcoal no-underline transition-[transform,background-color,color] duration-200 ease-editorial hover:-translate-y-px hover:bg-gold hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold motion-reduce:transform-none motion-reduce:transition-none',
+  secondary: 'inline-flex min-h-12 items-center justify-center gap-2 rounded-hairline border border-line bg-cream/55 px-5 py-3 text-[0.82rem] font-medium tracking-[0.015em] text-charcoal no-underline transition-[transform,background-color,border-color] duration-200 ease-editorial hover:-translate-y-px hover:border-gold hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold motion-reduce:transform-none motion-reduce:transition-none',
+  quiet: 'inline-flex min-h-11 items-center justify-center gap-2 rounded-hairline border border-transparent bg-transparent px-3 py-2 text-[0.82rem] font-medium text-charcoal no-underline transition-colors duration-200 hover:bg-gold/10 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold',
+} as const;
+
+export const eyebrowClass = 'm-0 text-[0.7rem] font-extrabold tracking-[0.18em] text-gold uppercase';
+export const chipClass = 'inline-flex items-center rounded-full border border-line bg-cream/75 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.04em] text-muted';
+export const iconButtonClass = 'grid size-11 shrink-0 place-items-center rounded-full border border-line bg-cream/90 text-charcoal shadow-sm transition-[transform,background-color,border-color] duration-200 hover:-translate-y-px hover:border-gold hover:bg-cream focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-gold motion-reduce:transform-none';

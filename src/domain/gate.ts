@@ -1,8 +1,8 @@
 import type { AuthConfig } from './auth';
 
-export type GateDecision = 'allow-public' | 'allow-session' | 'redirect-login' | 'reject-api';
+export type GateDecision = 'allow-public' | 'allow-session' | 'redirect-login';
 
-const protectedPrefixes = ['/album', '/api/download-tickets', '/api/zip-ticket'];
+const protectedPrefixes = ['/album'];
 
 export function isProtectedPath(pathname: string) {
   return protectedPrefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`));
@@ -15,5 +15,5 @@ export function decideGate(
 ): GateDecision {
   if (!isProtectedPath(pathname) || config.mode === 'public') return 'allow-public';
   if (config.configured && hasValidSession) return 'allow-session';
-  return pathname.startsWith('/api/') ? 'reject-api' : 'redirect-login';
+  return 'redirect-login';
 }

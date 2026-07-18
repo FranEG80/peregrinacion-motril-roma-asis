@@ -1,0 +1,63 @@
+---
+import { Eye, EyeOff } from 'lucide-preact';
+import { buttonClasses } from '../ui/classes';
+interface Props { enhanced?: boolean; returnTo?: string; error?: string; }
+const { enhanced = false, returnTo = '/album', error = '' } = Astro.props;
+const inputId = enhanced ? 'dialog-password' : 'page-password';
+const errorId = enhanced ? 'dialog-access-error' : 'page-access-error';
+---
+
+<form class="mt-6 grid gap-2" method="post" action="/api/access" data-access-component data-access-form={enhanced ? '' : undefined}>
+  <input type="hidden" name="returnTo" value={returnTo} />
+  <label class="text-sm font-medium text-charcoal" for={inputId}>Contraseña compartida</label>
+  <div class="grid grid-cols-[minmax(0,1fr)_3rem] overflow-clip rounded-hairline border border-line bg-white shadow-sm transition-[border-color,box-shadow] focus-within:border-gold focus-within:shadow-[0_0_0_3px_rgb(141_112_67_/_0.16)]">
+    <input class="min-h-12 min-w-0 border-0 bg-transparent px-4 text-charcoal outline-0" id={inputId} name="password" type="password" autocomplete="current-password" required aria-describedby={errorId} />
+    <button class="grid place-items-center border-0 border-l border-line bg-paper text-charcoal transition-colors hover:bg-gold/10" type="button" data-toggle-password aria-label="Mostrar contraseña" aria-pressed="false">
+      <Eye size={18} strokeWidth={1.7} data-eye aria-hidden="true" />
+      <EyeOff size={18} strokeWidth={1.7} data-eye-off aria-hidden="true" hidden />
+    </button>
+  </div>
+  <p id={errorId} class="m-0 min-h-6 text-sm font-bold text-rust" role="alert" aria-live="polite">{error}</p>
+  <button class={buttonClasses.primary} type="submit">Entrar al álbum</button>
+</form>
+
+<script>
+  function initializeAccessForms() {
+    document.querySelectorAll<HTMLFormElement>('form[data-access-component][data-access-bound!="true"]').forEach((form) => {
+      form.dataset.accessBound = 'true';
+      const password = form.querySelector<HTMLInputElement>('input[name="password"]');
+      const toggle = form.querySelector<HTMLButtonElement>('[data-toggle-password]');
+      toggle?.addEventListener('click', () => {
+        if (!password) return;
+        const visible = password.type === 'text';
+        password.type = visible ? 'password' : 'text';
+        toggle.setAttribute('aria-label', visible ? 'Mostrar contraseña' : 'Ocultar contraseña');
+        toggle.setAttribute('aria-pressed', String(!visible));
+        toggle.querySelector<SVGElement>('[data-eye]')?.toggleAttribute('hidden', !visible);
+        toggle.querySelector<SVGElement>('[data-eye-off]')?.toggleAttribute('hidden', visible);
+      });
+      if (!form.hasAttribute('data-access-form')) return;
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+        const message = form.querySelector<HTMLElement>('[role="alert"]');
+        if (submit) { submit.disabled = true; submit.textContent = 'Comprobando…'; }
+        if (message) message.textContent = '';
+        try {
+          const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+          const result = await response.json();
+          if (!response.ok) throw new Error(result.error || 'No se ha podido acceder.');
+          window.location.assign(result.redirectTo || '/album');
+        } catch (reason) {
+          if (message) message.textContent = reason instanceof Error ? reason.message : 'No se ha podido acceder.';
+          password?.focus();
+        } finally {
+          if (submit) { submit.disabled = false; submit.textContent = 'Entrar al álbum'; }
+        }
+      });
+    });
+  }
+
+  initializeAccessForms();
+  document.addEventListener('astro:page-load', initializeAccessForms);
+</script>

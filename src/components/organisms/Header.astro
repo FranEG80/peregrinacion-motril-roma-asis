@@ -1,0 +1,37 @@
+---
+import { getAuthConfig } from '../../domain/auth';
+interface Props { active?: 'home' | 'album'; }
+const { active = 'album' } = Astro.props;
+const isPrivate = getAuthConfig().mode === 'private';
+---
+
+<header class="site-header sticky top-0 z-30 border-b border-line bg-paper/92 shadow-[0_1px_0_rgb(255_255_255_/_0.65)] backdrop-blur-xl">
+  <div class="container flex min-h-16 items-center justify-between gap-4">
+    <a
+      class="group inline-flex items-center gap-3 text-charcoal no-underline"
+      href="/"
+      aria-label="Peregrinación Roma y Asís, inicio"
+    >
+      <img src="/brand/pilgrimage-mark-512.png" width="42" height="42" alt="" class="size-10 object-contain transition-transform duration-300 ease-editorial group-hover:-rotate-3 group-hover:scale-105 motion-reduce:transition-none" />
+      <span class="font-serif text-base leading-tight font-semibold tracking-[-0.01em]">
+        <small class="mb-0.5 block font-sans text-[0.58rem] font-extrabold tracking-[0.18em] text-gold uppercase">Álbum del camino</small>
+        Roma · Asís
+      </span>
+    </a>
+
+    <nav class="flex items-center gap-1" aria-label="Navegación principal">
+      <a
+        href="/album"
+        aria-current={active === 'album' ? 'page' : undefined}
+        class="hidden min-h-11 items-center border-b border-transparent px-3 text-[0.8rem] font-medium text-muted no-underline transition-colors hover:text-charcoal sm:inline-flex aria-[current=page]:border-gold aria-[current=page]:text-gold"
+      >
+        Los cinco días
+      </a>
+      {active === 'album' && isPrivate && (
+        <form method="post" action="/api/logout" class="m-0">
+          <button type="submit" class="min-h-11 border-0 bg-transparent px-3 text-[0.8rem] font-medium text-muted transition-colors hover:text-charcoal">Salir</button>
+        </form>
+      )}
+    </nav>
+  </div>
+</header>

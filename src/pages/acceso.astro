@@ -1,29 +1,30 @@
 ---
-import AccessForm from '../components/AccessForm.astro';
-import Header from '../components/Header.astro';
+import AccessForm from '../components/molecules/AccessForm.astro';
+import Header from '../components/organisms/Header.astro';
+import SectionTitle from '../components/atoms/SectionTitle.astro';
 import Layout from '../layouts/Layout.astro';
 import { getAuthConfig } from '../domain/auth';
 if (getAuthConfig().mode === 'public') return Astro.redirect('/album', 302);
-const error = Astro.url.searchParams.has('error') ? 'La contraseña no es correcta. Revísala e inténtalo de nuevo.' : Astro.url.searchParams.has('config') ? 'El acceso privado todavía no está configurado.' : '';
+const error = Astro.url.searchParams.has('error')
+  ? 'La contraseña no es correcta. Revísala e inténtalo de nuevo.'
+  : Astro.url.searchParams.has('config')
+    ? 'El acceso privado todavía no está configurado.'
+    : '';
 const returnTo = Astro.url.searchParams.get('returnTo') || '/album';
 ---
+
 <Layout title="Acceso privado · Peregrinación a Roma" transitionReadyId="access-card">
   <Header active="home" />
-  <main id="main-content" class="access-page">
-    <section id="access-card">
-      <p class="eyebrow">Contenido privado</p>
-      <h1>Entrar en el álbum</h1>
-      <p>Introduce la contraseña compartida con los peregrinos y sus familias.</p>
+  <main id="main-content" class="relative grid min-h-[calc(100svh-4rem)] place-items-center overflow-clip px-4 py-12">
+    <div class="absolute inset-0 bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:32rem] opacity-[0.045]"></div>
+    <img class="pointer-events-none absolute -right-10 bottom-0 w-52 opacity-[0.08] mix-blend-multiply" src="/images/marginalia/column.png" width="178" height="760" alt="" />
+    <section id="access-card" class="relative z-10 w-[min(100%,28rem)] overflow-hidden rounded-plate border border-line bg-cream/95 p-[clamp(1.5rem,5vw,2.5rem)] shadow-modal backdrop-blur">
+      <img class="pointer-events-none absolute -right-12 -bottom-12 w-36 opacity-[0.1] mix-blend-multiply" src="/images/marginalia/scallop.png" width="760" height="758" alt="" />
+      <p class="mb-3 text-[0.7rem] font-extrabold tracking-[0.18em] text-gold uppercase">Contenido privado</p>
+      <SectionTitle as="h1" size="small">Entrar en el álbum</SectionTitle>
+      <p class="mt-4 text-sm leading-6 text-muted">Introduce la contraseña compartida con los peregrinos y sus familias.</p>
       <AccessForm returnTo={returnTo} error={error} />
-      <a class="back" href="/">← Volver a la presentación</a>
+      <a class="mt-6 inline-flex min-h-10 items-center text-sm font-medium text-muted underline decoration-line underline-offset-4 hover:text-charcoal" href="/">← Volver a la presentación</a>
     </section>
   </main>
 </Layout>
-<style>
-  .access-page { display: grid; min-height: calc(100dvh - 4rem); place-items: center; padding: 1rem; }
-  section { position: relative; width: min(100%, 26rem); border: 1px solid var(--line); border-radius: .35rem; padding: clamp(1.3rem, 5vw, 2rem); background: rgb(250 249 246 / .92); box-shadow: var(--shadow-soft); }
-  section::after { position: absolute; right: -3rem; bottom: -2.5rem; width: 7rem; height: 7rem; background: url('/images/marginalia/scallop.png') center / contain no-repeat; content: ''; opacity: .17; pointer-events: none; }
-  h1 { font-size: clamp(2rem, 7vw, 2.8rem); }
-  section > p:not(.eyebrow) { color: var(--ink-700); }
-  .back { display: inline-block; margin-top: 1.2rem; color: var(--muted); font-size: .82rem; font-weight: 800; }
-</style>

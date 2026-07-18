@@ -1,0 +1,56 @@
+---
+import type { HomeDayPreview } from '../../data/gallery';
+import DayMeta from '../molecules/DayMeta.astro';
+import Marginalia from '../atoms/Marginalia.astro';
+import TextLink from '../atoms/TextLink.astro';
+interface Props {
+  day: HomeDayPreview;
+  index: number;
+  formattedDate: string;
+  isPrivate: boolean;
+  marginalia: string;
+}
+const { day, index, formattedDate, isPrivate, marginalia } = Astro.props;
+const reversed = index % 2 === 1;
+const photoLabels = [day.highlights[0], day.highlights[1], day.highlights[2], `Otro recuerdo de ${day.title}`];
+---
+
+<article class:list={['day-chapter relative overflow-clip border-t border-line py-section', index >= 3 && 'bg-cream/55']} data-chapter data-day-number={String(day.number).padStart(2, '0')}>
+  <Marginalia
+    name={marginalia}
+    class={`bottom-[6%] w-[clamp(14rem,28vw,28rem)] opacity-[0.12] ${reversed ? '-left-8 lg:-left-12' : '-right-8 lg:-right-12'}`}
+  />
+
+  <div class:list={['container relative z-10 grid items-center gap-[clamp(3rem,7vw,7rem)] lg:grid-cols-[0.76fr_1.24fr]', reversed && 'lg:grid-cols-[1.24fr_0.76fr]']}>
+    <div class:list={['max-w-[32rem]', reversed && 'lg:order-2 lg:justify-self-end']} data-chapter-copy>
+      <DayMeta number={day.number} date={formattedDate} city={day.city} />
+      <h3 class="mt-4 max-w-[15ch] font-serif text-title leading-[1.02] font-medium tracking-[-0.04em] text-charcoal">{day.title}</h3>
+      <p class="mt-5 max-w-[55ch] text-[0.95rem] leading-7 text-muted">{day.summary}</p>
+      <ul class="my-6 grid gap-2 p-0 text-sm text-muted" aria-label="Hitos de la jornada">
+        {day.highlights.map((highlight) => (
+          <li class="flex items-center gap-3 before:h-px before:w-7 before:bg-gold before:content-['']">{highlight}</li>
+        ))}
+      </ul>
+      {isPrivate ? (
+        <TextLink dataOpenAccess>Ver jornada</TextLink>
+      ) : (
+        <TextLink href={`/album/dia/${day.slug}`}>Ver jornada</TextLink>
+      )}
+    </div>
+
+    <div class:list={['relative h-[clamp(25rem,50vw,38rem)]', reversed && 'lg:order-1']} data-chapter-photos aria-label={`Cuatro recuerdos del día ${day.number}`}>
+      <figure class="absolute top-[3%] left-0 z-0 m-0 h-[72%] w-[72%] -rotate-[0.6deg] overflow-hidden rounded-plate border border-line bg-cream p-2 shadow-plate">
+        <img class="size-full object-cover" src={day.images[0]} width="1200" height="900" alt={`Recuerdo del día ${day.number}: ${photoLabels[0]}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+      </figure>
+      <figure class="absolute top-0 right-0 z-10 m-0 h-[43%] w-[39%] rotate-[1.4deg] overflow-hidden rounded-plate border border-line bg-cream p-1.5 shadow-lift">
+        <img class="size-full object-cover" src={day.images[1]} width="900" height="900" alt={`Recuerdo del día ${day.number}: ${photoLabels[1]}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+      </figure>
+      <figure class="absolute right-0 bottom-0 z-20 m-0 h-[48%] w-[42%] -rotate-[1deg] overflow-hidden rounded-plate border border-line bg-cream p-1.5 shadow-lift">
+        <img class="size-full object-cover" src={day.images[2]} width="900" height="1100" alt={`Recuerdo del día ${day.number}: ${photoLabels[2]}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+      </figure>
+      <figure class="absolute bottom-[1%] left-[3%] z-30 m-0 h-[31%] w-[55%] rotate-[0.7deg] overflow-hidden rounded-plate border border-line bg-cream p-1.5 shadow-lift">
+        <img class="size-full object-cover" src={day.images[3]} width="1200" height="700" alt={`Recuerdo del día ${day.number}: ${photoLabels[3]}`} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+      </figure>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,13 @@
+---
+interface Props { name: string; width?: number; height?: number; class?: string; loading?: 'eager' | 'lazy'; }
+const { name, width = 760, height = 520, class: className = '', loading = 'lazy' } = Astro.props;
+---
+
+<img
+  class:list={['pointer-events-none absolute object-contain opacity-20 mix-blend-multiply', className]}
+  src={`/images/marginalia/${name}.png`}
+  width={width}
+  height={height}
+  alt=""
+  loading={loading}
+/>

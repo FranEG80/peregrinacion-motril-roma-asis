@@ -1,0 +1,16 @@
+---
+import { ArrowRight } from 'lucide-preact';
+interface Props { href?: string; type?: 'button' | 'submit'; class?: string; dataOpenAccess?: boolean; }
+const { href, type = 'button', class: className = '', dataOpenAccess = false } = Astro.props;
+const classes = `group inline-flex min-h-11 items-center gap-2 border-b border-gold py-1 text-[0.82rem] font-medium tracking-[0.01em] text-charcoal no-underline ${className}`;
+---
+
+{href ? (
+  <a class={classes} href={href}>
+    <slot /><ArrowRight class="transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none" size={16} strokeWidth={1.7} aria-hidden="true" />
+  </a>
+) : (
+  <button class={`${classes} cursor-pointer bg-transparent`} type={type} data-open-access={dataOpenAccess ? '' : undefined}>
+    <slot /><ArrowRight class="transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none" size={16} strokeWidth={1.7} aria-hidden="true" />
+  </button>
+)}

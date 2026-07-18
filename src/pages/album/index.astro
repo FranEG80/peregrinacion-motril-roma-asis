@@ -1,11 +1,14 @@
 ---
-import Header from '../../components/Header.astro';
-import SearchExperience from '../../components/SearchExperience';
-import Timeline from '../../components/Timeline.astro';
+import Header from '../../components/organisms/Header.astro';
+import Footer from '../../components/organisms/Footer.astro';
+import AlbumHero from '../../components/organisms/AlbumHero.astro';
+import Timeline from '../../components/organisms/Timeline.astro';
+import SearchExperience from '../../components/search/SearchExperience';
+import SectionHeading from '../../components/molecules/SectionHeading.astro';
+import Marginalia from '../../components/atoms/Marginalia.astro';
 import { pilgrimage } from '../../data/pilgrimage';
 import { getGalleryCover } from '../../data/gallery';
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/search.css';
 
 const searchItems = pilgrimage.days.flatMap((day) => [
   { id: day.id, day: `Día ${day.number}`, title: day.title, summary: day.summary, href: `/album/dia/${day.slug}`, type: 'Día' as const },
@@ -13,6 +16,7 @@ const searchItems = pilgrimage.days.flatMap((day) => [
 ]);
 
 const covers = await Promise.all(pilgrimage.days.map((day) => getGalleryCover(day.slug).catch(() => undefined)));
+const validCovers = covers.filter((cover): cover is string => Boolean(cover));
 const timelineItems = pilgrimage.days.map((day, index) => ({
   id: day.id,
   sequence: day.number,
@@ -29,71 +33,27 @@ const timelineItems = pilgrimage.days.map((day, index) => ({
 <Layout title={`Los cinco días · ${pilgrimage.title}`} description={pilgrimage.privateIntroduction} transitionReadyId="album-hero">
   <Header active="album" />
   <main id="main-content">
-    <section id="album-hero" class="album-intro">
-      <div class="container album-intro__grid">
-        <div>
-          <p class="eyebrow">7—11 de julio · 2026</p>
-          <h1 class="display-title">Roma y Asís,<br />día a día</h1>
-          <p>{pilgrimage.privateIntroduction}</p>
-        </div>
-        <div class="album-tools">
-          <img src="/images/marginalia/apostles.png" width="760" height="597" alt="" loading="lazy" />
-          <dl>
-            <div><dt>Jornadas</dt><dd>05</dd></div>
-            <div><dt>Ruta</dt><dd>Roma → Asís</dd></div>
-          </dl>
-          <SearchExperience client:idle items={searchItems} />
-        </div>
-      </div>
-    </section>
+    <AlbumHero title="Roma y Asís, día a día" description={pilgrimage.privateIntroduction} covers={validCovers}>
+      <SearchExperience client:idle items={searchItems} />
+    </AlbumHero>
 
-    <section class="album-journey section" aria-labelledby="journey-title">
-      <img class="album-mark album-mark--fountain" src="/images/marginalia/fountain.png" width="534" height="760" alt="" loading="lazy" />
-      <img class="album-mark album-mark--shell" src="/images/marginalia/scallop.png" width="760" height="758" alt="" loading="lazy" />
-      <div class="container">
-        <div class="album-journey__heading">
-          <div>
-            <p class="eyebrow">La bitácora del viaje</p>
-            <h2 id="journey-title" class="section-title">Cinco capítulos en orden de camino</h2>
-          </div>
-          <p>Cada jornada reúne sus lugares y conserva el archivo visual en el orden en que fue vivido.</p>
+    <section class="relative overflow-clip py-section" aria-labelledby="journey-title">
+      <Marginalia name="fountain" class="top-12 -right-8 w-36 opacity-10" />
+      <Marginalia name="scallop" class="bottom-12 -left-8 w-36 -rotate-12 opacity-10" />
+      <div class="container relative z-10">
+        <SectionHeading
+          eyebrow="La bitácora del viaje"
+          title="Cinco capítulos en orden de camino"
+          description="Cada jornada reúne sus lugares y conserva el archivo visual en el orden en que fue vivido."
+          id="journey-title"
+          align="split"
+        />
+        <div class="mt-10 border-t border-line pt-2">
+          <Timeline items={timelineItems} variant="days" ariaLabel="Recorrido de los cinco días de la peregrinación" />
         </div>
-        <Timeline items={timelineItems} variant="days" ariaLabel="Recorrido de los cinco días de la peregrinación" />
       </div>
     </section>
   </main>
 
-  <footer class="album-footer">
-    <div class="container"><p>Peregrinación Roma · Asís</p><span>Motril · 7—11 julio</span></div>
-  </footer>
+  <Footer />
 </Layout>
-
-<style>
-  .album-intro { position: relative; overflow: clip; border-bottom: 1px solid var(--line); background-color: var(--cream); background-image: linear-gradient(rgb(250 249 246 / .94), rgb(250 249 246 / .94)), url('/images/textures/pilgrimage-pattern.webp'); background-size: auto, 32rem; }
-  .album-intro__grid { display: grid; gap: 2rem; padding-block: clamp(3rem, 7vw, 5.5rem); }
-  .album-intro h1 { max-width: 13ch; }
-  .album-intro h1 + p { max-width: 49ch; margin: 1.2rem 0 0; color: var(--muted); }
-  .album-tools { position: relative; align-self: end; }
-  .album-tools > img { position: absolute; right: 0; bottom: calc(100% + .8rem); width: 9rem; opacity: .13; pointer-events: none; }
-  .album-tools dl { display: grid; grid-template-columns: 1fr 1.5fr; margin: 0 0 1.2rem; border-block: 1px solid var(--line); }
-  .album-tools dl > div { padding: .75rem 0; }
-  .album-tools dl > div + div { border-left: 1px solid var(--line); padding-left: 1rem; }
-  .album-tools dt { color: var(--gold); font-size: .6rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
-  .album-tools dd { margin: .18rem 0 0; font-family: var(--font-display); font-size: 1.15rem; }
-  .album-journey { position: relative; overflow: clip; }
-  .album-journey__heading { position: relative; z-index: 1; display: grid; gap: 1rem; border-bottom: 1px solid var(--line); padding-bottom: 2rem; }
-  .album-journey__heading > p { max-width: 48ch; margin: 0; color: var(--muted); }
-  .album-mark { position: absolute; width: 8rem; object-fit: contain; opacity: .1; pointer-events: none; }
-  .album-mark--fountain { top: 3rem; right: -1.5rem; }
-  .album-mark--shell { bottom: 3rem; left: -2rem; transform: rotate(-14deg); }
-  .album-footer { border-top: 1px solid #3f3d36; padding-block: 1.5rem; background: var(--charcoal); color: var(--cream); }
-  .album-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
-  .album-footer p { margin: 0; font-family: var(--font-display); }
-  .album-footer span { color: #c9bdab; font-size: .72rem; }
-
-  @media (min-width: 800px) {
-    .album-intro__grid { grid-template-columns: .9fr 1.1fr; align-items: end; gap: 6rem; }
-    .album-journey__heading { grid-template-columns: 1fr 1fr; align-items: end; }
-    .album-journey__heading > p { justify-self: end; }
-  }
-</style>
