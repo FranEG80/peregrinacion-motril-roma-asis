@@ -4,6 +4,10 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  imageAlt?: string;
+  canonicalPath?: string;
+  type?: 'website' | 'article';
   noindex?: boolean;
   transitionReadyId?: string;
 }
@@ -11,20 +15,49 @@ interface Props {
 const {
   title = 'Peregrinación a Roma',
   description = 'Álbum privado de una peregrinación de cinco días por Roma.',
+  image = '/images/og/peregrinacion-roma-asis.jpg',
+  imageAlt = 'Peregrinos caminando hacia la Basílica de San Pedro durante la peregrinación a Roma y Asís',
+  canonicalPath,
+  type = 'website',
   noindex = false,
   transitionReadyId,
 } = Astro.props;
+
+const baseUrl = Astro.site ?? Astro.url.origin;
+const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, baseUrl);
+const socialImageUrl = new URL(image, baseUrl);
 ---
 
 <!doctype html>
-<html lang="es">
-  <head>
+  <html lang="es">
+    <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, nofollow, noarchive" />}
+    <meta
+      name="robots"
+      content={noindex ? 'noindex, nofollow, noarchive' : 'index, follow, max-image-preview:large'}
+    />
     <meta name="theme-color" content="#F0EFEB" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="Peregrinación Roma · Asís" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:secure_url" content={socialImageUrl} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     {transitionReadyId && <link rel="expect" href={`#${transitionReadyId}`} blocking="render" />}
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
