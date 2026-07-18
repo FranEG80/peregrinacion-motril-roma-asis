@@ -1,13 +1,14 @@
 import type { APIRoute } from 'astro';
 import { getGalleryDay, r2Url } from '../../data/gallery';
+import { pilgrimage } from '../../data/pilgrimage';
 
 interface RequestBody { dayId?: string; photoIds?: string[]; }
 
 export const POST: APIRoute = async ({ request }) => {
   let body: RequestBody;
   try { body = await request.json(); } catch { return Response.json({ error: 'La selección enviada no es válida.' }, { status: 400 }); }
-  const slug = { 'day-1': 'primer-dia-en-roma', 'day-2': 'el-corazon-del-vaticano', 'day-3': 'basilicas-y-roma-imperial', 'day-4': 'asis-y-catacumbas', 'day-5': 'rivotorto-y-regreso' }[body.dayId || ''];
-  const day = slug ? await getGalleryDay(slug) : undefined;
+  const sourceDay = pilgrimage.days.find((day) => day.id === body.dayId);
+  const day = sourceDay ? await getGalleryDay(sourceDay.slug) : undefined;
   if (!day) return Response.json({ error: 'No se ha encontrado la jornada.' }, { status: 404 });
   const requested = new Set(Array.isArray(body.photoIds) ? body.photoIds : []);
   const available = day.blocks.flatMap((block) => block.media.filter((item) => item.mediaType === 'image').map((photo) => ({ photo, block }))).filter(({ photo }) => requested.has(photo.id));

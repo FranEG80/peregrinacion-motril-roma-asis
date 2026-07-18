@@ -1,0 +1,2 @@
+# Copia este archivo como .dev.vars para el desarrollo local.
+MEDIA_TICKET_SECRET=replace-with-a-local-test-secret

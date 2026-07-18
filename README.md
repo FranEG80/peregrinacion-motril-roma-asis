@@ -5,7 +5,7 @@
 ## Puesta en marcha
 
 1. Instala dependencias con `pnpm install`.
-2. Copia `.env.example` a `.env` y sustituye todos los secretos.
+2. Copia `.env.example` a `.env`. Deja `APP_PASSWORD` vacío si el álbum debe ser público; para el modo privado configura también `SESSION_SECRET`.
 3. Arranca Astro en segundo plano con `pnpm dev`.
 4. Consulta el estado con `pnpm dev:status`, los registros con `pnpm dev:logs` y detenlo con `pnpm dev:stop`.
 
@@ -19,13 +19,13 @@ La contraseña local incluida en `.env` es solo para desarrollo. `.env` está ig
 
 ## Medios y Cloudflare
 
-El frontend y la autenticación se despliegan en Vercel. El Worker de `workers/media` sirve originales privados desde R2, genera variantes WebP con Cloudflare Images y construye ZIP en streaming. La descarga predefinida es WebP de alta calidad sin reducir las dimensiones; el original queda como opción explícita.
+El frontend y la autenticación se despliegan en Vercel. El Worker de `workers/media` sirve los archivos desde R2, genera variantes WebP con Cloudflare Images y construye ZIP en streaming. Los ZIP incluyen fotografías WebP y vídeos MP4 tal como están almacenados en R2.
 
 Para configurar Cloudflare:
 
 1. Crea el bucket R2 indicado en `workers/media/wrangler.jsonc`.
-2. Sustituye el identificador de la cuenta y configura `MEDIA_TICKET_SECRET` como secreto de Wrangler.
+2. Configura `MEDIA_TICKET_SECRET` como secreto de Wrangler y usa exactamente el mismo valor en Vercel.
 3. Ajusta `ALLOWED_ORIGIN` al dominio definitivo.
-4. Despliega con `pnpm worker:deploy` y copia su URL a `MEDIA_WORKER_URL`.
+4. Despliega con `pnpm worker:deploy` y copia su URL, sin barra final, a `MEDIA_WORKER_URL` en Vercel.
 
-Las URLs fotográficas actuales son contenido provisional WebP de Unsplash para poder revisar la interfaz. Al cargar el material real, conserva las claves `roma/...` descritas en `src/data/pilgrimage.ts`. No se usan ilustraciones SVG: los únicos SVG permitidos son los iconos de Lucide.
+Las claves de medios deben seguir el formato `07julio2026/archivo.webp` (o el día equivalente). No se usan ilustraciones SVG: los únicos SVG permitidos son los iconos de Lucide.
