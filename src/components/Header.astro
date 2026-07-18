@@ -1,6 +1,8 @@
 ---
+import { getAuthConfig } from '../domain/auth';
 interface Props { active?: 'home' | 'album'; }
 const { active = 'album' } = Astro.props;
+const isPrivate = getAuthConfig().mode === 'private';
 ---
 
 <header class="site-header sticky top-0 z-30 border-b border-[var(--line)] bg-[rgb(240_239_235_/_0.94)] backdrop-blur-md">
@@ -25,7 +27,7 @@ const { active = 'album' } = Astro.props;
       >
         Los cinco días
       </a>
-      {active === 'album' && (
+      {active === 'album' && isPrivate && (
         <form method="post" action="/api/logout" class="m-0">
           <button type="submit" class="min-h-11 border-0 bg-transparent px-3 text-[0.8rem] font-bold text-[var(--muted)] transition-colors hover:text-[var(--charcoal)]">Salir</button>
         </form>

@@ -5,8 +5,10 @@ import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import { pilgrimage } from '../data/pilgrimage';
 import { getHomeDayPreviews } from '../data/gallery';
+import { getAuthConfig } from '../domain/auth';
 
 const days = getHomeDayPreviews();
+const isPrivate = getAuthConfig().mode === 'private';
 const marginalia = ['vatican', 'arch', 'colosseum', 'assisi-tower', 'olive-branch'];
 const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' });
 ---
@@ -24,9 +26,15 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
           <p class="eyebrow" data-hero-reveal>{pilgrimage.dates}</p>
           <h1 class="display-title" data-hero-reveal>{pilgrimage.title}</h1>
           <p class="home-hero__lead" data-hero-reveal>{pilgrimage.subtitle}</p>
-          <button class="button home-hero__cta" type="button" data-open-access data-hero-reveal>
-            Entrar en el álbum <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
-          </button>
+          {isPrivate ? (
+            <button class="button home-hero__cta" type="button" data-open-access data-hero-reveal>
+              Entrar en el álbum <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
+            </button>
+          ) : (
+            <a class="button home-hero__cta" href="/album" data-hero-reveal>
+              Entrar en el álbum <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
+            </a>
+          )}
         </div>
 
         <figure class="home-hero__art" data-hero-art>
@@ -44,9 +52,15 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
         </div>
         <div class="home-intro__text">
           {pilgrimage.publicIntroduction.map((paragraph) => <p>{paragraph}</p>)}
-          <button class="text-link" type="button" data-open-access>
-            Abrir el archivo privado <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
-          </button>
+          {isPrivate ? (
+            <button class="text-link" type="button" data-open-access>
+              Abrir el archivo privado <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
+            </button>
+          ) : (
+            <a class="text-link" href="/album">
+              Abrir el álbum <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
+            </a>
+          )}
         </div>
       </div>
       <img class="marginalia marginalia--column" src="/images/marginalia/column.png" width="178" height="760" alt="" loading="lazy" />
@@ -75,9 +89,15 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
                 <ul aria-label="Hitos de la jornada">
                   {day.highlights.map((highlight) => <li>{highlight}</li>)}
                 </ul>
-                <button class="text-link" type="button" data-open-access>
-                  Ver jornada <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
-                </button>
+                {isPrivate ? (
+                  <button class="text-link" type="button" data-open-access>
+                    Ver jornada <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
+                  </button>
+                ) : (
+                  <a class="text-link" href={`/album/dia/${day.slug}`}>
+                    Ver jornada <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
+                  </a>
+                )}
               </div>
 
               <div class="day-chapter__photos" aria-label={`Dos recuerdos del día ${day.number}`}>
@@ -105,17 +125,19 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
     </div>
   </footer>
 
-  <dialog id="access-dialog" aria-labelledby="access-title" closedby="any">
-    <div class="access-dialog__inner">
-      <form method="dialog" class="access-dialog__close">
-        <button type="submit" aria-label="Cerrar acceso"><X size={19} strokeWidth={1.7} aria-hidden="true" /></button>
-      </form>
-      <p class="eyebrow">Contenido privado</p>
-      <h2 id="access-title">Entrar en el álbum</h2>
-      <p>Usa la contraseña compartida con los peregrinos y sus familias.</p>
-      <AccessForm enhanced />
-    </div>
-  </dialog>
+  {isPrivate && (
+    <dialog id="access-dialog" aria-labelledby="access-title" closedby="any">
+      <div class="access-dialog__inner">
+        <form method="dialog" class="access-dialog__close">
+          <button type="submit" aria-label="Cerrar acceso"><X size={19} strokeWidth={1.7} aria-hidden="true" /></button>
+        </form>
+        <p class="eyebrow">Contenido privado</p>
+        <h2 id="access-title">Entrar en el álbum</h2>
+        <p>Usa la contraseña compartida con los peregrinos y sus familias.</p>
+        <AccessForm enhanced />
+      </div>
+    </dialog>
+  )}
 </Layout>
 
 <style>
@@ -236,10 +258,16 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
   openers.forEach((button) => button.addEventListener('click', openDialog));
   const restoreFocus = () => opener?.focus();
   const closeOnBackdrop = (event: MouseEvent) => {
-    if (event.target === dialog) dialog?.close();
+    if (event.target !== dialog || !dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    const inside = rect.top <= event.clientY
+      && event.clientY <= rect.bottom
+      && rect.left <= event.clientX
+      && event.clientX <= rect.right;
+    if (!inside) dialog.close();
   };
   dialog?.addEventListener('close', restoreFocus);
-  dialog?.addEventListener('click', closeOnBackdrop);
+  if (dialog && !('closedBy' in HTMLDialogElement.prototype)) dialog.addEventListener('click', closeOnBackdrop);
   if (new URLSearchParams(window.location.search).has('access')) dialog?.showModal();
 
   const mm = gsap.matchMedia();
@@ -268,6 +296,6 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
     mm.revert();
     openers.forEach((button) => button.removeEventListener('click', openDialog));
     dialog?.removeEventListener('close', restoreFocus);
-    dialog?.removeEventListener('click', closeOnBackdrop);
+    if (dialog && !('closedBy' in HTMLDialogElement.prototype)) dialog.removeEventListener('click', closeOnBackdrop);
   }, { once: true });
 </script>

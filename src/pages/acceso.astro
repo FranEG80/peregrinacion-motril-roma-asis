@@ -2,6 +2,8 @@
 import AccessForm from '../components/AccessForm.astro';
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import { getAuthConfig } from '../domain/auth';
+if (getAuthConfig().mode === 'public') return Astro.redirect('/album', 302);
 const error = Astro.url.searchParams.has('error') ? 'La contraseña no es correcta. Revísala e inténtalo de nuevo.' : Astro.url.searchParams.has('config') ? 'El acceso privado todavía no está configurado.' : '';
 const returnTo = Astro.url.searchParams.get('returnTo') || '/album';
 ---

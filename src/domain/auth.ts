@@ -1,6 +1,18 @@
 const encoder = new TextEncoder();
 export const SESSION_COOKIE = 'peregrinacion_session';
 
+export interface AuthEnvironment {
+  APP_PASSWORD?: string;
+  SESSION_SECRET?: string;
+}
+
+export interface AuthConfig {
+  mode: 'public' | 'private';
+  password: string;
+  sessionSecret: string;
+  configured: boolean;
+}
+
 function toBase64Url(bytes: Uint8Array) {
   return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
 }
@@ -51,10 +63,19 @@ export async function verifySessionToken(token: string | undefined, secret: stri
   }
 }
 
-export function getAuthConfig() {
-  const isProduction = import.meta.env.PROD;
-  const password = import.meta.env.APP_PASSWORD || (isProduction ? '' : 'roma2026');
-  const sessionSecret = import.meta.env.SESSION_SECRET || (isProduction ? '' : 'dev-session-secret-change-me');
-  return { password, sessionSecret, configured: Boolean(password && sessionSecret) };
+export function resolveAuthConfig(env: AuthEnvironment): AuthConfig {
+  const password = env.APP_PASSWORD?.trim() || '';
+  const sessionSecret = env.SESSION_SECRET?.trim() || '';
+  const mode = password ? 'private' : 'public';
+
+  return {
+    mode,
+    password,
+    sessionSecret,
+    configured: mode === 'public' || Boolean(sessionSecret),
+  };
 }
 
+export function getAuthConfig() {
+  return resolveAuthConfig(import.meta.env);
+}

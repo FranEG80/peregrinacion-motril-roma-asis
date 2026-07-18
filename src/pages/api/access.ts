@@ -3,11 +3,16 @@ import { createSessionToken, getAuthConfig, safeEqual, SESSION_COOKIE } from '..
 
 export const POST: APIRoute = async ({ request, cookies, redirect }) => {
   const wantsJson = request.headers.get('accept')?.includes('application/json');
+  const config = getAuthConfig();
+
+  if (config.mode === 'public') {
+    return wantsJson ? Response.json({ ok: true, redirectTo: '/album' }) : redirect('/album', 303);
+  }
+
   const form = await request.formData();
   const password = String(form.get('password') || '');
   const requestedReturn = String(form.get('returnTo') || '/album');
   const returnTo = requestedReturn.startsWith('/album') ? requestedReturn : '/album';
-  const config = getAuthConfig();
 
   if (!config.configured) {
     const message = 'El acceso privado todavía no está configurado.';
@@ -29,4 +34,3 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 
   return wantsJson ? Response.json({ ok: true, redirectTo: returnTo }) : redirect(returnTo, 303);
 };
-
