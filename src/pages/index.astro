@@ -13,6 +13,7 @@ const days = getHomeDayPreviews();
 const isPrivate = getAuthConfig().mode === 'private';
 const marginalia = ['vatican', 'arch', 'colosseum', 'assisi-tower', 'olive-branch'];
 const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' });
+
 ---
 
 <Layout title={`${pilgrimage.title} · Álbum del camino`} description={pilgrimage.publicIntroduction[0]} transitionReadyId="home-hero">
@@ -22,7 +23,7 @@ const dateFormatter = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 
       title={pilgrimage.title}
       subtitle={pilgrimage.subtitle}
       dates={pilgrimage.dates}
-      image={days[1].cover}
+      image={pilgrimage.hero}
       isPrivate={isPrivate}
     />
 
