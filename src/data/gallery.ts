@@ -12,6 +12,7 @@ const manifestSchema = z.object({
   items: z.array(z.object({
     id: z.string().min(1), key: z.string().min(1), mediaType: z.enum(['image', 'video']),
     capturedAt: z.string(), title: z.string().min(1), caption: z.string().min(1), keywords: z.array(z.string()),
+    width: z.number().int().positive().optional(), height: z.number().int().positive().optional(),
   })),
 });
 const photoLocationsSchema = z.object({
