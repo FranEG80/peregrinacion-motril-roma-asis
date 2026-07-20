@@ -195,29 +195,16 @@ dialog[open]::backdrop {
   }
 }
 
-/* The gallery modal intentionally avoids blur and transform layers. On Android,
- * combining those layers with large images or video surfaces can leave stale GPU tiles. */
+/* Keep the gallery modal still while media surfaces mount; its backdrop retains
+ * the shared blur used by the rest of the site. */
 dialog[data-media-dialog] {
   transform: none;
   transition: none;
 }
 
-dialog[data-media-dialog]::backdrop {
-  backdrop-filter: none;
-  transition: none;
-}
-
-dialog[data-media-dialog][open]::backdrop {
-  backdrop-filter: none;
-}
-
 @starting-style {
   dialog[data-media-dialog][open] {
     transform: none;
-  }
-
-  dialog[data-media-dialog][open]::backdrop {
-    backdrop-filter: none;
   }
 }
 

@@ -7,6 +7,14 @@ import PlaceChapter from './PlaceChapter';
 import TagFilter from './TagFilter';
 import ZipDownloadButton from './ZipDownloadButton';
 
+function releaseDialogVideo(dialog: HTMLDialogElement | null) {
+  const video = dialog?.querySelector('video');
+  if (!video) return;
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+}
+
 export default function DayExperience({ day }: { day: GalleryDay }) {
   const allMedia = useMemo(() => day.blocks.flatMap((block) => block.media), [day.blocks]);
   const [activeTag, setActiveTag] = useState<string | null>(null);
@@ -46,7 +54,9 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
     if (!dialog) return;
     if (activeId && !dialog.open) dialog.showModal();
     const closeOnBackdrop = (event: MouseEvent) => {
-      if (event.target === dialog) dialog.close();
+      if (event.target !== dialog) return;
+      releaseDialogVideo(dialog);
+      dialog.close();
     };
     dialog.addEventListener('click', closeOnBackdrop);
     return () => dialog.removeEventListener('click', closeOnBackdrop);
@@ -54,10 +64,25 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (!active) return;
+      if (!active || event.repeat) return;
       const index = visibleMedia.findIndex((item) => item.id === active.id);
-      if (event.key === 'ArrowLeft' && index > 0) setActiveId(visibleMedia[index - 1].id);
-      if (event.key === 'ArrowRight' && index < visibleMedia.length - 1) setActiveId(visibleMedia[index + 1].id);
+      const nextId =
+        event.key === 'ArrowLeft' && index > 0
+          ? visibleMedia[index - 1].id
+          : event.key === 'ArrowRight' && index < visibleMedia.length - 1
+            ? visibleMedia[index + 1].id
+            : null;
+      if (!nextId) return;
+
+      const dialog = dialogRef.current;
+      const video = dialog?.querySelector('video');
+      if (!video) {
+        setActiveId(nextId);
+        return;
+      }
+
+      releaseDialogVideo(dialog);
+      requestAnimationFrame(() => setActiveId(nextId));
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -67,8 +92,14 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
     triggerRef.current = trigger;
     setActiveId(item.id);
   }, []);
-  const closeDialog = () => dialogRef.current?.close();
+  const closeDialog = () => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    releaseDialogVideo(dialog);
+    dialog.close();
+  };
   const onClose = () => {
+    releaseDialogVideo(dialogRef.current);
     setActiveId(null);
     triggerRef.current?.focus();
   };
@@ -108,6 +139,7 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
       <dialog
         ref={dialogRef}
         data-media-dialog
+        onCancel={() => releaseDialogVideo(dialogRef.current)}
         onClose={onClose}
         aria-labelledby="experience-dialog-title"
         closedby="any"

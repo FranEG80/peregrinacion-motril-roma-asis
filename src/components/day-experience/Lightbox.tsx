@@ -8,8 +8,16 @@ const MAX_ZOOM = 5;
 const ZOOM_STEP = 0.25;
 
 type HdState = 'thumbnail' | 'loading' | 'loaded' | 'error';
+type VideoState = 'poster' | 'loading' | 'playing' | 'paused' | 'error';
 type ImageView = { zoom: number; x: number; y: number };
 type DragState = { pointerId: number; startX: number; startY: number; originX: number; originY: number };
+
+function releaseVideo(video: HTMLVideoElement | null) {
+  if (!video) return;
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+}
 
 interface Props {
   active: GalleryMedia;
@@ -26,7 +34,11 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
   const videoRef = useRef<HTMLVideoElement>(null);
   const hdImageRef = useRef<HTMLImageElement | null>(null);
   const dragRef = useRef<DragState | null>(null);
+  const navigationFrameRef = useRef<number | null>(null);
+  const videoPlayRequestedRef = useRef(false);
   const [hdState, setHdState] = useState<HdState>('thumbnail');
+  const [videoState, setVideoState] = useState<VideoState>('poster');
+  const [videoSourceAttached, setVideoSourceAttached] = useState(true);
   const [view, setView] = useState<ImageView>({ zoom: MIN_ZOOM, x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
   const { zoom, x, y } = view;
@@ -36,17 +48,19 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
     setIsPanning(false);
     setView({ zoom: MIN_ZOOM, x: 0, y: 0 });
     setHdState('thumbnail');
+    videoPlayRequestedRef.current = false;
+    setVideoState('poster');
+    setVideoSourceAttached(true);
   }, [active.id]);
 
   useEffect(() => {
     const video = active.mediaType === 'video' ? videoRef.current : null;
-    return () => {
-      if (!video) return;
-      video.pause();
-      video.removeAttribute('src');
-      video.load();
-    };
+    return () => releaseVideo(video);
   }, [active.id]);
+
+  useEffect(() => () => {
+    if (navigationFrameRef.current !== null) cancelAnimationFrame(navigationFrameRef.current);
+  }, []);
 
   useEffect(() => () => {
     const pendingImage = hdImageRef.current;
@@ -68,6 +82,24 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
   const zoomPercentage = Math.round(zoom * 100);
   const canZoomOut = zoom > MIN_ZOOM;
   const canZoomIn = zoom < MAX_ZOOM;
+
+  const navigateAfterVideoRelease = (navigate: () => void) => {
+    const video = videoRef.current;
+    if (!video) {
+      navigate();
+      return;
+    }
+    if (navigationFrameRef.current !== null) return;
+
+    videoPlayRequestedRef.current = false;
+    setVideoState('poster');
+    setVideoSourceAttached(false);
+    releaseVideo(video);
+    navigationFrameRef.current = requestAnimationFrame(() => {
+      navigationFrameRef.current = null;
+      navigate();
+    });
+  };
 
   const getPanBounds = (targetZoom: number) => {
     const viewport = mediaRef.current;
@@ -298,13 +330,52 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
             </span>
           </>
         ) : (
-          <video ref={videoRef} class="block size-full max-h-[78dvh] object-contain" key={active.id} controls autoPlay preload="metadata" playsInline src={active.src} aria-label={active.title} />
+          <video
+            ref={videoRef}
+            class="block size-full max-h-[78dvh] object-contain"
+            key={active.id}
+            controls
+            preload="none"
+            playsInline
+            poster={active.thumbnailSrc}
+            src={videoSourceAttached ? active.src : undefined}
+            width={active.width}
+            height={active.height}
+            aria-label={active.title}
+            onPlay={(event) => {
+              videoPlayRequestedRef.current = true;
+              if (event.currentTarget.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) setVideoState('loading');
+            }}
+            onWaiting={() => {
+              if (videoPlayRequestedRef.current) setVideoState('loading');
+            }}
+            onPlaying={() => setVideoState('playing')}
+            onPause={() => {
+              if (videoPlayRequestedRef.current) setVideoState('paused');
+            }}
+            onError={() => {
+              if (videoPlayRequestedRef.current) setVideoState('error');
+            }}
+          />
+        )}
+        {active.mediaType === 'video' && videoState === 'loading' && (
+          <div class="pointer-events-none absolute inset-0 z-[5] grid place-items-center" role="status" aria-live="polite">
+            <span class="grid size-14 place-items-center rounded-full border border-white/25 bg-charcoal/80 text-white shadow-lift">
+              <LoaderCircle class="animate-spin motion-reduce:animate-none" size={25} aria-hidden="true" />
+            </span>
+            <span class="sr-only">Cargando vídeo.</span>
+          </div>
+        )}
+        {active.mediaType === 'video' && videoState === 'error' && (
+          <p class="pointer-events-none absolute bottom-16 left-1/2 z-[5] m-0 -translate-x-1/2 rounded-full border border-white/25 bg-charcoal/90 px-4 py-2 text-xs font-semibold text-white shadow-lift" role="alert">
+            No se pudo cargar el vídeo.
+          </p>
         )}
         <button
           type="button"
           class="absolute top-1/2 left-3 z-10 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-charcoal/85 text-white disabled:opacity-25"
           disabled={currentIndex <= 0}
-          onClick={onPrevious}
+          onClick={() => navigateAfterVideoRelease(onPrevious)}
           aria-label="Archivo anterior"
         >
           <ChevronLeft size={24} aria-hidden="true" />
@@ -313,7 +384,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
           type="button"
           class="absolute top-1/2 right-3 z-10 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-charcoal/85 text-white disabled:opacity-25"
           disabled={currentIndex >= total - 1}
-          onClick={onNext}
+          onClick={() => navigateAfterVideoRelease(onNext)}
           aria-label="Archivo siguiente"
         >
           <ChevronRight size={24} aria-hidden="true" />
