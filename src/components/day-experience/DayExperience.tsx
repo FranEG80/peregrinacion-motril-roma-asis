@@ -9,19 +9,23 @@ import ZipDownloadButton from './ZipDownloadButton';
 
 function releaseDialogVideo(dialog: HTMLDialogElement | null) {
   const video = dialog?.querySelector('video');
-  if (!video) return;
+  if (!video) return false;
   video.pause();
   video.removeAttribute('src');
   video.load();
+  return true;
 }
 
 export default function DayExperience({ day }: { day: GalleryDay }) {
   const allMedia = useMemo(() => day.blocks.flatMap((block) => block.media), [day.blocks]);
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [isAndroid, setIsAndroid] = useState(false);
   const [placesParent] = useAutoAnimate<HTMLOListElement>({ duration: 190 });
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
+  const closeFrameRef = useRef<number | null>(null);
+  const keyboardFrameRef = useRef<number | null>(null);
 
   const visibleBlocks = useMemo(() => {
     if (!activeTag) return day.blocks;
@@ -50,17 +54,47 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
   }, [allMedia]);
 
   useEffect(() => {
+    setIsAndroid(/\bAndroid\b/i.test(navigator.userAgent));
+    return () => {
+      if (closeFrameRef.current !== null) cancelAnimationFrame(closeFrameRef.current);
+      if (keyboardFrameRef.current !== null) cancelAnimationFrame(keyboardFrameRef.current);
+    };
+  }, []);
+
+  const closeDialog = useCallback(() => {
+    const dialog = dialogRef.current;
+    if (!dialog || closeFrameRef.current !== null) return;
+    if (!releaseDialogVideo(dialog)) {
+      dialog.close();
+      return;
+    }
+
+    let remainingFrames = 2;
+    const closeAfterRelease = () => {
+      closeFrameRef.current = requestAnimationFrame(() => {
+        remainingFrames -= 1;
+        if (remainingFrames > 0) {
+          closeAfterRelease();
+          return;
+        }
+        closeFrameRef.current = null;
+        if (dialog.open) dialog.close();
+      });
+    };
+    closeAfterRelease();
+  }, []);
+
+  useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
     if (activeId && !dialog.open) dialog.showModal();
     const closeOnBackdrop = (event: MouseEvent) => {
       if (event.target !== dialog) return;
-      releaseDialogVideo(dialog);
-      dialog.close();
+      closeDialog();
     };
     dialog.addEventListener('click', closeOnBackdrop);
     return () => dialog.removeEventListener('click', closeOnBackdrop);
-  }, [activeId]);
+  }, [activeId, closeDialog]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -73,6 +107,7 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
             ? visibleMedia[index + 1].id
             : null;
       if (!nextId) return;
+      event.preventDefault();
 
       const dialog = dialogRef.current;
       const video = dialog?.querySelector('video');
@@ -80,9 +115,22 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
         setActiveId(nextId);
         return;
       }
+      if (keyboardFrameRef.current !== null) return;
 
       releaseDialogVideo(dialog);
-      requestAnimationFrame(() => setActiveId(nextId));
+      let remainingFrames = 2;
+      const navigateAfterRelease = () => {
+        keyboardFrameRef.current = requestAnimationFrame(() => {
+          remainingFrames -= 1;
+          if (remainingFrames > 0) {
+            navigateAfterRelease();
+            return;
+          }
+          keyboardFrameRef.current = null;
+          setActiveId(nextId);
+        });
+      };
+      navigateAfterRelease();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -92,13 +140,11 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
     triggerRef.current = trigger;
     setActiveId(item.id);
   }, []);
-  const closeDialog = () => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    releaseDialogVideo(dialog);
-    dialog.close();
-  };
   const onClose = () => {
+    if (closeFrameRef.current !== null) cancelAnimationFrame(closeFrameRef.current);
+    if (keyboardFrameRef.current !== null) cancelAnimationFrame(keyboardFrameRef.current);
+    closeFrameRef.current = null;
+    keyboardFrameRef.current = null;
     releaseDialogVideo(dialogRef.current);
     setActiveId(null);
     triggerRef.current?.focus();
@@ -139,10 +185,13 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
       <dialog
         ref={dialogRef}
         data-media-dialog
-        onCancel={() => releaseDialogVideo(dialogRef.current)}
+        data-android={isAndroid ? '' : undefined}
+        onCancel={(event) => {
+          event.preventDefault();
+          closeDialog();
+        }}
         onClose={onClose}
         aria-labelledby="experience-dialog-title"
-        closedby="any"
         class="w-[min(1160px,calc(100%-1.25rem))] max-h-[92dvh] overflow-auto"
       >
         <div class="relative min-h-full">

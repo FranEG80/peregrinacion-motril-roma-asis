@@ -17,6 +17,7 @@
     "test:e2e": "playwright test",
     "gallery:dimensions": "tsx scripts/enrich-gallery-dimensions.ts",
     "gallery:video-thumbnails": "tsx scripts/generate-video-thumbnails.ts",
+    "gallery:video-transcode": "tsx scripts/transcode-videos-for-web.ts",
     "archives:generate": "tsx scripts/generate-static-zips.ts",
     "archives:upload": "tsx scripts/generate-static-zips.ts --upload",
     "worker:dev": "wrangler dev --config workers/media/wrangler.jsonc",

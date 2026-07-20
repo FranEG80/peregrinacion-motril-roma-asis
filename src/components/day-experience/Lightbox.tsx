@@ -9,6 +9,7 @@ const ZOOM_STEP = 0.25;
 
 type HdState = 'thumbnail' | 'loading' | 'loaded' | 'error';
 type VideoState = 'poster' | 'loading' | 'playing' | 'paused' | 'error';
+type VideoQuality = '1080p' | '4k';
 type ImageView = { zoom: number; x: number; y: number };
 type DragState = { pointerId: number; startX: number; startY: number; originX: number; originY: number };
 
@@ -38,6 +39,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
   const videoPlayRequestedRef = useRef(false);
   const [hdState, setHdState] = useState<HdState>('thumbnail');
   const [videoState, setVideoState] = useState<VideoState>('poster');
+  const [videoQuality, setVideoQuality] = useState<VideoQuality>('1080p');
   const [videoSourceAttached, setVideoSourceAttached] = useState(true);
   const [view, setView] = useState<ImageView>({ zoom: MIN_ZOOM, x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
@@ -50,6 +52,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
     setHdState('thumbnail');
     videoPlayRequestedRef.current = false;
     setVideoState('poster');
+    setVideoQuality('1080p');
     setVideoSourceAttached(true);
   }, [active.id]);
 
@@ -82,22 +85,47 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
   const zoomPercentage = Math.round(zoom * 100);
   const canZoomOut = zoom > MIN_ZOOM;
   const canZoomIn = zoom < MAX_ZOOM;
+  const videoSrc = videoQuality === '4k' ? active.video4kSrc || active.src : active.src;
 
-  const navigateAfterVideoRelease = (navigate: () => void) => {
+  const afterVideoFrames = (callback: () => void, frames = 2) => {
+    const nextFrame = (remaining: number) => {
+      navigationFrameRef.current = requestAnimationFrame(() => {
+        if (remaining > 1) {
+          nextFrame(remaining - 1);
+          return;
+        }
+        navigationFrameRef.current = null;
+        callback();
+      });
+    };
+    nextFrame(frames);
+  };
+
+  const releaseCurrentVideo = () => {
     const video = videoRef.current;
-    if (!video) {
-      navigate();
-      return;
-    }
-    if (navigationFrameRef.current !== null) return;
-
+    if (!video || navigationFrameRef.current !== null) return false;
     videoPlayRequestedRef.current = false;
     setVideoState('poster');
     setVideoSourceAttached(false);
     releaseVideo(video);
-    navigationFrameRef.current = requestAnimationFrame(() => {
-      navigationFrameRef.current = null;
+    return true;
+  };
+
+  const navigateAfterVideoRelease = (navigate: () => void) => {
+    if (!videoRef.current) {
       navigate();
+      return;
+    }
+    if (!releaseCurrentVideo()) return;
+    afterVideoFrames(navigate);
+  };
+
+  const changeVideoQuality = () => {
+    if (!active.video4kSrc || !releaseCurrentVideo()) return;
+    const nextQuality: VideoQuality = videoQuality === '4k' ? '1080p' : '4k';
+    afterVideoFrames(() => {
+      setVideoQuality(nextQuality);
+      setVideoSourceAttached(true);
     });
   };
 
@@ -333,12 +361,12 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
           <video
             ref={videoRef}
             class="block size-full max-h-[78dvh] object-contain"
-            key={active.id}
+            key={`${active.id}-${videoQuality}`}
             controls
             preload="none"
             playsInline
             poster={active.thumbnailSrc}
-            src={videoSourceAttached ? active.src : undefined}
+            src={videoSourceAttached ? videoSrc : undefined}
             width={active.width}
             height={active.height}
             aria-label={active.title}
@@ -396,6 +424,27 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
         <p class="mt-4 font-serif text-base leading-7 text-muted">{active.caption}</p>
         {active.locationLabel && (
           <p class="mt-3 flex items-center gap-2 text-xs font-medium text-gold"><MapPin size={14} strokeWidth={1.8} aria-hidden="true" />{active.locationLabel}</p>
+        )}
+        {active.mediaType === 'video' && active.video4kSrc && (
+          <div class="mt-5">
+            <button
+              type="button"
+              class={`inline-flex min-h-11 items-center gap-2 rounded-full border px-4 text-xs font-bold shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-gold ${
+                videoQuality === '4k'
+                  ? 'border-gold/60 bg-gold text-charcoal'
+                  : 'border-line bg-paper text-charcoal hover:border-gold'
+              }`}
+              onClick={changeVideoQuality}
+              disabled={navigationFrameRef.current !== null}
+              aria-label={videoQuality === '4k' ? 'Cambiar el vídeo a resolución 1080p' : 'Cambiar el vídeo a resolución 4K'}
+            >
+              {videoQuality === '4k' && <Check size={17} strokeWidth={2.2} aria-hidden="true" />}
+              {videoQuality === '4k' ? '4K activa · volver a 1080p' : 'Ver en 4K'}
+            </button>
+            <p class="mt-2 text-[0.68rem] leading-5 text-muted">
+              {videoQuality === '4k' ? 'La versión 4K usa más datos.' : '1080p ofrece una reproducción más fluida y consume menos datos.'}
+            </p>
+          </div>
         )}
         <div class="my-5 flex flex-wrap gap-2">
           {active.keywords.map((tag) => (

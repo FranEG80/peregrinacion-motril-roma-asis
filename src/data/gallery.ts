@@ -32,7 +32,12 @@ const archiveSizes = z.object({
   items: z.record(z.string(), z.number().int().positive()),
 }).parse(archiveSizesSource);
 
-export type GalleryMedia = z.infer<typeof manifestSchema>['items'][number] & { src: string; thumbnailSrc: string; locationLabel?: string };
+export type GalleryMedia = z.infer<typeof manifestSchema>['items'][number] & {
+  src: string;
+  thumbnailSrc: string;
+  video4kSrc?: string;
+  locationLabel?: string;
+};
 export type GalleryBlock = { id: string; title: string; summary: string; description: string; from?: string; to?: string; media: GalleryMedia[]; archiveUrl?: string; archiveSizeBytes?: number };
 export type GalleryDay = { id: string; number: number; slug: string; date: string; city: string; title: string; summary: string; cover: string; archiveUrl: string; archiveSizeBytes?: number; blocks: GalleryBlock[] };
 export type HomeDayPreview = Pick<GalleryDay, 'id' | 'number' | 'slug' | 'date' | 'city' | 'title' | 'summary' | 'cover'> & { images: [string, string, string, string]; highlights: string[] };
@@ -143,7 +148,8 @@ export function buildGalleryDay(slug: string, manifestInput: unknown, urlForKey:
   const sourceItems = manifest.items.filter((item) => item.key.startsWith(`${setup.prefix}/`)).sort((a, b) => a.capturedAt.localeCompare(b.capturedAt) || a.key.localeCompare(b.key));
   const media = sourceItems.map((item) => ({
     ...item,
-    src: urlForKey(item.key),
+    src: urlForKey(item.mediaType === 'video' ? `playback/1080/${item.key}` : item.key),
+    video4kSrc: item.mediaType === 'video' ? `${urlForKey(item.key)}?v=avc-4k-1` : undefined,
     thumbnailSrc: urlForKey(`thumbnail/${item.mediaType === 'video' ? item.key.replace(/\.[^.]+$/, '.webp') : item.key}`),
     locationLabel: photoLocations.items[item.id]?.label,
   }));

@@ -209,6 +209,27 @@ dialog[data-media-dialog] {
 }
 
 /*
+ * Android can retain stale video/backdrop compositor tiles when a decoded video
+ * surface and backdrop-filter leave the top layer together. Keep the blur on
+ * other platforms and use a visually similar, non-filtered scrim on Android.
+ */
+dialog[data-media-dialog][data-android]::backdrop,
+dialog[data-media-dialog][data-android][open]::backdrop {
+  background:
+    radial-gradient(circle at 50% 35%, rgb(62 58 48 / .72), rgb(24 23 20 / .92));
+  backdrop-filter: none;
+  transition: none;
+}
+
+@starting-style {
+  dialog[data-media-dialog][data-android][open]::backdrop {
+    background:
+      radial-gradient(circle at 50% 35%, rgb(62 58 48 / .72), rgb(24 23 20 / .92));
+    backdrop-filter: none;
+  }
+}
+
+/*
  * Reusable shared-element hooks. For route-specific names, add
  * data-view-transition and set --view-transition-name to a unique ident.
  */
