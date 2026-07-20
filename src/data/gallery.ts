@@ -114,7 +114,7 @@ export function r2Url(key: string) {
 export async function getGalleryCover(slug: string) {
   const sourceDay = getDay(slug);
   const setup = sourceDay ? editorial[sourceDay.id] : undefined;
-  return setup ? r2Url(setup.coverKey) : undefined;
+  return setup ? r2Url(`thumbnail/${setup.coverKey}`) : undefined;
 }
 
 export function getHomeDayPreviews(): HomeDayPreview[] {
