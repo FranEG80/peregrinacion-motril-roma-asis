@@ -189,8 +189,8 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
   };
 
   return (
-    <div class="grid min-h-[min(80dvh,780px)] md:grid-cols-[minmax(0,1.55fr)_minmax(19rem,0.65fr)]">
-      <div ref={mediaRef} class="relative grid min-h-[46dvh] touch-pan-y place-items-center overflow-hidden bg-charcoal bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:28rem] bg-blend-soft-light select-none">
+    <div class="grid min-h-[min(80dvh,780px)] md:h-[min(80dvh,780px)] md:grid-cols-[minmax(0,1.4fr)_minmax(21rem,0.85fr)] md:grid-rows-[minmax(0,1fr)]">
+      <div ref={mediaRef} class="relative grid min-h-[46dvh] touch-pan-y place-items-center overflow-hidden bg-charcoal bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:28rem] bg-blend-soft-light select-none md:h-full">
         {active.mediaType === 'image' ? (
           <>
             <img
@@ -321,7 +321,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
           <ChevronRight size={24} aria-hidden="true" />
         </button>
       </div>
-      <aside class="content-center bg-cream bg-[url('/images/textures/paper-fiber.webp')] bg-[length:32rem] p-[clamp(1.5rem,4vw,2.5rem)]">
+      <aside class="content-center bg-cream bg-[url('/images/textures/paper-fiber.webp')] bg-[length:32rem] p-[clamp(1.5rem,4vw,2.5rem)] md:h-full md:overflow-y-auto">
         <p class="mb-3 text-[0.68rem] font-extrabold tracking-[0.17em] text-gold uppercase">{active.mediaType === 'video' ? 'Vídeo' : 'Imagen'} {currentIndex + 1} de {total}</p>
         <h2 id="experience-dialog-title" class="max-w-[15ch] pr-8 font-serif text-title-sm leading-[1.04] font-medium tracking-[-0.03em] text-charcoal">{active.title}</h2>
         <p class="mt-4 font-serif text-base leading-7 text-muted">{active.caption}</p>
