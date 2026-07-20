@@ -216,11 +216,11 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
               onKeyDown={movePanWithKeyboard}
             />
             {zoom > MIN_ZOOM && (
-              <p id="lightbox-pan-hint" class="pointer-events-none absolute bottom-16 left-3 z-10 m-0 rounded-full border border-white/20 bg-charcoal/75 px-3 py-1.5 text-[0.68rem] font-semibold text-white shadow-lift backdrop-blur">
+              <p id="lightbox-pan-hint" class="pointer-events-none absolute bottom-16 left-3 z-10 m-0 rounded-full border border-white/20 bg-charcoal/90 px-3 py-1.5 text-[0.68rem] font-semibold text-white shadow-lift">
                 Arrastra o usa las flechas para mover
               </p>
             )}
-            <div class="absolute bottom-3 left-3 z-10 flex items-center rounded-full border border-white/30 bg-charcoal/80 text-white shadow-lift backdrop-blur select-none" role="group" aria-label="Controles de zoom">
+            <div class="absolute bottom-3 left-3 z-10 flex items-center rounded-full border border-white/30 bg-charcoal/90 text-white shadow-lift select-none" role="group" aria-label="Controles de zoom">
               <button
                 type="button"
                 class="grid size-11 place-items-center rounded-l-full transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-inset disabled:cursor-not-allowed disabled:opacity-35"
@@ -254,7 +254,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
             </div>
             <button
               type="button"
-              class={`absolute right-3 bottom-3 z-10 flex min-h-11 items-center gap-2 rounded-full border px-4 text-xs font-bold shadow-lift backdrop-blur transition-colors select-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal ${
+              class={`absolute right-3 bottom-3 z-10 flex min-h-11 items-center gap-2 rounded-full border px-4 text-xs font-bold shadow-lift transition-colors select-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal ${
                 hdState === 'loaded'
                   ? 'border-gold/60 bg-gold text-charcoal'
                   : 'border-white/30 bg-cream/92 text-charcoal hover:bg-paper'
@@ -304,7 +304,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
         )}
         <button
           type="button"
-          class="absolute top-1/2 left-3 z-10 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-charcoal/70 text-white backdrop-blur disabled:opacity-25"
+          class="absolute top-1/2 left-3 z-10 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-charcoal/85 text-white disabled:opacity-25"
           disabled={currentIndex <= 0}
           onClick={onPrevious}
           aria-label="Archivo anterior"
@@ -313,7 +313,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
         </button>
         <button
           type="button"
-          class="absolute top-1/2 right-3 z-10 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-charcoal/70 text-white backdrop-blur disabled:opacity-25"
+          class="absolute top-1/2 right-3 z-10 grid size-11 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-charcoal/85 text-white disabled:opacity-25"
           disabled={currentIndex >= total - 1}
           onClick={onNext}
           aria-label="Archivo siguiente"

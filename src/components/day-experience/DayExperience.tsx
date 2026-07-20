@@ -113,7 +113,7 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
         class="w-[min(1160px,calc(100%-1.25rem))] max-h-[92dvh] overflow-auto"
       >
         <div class="relative min-h-full">
-          <button type="button" class="absolute top-3 right-3 z-20 grid size-11 place-items-center rounded-full border-0 bg-cream/92 text-charcoal shadow-lift backdrop-blur hover:bg-paper" onClick={closeDialog} aria-label="Cerrar">
+          <button type="button" class="absolute top-3 right-3 z-20 grid size-11 place-items-center rounded-full border-0 bg-cream/92 text-charcoal shadow-lift hover:bg-paper" onClick={closeDialog} aria-label="Cerrar">
             <X size={20} strokeWidth={1.7} aria-hidden="true" />
           </button>
           {active && (
