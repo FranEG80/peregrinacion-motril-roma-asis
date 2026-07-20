@@ -144,7 +144,7 @@ export function buildGalleryDay(slug: string, manifestInput: unknown, urlForKey:
   const media = sourceItems.map((item) => ({
     ...item,
     src: urlForKey(item.key),
-    thumbnailSrc: urlForKey(`thumbnail/${item.key}`),
+    thumbnailSrc: urlForKey(`thumbnail/${item.mediaType === 'video' ? item.key.replace(/\.[^.]+$/, '.webp') : item.key}`),
     locationLabel: photoLocations.items[item.id]?.label,
   }));
   const blocks = setup.blocks.map((block, index) => {

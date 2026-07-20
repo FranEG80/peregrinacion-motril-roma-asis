@@ -1,4 +1,5 @@
 import { useAutoAnimate } from '@formkit/auto-animate/preact';
+import { memo } from 'preact/compat';
 import type { GalleryBlock, GalleryMedia } from '../../data/gallery';
 import MediaTile from './MediaTile';
 import ZipDownloadButton from './ZipDownloadButton';
@@ -17,7 +18,7 @@ function formatBlockTime(from?: string, to?: string) {
   return to ? `${start}–${to.slice(11, 16)}` : start;
 }
 
-export default function PlaceChapter({ block, original, index, onOpen }: Props) {
+function PlaceChapter({ block, original, index, onOpen }: Props) {
   const [col0] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
   const [col1] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
   const [col2] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
@@ -79,3 +80,5 @@ export default function PlaceChapter({ block, original, index, onOpen }: Props) 
     </li>
   );
 }
+
+export default memo(PlaceChapter);

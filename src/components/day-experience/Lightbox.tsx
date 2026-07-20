@@ -1,4 +1,3 @@
-import { animate } from 'motion';
 import { Check, ChevronLeft, ChevronRight, LoaderCircle, MapPin, RefreshCw, RotateCcw, ZoomIn, ZoomOut } from 'lucide-preact';
 import type { CSSProperties, TargetedKeyboardEvent, TargetedPointerEvent } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
@@ -33,12 +32,6 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
   const { zoom, x, y } = view;
 
   useEffect(() => {
-    if (!mediaRef.current || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const controls = animate(mediaRef.current, { opacity: [0.55, 1], scale: [0.992, 1] }, { duration: .18, ease: 'easeOut' });
-    return () => controls.stop();
-  }, [active.id]);
-
-  useEffect(() => {
     dragRef.current = null;
     setIsPanning(false);
     setView({ zoom: MIN_ZOOM, x: 0, y: 0 });
@@ -63,11 +56,14 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
     hdImageRef.current = null;
   }, [active.id]);
 
-  const imageStyle = {
-    '--lightbox-zoom': zoom,
-    '--lightbox-pan-x': `${x}px`,
-    '--lightbox-pan-y': `${y}px`,
-  } as CSSProperties;
+  const isImageTransformed = zoom > MIN_ZOOM || x !== 0 || y !== 0;
+  const imageStyle = isImageTransformed
+    ? {
+        '--lightbox-zoom': zoom,
+        '--lightbox-pan-x': `${x}px`,
+        '--lightbox-pan-y': `${y}px`,
+      } as CSSProperties
+    : undefined;
   const imageSrc = hdState === 'loaded' ? active.src : active.thumbnailSrc;
   const zoomPercentage = Math.round(zoom * 100);
   const canZoomOut = zoom > MIN_ZOOM;
@@ -195,7 +191,9 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
           <>
             <img
               ref={imageRef}
-              class={`block size-full max-h-[78dvh] origin-center [translate:var(--lightbox-pan-x)_var(--lightbox-pan-y)] scale-[var(--lightbox-zoom)] object-contain select-none ${
+              class={`block size-full max-h-[78dvh] origin-center object-contain select-none ${
+                isImageTransformed ? '[translate:var(--lightbox-pan-x)_var(--lightbox-pan-y)] scale-[var(--lightbox-zoom)]' : ''
+              } ${
                 isPanning ? 'transition-none' : 'transition-transform duration-150 motion-reduce:transition-none'
               } ${zoom > MIN_ZOOM ? `touch-none ${isPanning ? 'cursor-grabbing' : 'cursor-grab'}` : 'touch-pan-y'}`}
               style={imageStyle}

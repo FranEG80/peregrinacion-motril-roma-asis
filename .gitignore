@@ -24,7 +24,7 @@ pnpm-debug.log*
 !.dev.vars.example
 
 # local media source data (large, not for git)
-data/
+/data/
 
 # macOS-specific files
 .DS_Store

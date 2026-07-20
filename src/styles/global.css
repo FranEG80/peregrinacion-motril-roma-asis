@@ -195,6 +195,32 @@ dialog[open]::backdrop {
   }
 }
 
+/* The gallery modal intentionally avoids blur and transform layers. On Android,
+ * combining those layers with large images or video surfaces can leave stale GPU tiles. */
+dialog[data-media-dialog] {
+  transform: none;
+  transition: none;
+}
+
+dialog[data-media-dialog]::backdrop {
+  backdrop-filter: none;
+  transition: none;
+}
+
+dialog[data-media-dialog][open]::backdrop {
+  backdrop-filter: none;
+}
+
+@starting-style {
+  dialog[data-media-dialog][open] {
+    transform: none;
+  }
+
+  dialog[data-media-dialog][open]::backdrop {
+    backdrop-filter: none;
+  }
+}
+
 /*
  * Reusable shared-element hooks. For route-specific names, add
  * data-view-transition and set --view-transition-name to a unique ident.

@@ -1,6 +1,6 @@
 import { useAutoAnimate } from '@formkit/auto-animate/preact';
 import { X } from 'lucide-preact';
-import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { GalleryDay, GalleryMedia } from '../../data/gallery';
 import Lightbox from './Lightbox';
 import PlaceChapter from './PlaceChapter';
@@ -63,10 +63,10 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
     return () => window.removeEventListener('keydown', onKey);
   }, [active, visibleMedia]);
 
-  const openMedia = (item: GalleryMedia, trigger: HTMLElement) => {
+  const openMedia = useCallback((item: GalleryMedia, trigger: HTMLElement) => {
     triggerRef.current = trigger;
     setActiveId(item.id);
-  };
+  }, []);
   const closeDialog = () => dialogRef.current?.close();
   const onClose = () => {
     setActiveId(null);
@@ -107,6 +107,7 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
 
       <dialog
         ref={dialogRef}
+        data-media-dialog
         onClose={onClose}
         aria-labelledby="experience-dialog-title"
         closedby="any"

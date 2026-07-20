@@ -1,4 +1,5 @@
 import { Play } from 'lucide-preact';
+import { memo } from 'preact/compat';
 import type { GalleryMedia } from '../../data/gallery';
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   onOpen: (item: GalleryMedia, trigger: HTMLElement) => void;
 }
 
-export default function MediaTile({ item, onOpen }: Props) {
+function MediaTile({ item, onOpen }: Props) {
   const mediaDimensions = item.width && item.height
     ? { width: item.width, height: item.height, aspectRatio: `${item.width} / ${item.height}` }
     : item.mediaType === 'image'
@@ -24,23 +25,10 @@ export default function MediaTile({ item, onOpen }: Props) {
         onClick={(event) => onOpen(item, event.currentTarget)}
         aria-label={`${item.mediaType === 'video' ? 'Reproducir' : 'Ampliar'}: ${item.title}`}
       >
-        {item.mediaType === 'image' ? (
-          <img class="h-auto w-full object-contain transition-transform duration-[350ms] ease-editorial group-hover:scale-[1.012] motion-reduce:transition-none" src={item.thumbnailSrc} width={mediaDimensions.width} height={mediaDimensions.height} alt="" loading="lazy" />
-        ) : (
-          <span class="relative block min-h-32 w-full overflow-hidden bg-charcoal bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:24rem] text-cream bg-blend-soft-light" aria-hidden="true">
-            <video
-              class="block h-auto w-full"
-              src={`${item.src}#t=0.1`}
-              width={mediaDimensions.width}
-              height={mediaDimensions.height}
-              preload="metadata"
-              muted
-              playsInline
-              tabindex={-1}
-            />
-            <span class="absolute inset-0 grid place-items-center bg-charcoal/10">
-              <Play class="box-content rounded-full border border-cream/65 bg-charcoal/45 p-3 text-cream shadow-lift backdrop-blur-sm transition-transform duration-200 group-hover:scale-105 motion-reduce:transition-none" size={34} strokeWidth={1.5} />
-            </span>
+        <img class="h-auto w-full object-contain transition-transform duration-[350ms] ease-editorial group-hover:scale-[1.012] motion-reduce:transition-none" src={item.thumbnailSrc} width={mediaDimensions.width} height={mediaDimensions.height} alt="" loading="lazy" />
+        {item.mediaType === 'video' && (
+          <span class="pointer-events-none absolute inset-0 grid place-items-center bg-charcoal/10" aria-hidden="true">
+            <Play class="box-content rounded-full border border-cream/65 bg-charcoal/70 p-3 text-cream shadow-lift transition-transform duration-200 group-hover:scale-105 motion-reduce:transition-none" size={34} strokeWidth={1.5} />
           </span>
         )}
       </button>
@@ -48,3 +36,5 @@ export default function MediaTile({ item, onOpen }: Props) {
     </figure>
   );
 }
+
+export default memo(MediaTile);
