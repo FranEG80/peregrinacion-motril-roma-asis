@@ -15,8 +15,6 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
 
-  console.log('allMedia', allMedia.find((item) => item.id === activeId), activeId);
-
   const visibleBlocks = useMemo(() => {
     if (!activeTag) return day.blocks;
     return day.blocks

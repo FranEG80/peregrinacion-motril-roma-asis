@@ -2,6 +2,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/preact';
 import type { GalleryBlock, GalleryMedia } from '../../data/gallery';
 import MediaTile from './MediaTile';
 import ZipDownloadButton from './ZipDownloadButton';
+import { useColumnCount } from './useColumnCount';
 
 interface Props {
   block: GalleryBlock;
@@ -17,8 +18,15 @@ function formatBlockTime(from?: string, to?: string) {
 }
 
 export default function PlaceChapter({ block, original, index, onOpen }: Props) {
-  const [mediaParent] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
+  const [col0] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
+  const [col1] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
+  const [col2] = useAutoAnimate<HTMLDivElement>({ duration: 180 });
+  const columnRefs = [col0, col1, col2];
   const fileCount = original?.media.length || 0;
+  const columnCount = useColumnCount(2, [{ minWidth: 1024, count: 3 }]);
+
+  const columns: GalleryMedia[][] = Array.from({ length: columnCount }, () => []);
+  block.media.forEach((item, i) => columns[i % columnCount].push(item));
 
   return (
     <li class="relative grid grid-cols-[2.1rem_minmax(0,1fr)] gap-3 pb-[clamp(4rem,9vw,7rem)] md:grid-cols-[2.6rem_minmax(0,1fr)] md:gap-6">
@@ -55,9 +63,13 @@ export default function PlaceChapter({ block, original, index, onOpen }: Props) 
         )}
 
         {block.media.length ? (
-          <div ref={mediaParent} class="mt-6 max-w-[1120px] columns-2 gap-2.5 lg:columns-3 lg:gap-3">
-            {block.media.map((item) => (
-              <MediaTile key={item.id} item={item} onOpen={onOpen} />
+          <div class="mt-6 flex max-w-[1120px] gap-2.5 lg:gap-3">
+            {columns.map((columnItems, columnIndex) => (
+              <div key={columnIndex} ref={columnRefs[columnIndex]} class="flex min-w-0 flex-1 flex-col gap-2.5 lg:gap-3">
+                {columnItems.map((item) => (
+                  <MediaTile key={item.id} item={item} onOpen={onOpen} />
+                ))}
+              </div>
             ))}
           </div>
         ) : (

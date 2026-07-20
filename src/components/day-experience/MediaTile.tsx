@@ -15,7 +15,7 @@ export default function MediaTile({ item, onOpen }: Props) {
 
   return (
     <figure
-      class="group relative mb-2.5 min-w-0 break-inside-avoid overflow-clip rounded-plate border border-line/80 bg-[#d7cbb8] shadow-sm transition-[transform,box-shadow] duration-200 ease-editorial hover:-translate-y-px hover:shadow-lift lg:mb-3 motion-reduce:transform-none motion-reduce:transition-none"
+      class="group relative min-w-0 overflow-clip rounded-plate border border-line/80 bg-[#d7cbb8] shadow-sm transition-[transform,box-shadow] duration-200 ease-editorial hover:-translate-y-px hover:shadow-lift motion-reduce:transform-none motion-reduce:transition-none"
       style={{ aspectRatio: mediaDimensions.aspectRatio }}
     >
       <button
@@ -25,7 +25,7 @@ export default function MediaTile({ item, onOpen }: Props) {
         aria-label={`${item.mediaType === 'video' ? 'Reproducir' : 'Ampliar'}: ${item.title}`}
       >
         {item.mediaType === 'image' ? (
-          <img class="h-auto w-full object-contain transition-transform duration-[350ms] ease-editorial group-hover:scale-[1.012] motion-reduce:transition-none" src={item.thumbnailSrc} width={mediaDimensions.width} height={mediaDimensions.height} alt="" loading="lazy" decoding="async" />
+          <img class="h-auto w-full object-contain transition-transform duration-[350ms] ease-editorial group-hover:scale-[1.012] motion-reduce:transition-none" src={item.thumbnailSrc} width={mediaDimensions.width} height={mediaDimensions.height} alt="" loading="lazy" />
         ) : (
           <span class="relative block min-h-32 w-full overflow-hidden bg-charcoal bg-[url('/images/textures/pilgrimage-pattern.webp')] bg-[length:24rem] text-cream bg-blend-soft-light" aria-hidden="true">
             <video
