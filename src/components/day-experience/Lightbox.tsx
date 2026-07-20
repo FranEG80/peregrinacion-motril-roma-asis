@@ -22,9 +22,9 @@ interface Props {
 }
 
 export default function Lightbox({ active, currentIndex, total, onPrevious, onNext, onTag }: Props) {
-  console.log('Lightbox render', active, currentIndex, total);
   const mediaRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const hdImageRef = useRef<HTMLImageElement | null>(null);
   const dragRef = useRef<DragState | null>(null);
   const [hdState, setHdState] = useState<HdState>('thumbnail');
@@ -38,13 +38,30 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
     return () => controls.stop();
   }, [active.id]);
 
+  useEffect(() => {
+    dragRef.current = null;
+    setIsPanning(false);
+    setView({ zoom: MIN_ZOOM, x: 0, y: 0 });
+    setHdState('thumbnail');
+  }, [active.id]);
+
+  useEffect(() => {
+    const video = active.mediaType === 'video' ? videoRef.current : null;
+    return () => {
+      if (!video) return;
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+    };
+  }, [active.id]);
+
   useEffect(() => () => {
     const pendingImage = hdImageRef.current;
     if (!pendingImage) return;
     pendingImage.onload = null;
     pendingImage.onerror = null;
     hdImageRef.current = null;
-  }, []);
+  }, [active.id]);
 
   const imageStyle = {
     '--lightbox-zoom': zoom,
@@ -283,7 +300,7 @@ export default function Lightbox({ active, currentIndex, total, onPrevious, onNe
             </span>
           </>
         ) : (
-          <video class="block size-full max-h-[78dvh] object-contain" key={active.id} controls autoPlay preload="metadata" playsInline src={active.src} aria-label={active.title} />
+          <video ref={videoRef} class="block size-full max-h-[78dvh] object-contain" key={active.id} controls autoPlay preload="metadata" playsInline src={active.src} aria-label={active.title} />
         )}
         <button
           type="button"

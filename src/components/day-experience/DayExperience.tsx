@@ -118,7 +118,6 @@ export default function DayExperience({ day }: { day: GalleryDay }) {
           </button>
           {active && (
             <Lightbox
-              key={active.id}
               active={active}
               currentIndex={currentIndex}
               total={visibleMedia.length}
